@@ -1,0 +1,139 @@
+[gd_scene load_steps=5 format=3 uid="uid://kvaeg7vr5u2e"]
+
+[ext_resource type="Texture2D" uid="uid://ddybta3nj3llr" path="res://assets/fundo_azul.jpeg" id="1_3area"]
+[ext_resource type="Texture2D" uid="uid://bks4ehoj6l4xp" path="res://assets/moldura.png" id="2_1hl7o"]
+[ext_resource type="Texture2D" uid="uid://bjeixepm1w65a" path="res://assets/fundo_caixa.jpg" id="3_jsjfs"]
+[ext_resource type="Script" path="res://scripts/Button.gd" id="4_oolmj"]
+
+[node name="Store" type="Node2D"]
+
+[node name="Fundo" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(1.84026, 1.58049)
+texture = ExtResource("1_3area")
+
+[node name="Sprite2D" type="Sprite2D" parent="Fundo"]
+position = Vector2(-2.17361, 46.821)
+scale = Vector2(0.969594, 0.885367)
+texture = ExtResource("2_1hl7o")
+
+[node name="Sprite2D" type="Sprite2D" parent="Fundo/Sprite2D"]
+position = Vector2(-204.732, -180.644)
+scale = Vector2(0.159898, 0.310998)
+texture = ExtResource("3_jsjfs")
+
+[node name="Button" type="Button" parent="Fundo/Sprite2D/Sprite2D"]
+offset_left = -307.0
+offset_top = 96.0
+offset_right = 307.0
+offset_bottom = 204.0
+theme_override_font_sizes/font_size = 50
+text = "COMPRAR"
+script = ExtResource("4_oolmj")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Fundo/Sprite2D"]
+position = Vector2(-66.6926, -179.374)
+scale = Vector2(0.159898, 0.310998)
+texture = ExtResource("3_jsjfs")
+
+[node name="Button" type="Button" parent="Fundo/Sprite2D/Sprite2D2"]
+offset_left = -307.0
+offset_top = 96.0
+offset_right = 307.0
+offset_bottom = 204.0
+theme_override_font_sizes/font_size = 50
+text = "COMPRAR"
+script = ExtResource("4_oolmj")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Fundo/Sprite2D"]
+position = Vector2(71.1764, -177.945)
+scale = Vector2(0.159898, 0.310998)
+texture = ExtResource("3_jsjfs")
+
+[node name="Button" type="Button" parent="Fundo/Sprite2D/Sprite2D3"]
+offset_left = -307.0
+offset_top = 96.0
+offset_right = 307.0
+offset_bottom = 204.0
+theme_override_font_sizes/font_size = 50
+text = "COMPRAR"
+script = ExtResource("4_oolmj")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Fundo/Sprite2D"]
+position = Vector2(204.001, -176.515)
+scale = Vector2(0.159898, 0.310998)
+texture = ExtResource("3_jsjfs")
+
+[node name="Button" type="Button" parent="Fundo/Sprite2D/Sprite2D4"]
+offset_left = -307.0
+offset_top = 96.0
+offset_right = 307.0
+offset_bottom = 204.0
+theme_override_font_sizes/font_size = 50
+text = "COMPRAR"
+script = ExtResource("4_oolmj")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Fundo/Sprite2D"]
+position = Vector2(-206.073, 23.424)
+scale = Vector2(0.159898, 0.310998)
+texture = ExtResource("3_jsjfs")
+
+[node name="Button" type="Button" parent="Fundo/Sprite2D/Sprite2D5"]
+offset_left = -307.0
+offset_top = 96.0
+offset_right = 307.0
+offset_bottom = 204.0
+theme_override_font_sizes/font_size = 50
+text = "COMPRAR"
+script = ExtResource("4_oolmj")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Fundo/Sprite2D"]
+position = Vector2(-68.0337, 24.6942)
+scale = Vector2(0.159898, 0.310998)
+texture = ExtResource("3_jsjfs")
+
+[node name="Button" type="Button" parent="Fundo/Sprite2D/Sprite2D6"]
+offset_left = -307.0
+offset_top = 96.0
+offset_right = 307.0
+offset_bottom = 204.0
+theme_override_font_sizes/font_size = 50
+text = "COMPRAR"
+script = ExtResource("4_oolmj")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Fundo/Sprite2D"]
+position = Vector2(69.8352, 26.1235)
+scale = Vector2(0.159898, 0.310998)
+texture = ExtResource("3_jsjfs")
+
+[node name="Button" type="Button" parent="Fundo/Sprite2D/Sprite2D7"]
+offset_left = -307.0
+offset_top = 96.0
+offset_right = 307.0
+offset_bottom = 204.0
+theme_override_font_sizes/font_size = 50
+text = "COMPRAR"
+script = ExtResource("4_oolmj")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Fundo/Sprite2D"]
+position = Vector2(202.66, 27.5527)
+scale = Vector2(0.159898, 0.310998)
+texture = ExtResource("3_jsjfs")
+
+[node name="Button" type="Button" parent="Fundo/Sprite2D/Sprite2D8"]
+offset_left = -307.0
+offset_top = 96.0
+offset_right = 307.0
+offset_bottom = 204.0
+theme_override_font_sizes/font_size = 50
+text = "COMPRAR"
+script = ExtResource("4_oolmj")
+
+[connection signal="pressed" from="Fundo/Sprite2D/Sprite2D/Button" to="Fundo/Sprite2D/Sprite2D/Button" method="_on_pressed"]
+[connection signal="pressed" from="Fundo/Sprite2D/Sprite2D2/Button" to="Fundo/Sprite2D/Sprite2D2/Button" method="_on_pressed"]
+[connection signal="pressed" from="Fundo/Sprite2D/Sprite2D3/Button" to="Fundo/Sprite2D/Sprite2D3/Button" method="_on_pressed"]
+[connection signal="pressed" from="Fundo/Sprite2D/Sprite2D4/Button" to="Fundo/Sprite2D/Sprite2D4/Button" method="_on_pressed"]
+[connection signal="pressed" from="Fundo/Sprite2D/Sprite2D5/Button" to="Fundo/Sprite2D/Sprite2D5/Button" method="_on_pressed"]
+[connection signal="pressed" from="Fundo/Sprite2D/Sprite2D6/Button" to="Fundo/Sprite2D/Sprite2D6/Button" method="_on_pressed"]
+[connection signal="pressed" from="Fundo/Sprite2D/Sprite2D7/Button" to="Fundo/Sprite2D/Sprite2D7/Button" method="_on_pressed"]
+[connection signal="pressed" from="Fundo/Sprite2D/Sprite2D8/Button" to="Fundo/Sprite2D/Sprite2D8/Button" method="_on_pressed"]

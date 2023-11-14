@@ -10,21 +10,11 @@ config_version=5
 
 [application]
 
-config/name="TechTycoon"
-run/main_scene="res://scenes/game.tscn"
-config/features=PackedStringArray("4.0", "GL Compatibility")
-
-[display]
-
-window/size/viewport_width=1280
-window/size/viewport_height=720
-window/size/resizable=false
+config/name="Store"
+run/main_scene="res://scenes/store.tscn"
+config/features=PackedStringArray("4.1", "Forward Plus")
+config/icon="res://icon.svg"
 
 [dotnet]
 
-project/assembly_name="TechTycoon"
-
-[rendering]
-
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"
+project/assembly_name="Store"
