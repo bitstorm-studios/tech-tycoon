@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=3 uid="uid://borqrcvph3vc1"]
+
+[ext_resource type="PackedScene" uid="uid://b4ivgos0w0uin" path="res://scenes/player.tscn" id="1_bv6cn"]
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_mssxk"]
+[ext_resource type="PackedScene" uid="uid://bhmk5tc31hfyo" path="res://scenes/spawn_container.tscn" id="3_rwvcb"]
+[ext_resource type="PackedScene" uid="uid://3qneuka50jp8" path="res://scenes/ui.tscn" id="4_wrwlb"]
+[ext_resource type="Texture2D" uid="uid://dlk04hupfuc7i" path="res://assets/backgrounds/black.png" id="5_1k3ov"]
+[ext_resource type="AudioStream" uid="uid://dryloe7ylvnfc" path="res://assets/audio/explode.wav" id="6_m6w1e"]
+[ext_resource type="AudioStream" uid="uid://bdy4k6wbv30nw" path="res://assets/audio/hit.wav" id="7_b74to"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_mssxk")
+
+[node name="Player" parent="." instance=ExtResource("1_bv6cn")]
+position = Vector2(115, 337)
+
+[node name="SpawnContainer" parent="." instance=ExtResource("3_rwvcb")]
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="HUD" instance=ExtResource("4_wrwlb")]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1152, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("5_1k3ov")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="ExplodeSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_m6w1e")
+
+[node name="HitSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_b74to")
+
+[connection signal="took_damage" from="Player" to="." method="_on_player_took_damage"]
+[connection signal="spawn_enemy" from="SpawnContainer" to="." method="_on_spawn_container_spawn_enemy"]

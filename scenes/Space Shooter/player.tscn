@@ -1,0 +1,65 @@
+[gd_scene load_steps=9 format=3 uid="uid://b4ivgos0w0uin"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_usj23"]
+[ext_resource type="Texture2D" uid="uid://c3yo3fvnyqb1u" path="res://assets/png/playerShip2_green.png" id="2_tlael"]
+[ext_resource type="AudioStream" uid="uid://e241vs7drwme" path="res://assets/audio/sfx_laser2.wav" id="3_h20vj"]
+
+[sub_resource type="Gradient" id="Gradient_o485c"]
+colors = PackedColorArray(1, 0.878333, 0.27, 1, 0.4, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_uvb40"]
+gradient = SubResource("Gradient_o485c")
+
+[sub_resource type="Curve" id="Curve_45gko"]
+_data = [Vector2(0, 0.509202), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_w61sk"]
+curve = SubResource("Curve_45gko")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_nitd1"]
+lifetime_randomness = 0.5
+emission_shape = 1
+emission_sphere_radius = 0.01
+particle_flag_disable_z = true
+direction = Vector3(-1, 0, 0)
+spread = 5.0
+gravity = Vector3(-200, 0, 0)
+initial_velocity_min = 200.0
+initial_velocity_max = 300.0
+angular_velocity_min = -720.0
+angular_velocity_max = 720.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_min = 5.0
+scale_max = 8.0
+scale_curve = SubResource("CurveTexture_w61sk")
+color_ramp = SubResource("GradientTexture1D_uvb40")
+turbulence_noise_strength = 2.13
+turbulence_noise_scale = 10.0
+
+[node name="Player" type="CharacterBody2D"]
+collision_mask = 2
+script = ExtResource("1_usj23")
+speed = 300
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("2_tlael")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+rotation = 1.5708
+polygon = PackedVector2Array(-2.00014, -38, -11.0001, -18, -56, 6.0002, -38.9999, 34.0001, -16.9999, 30.0001, -11.9999, 38, 11.0001, 38, 17.0001, 28.9999, 37.0001, 34.9999, 56, 5.9998, 11.9999, -17, 2.99987, -37)
+
+[node name="LaserContainer" type="Node" parent="."]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+z_index = -1
+position = Vector2(-38, 0)
+amount = 48
+process_material = SubResource("ParticleProcessMaterial_nitd1")
+
+[node name="LaserSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_h20vj")
+pitch_scale = 2.5
+max_distance = 1000.0

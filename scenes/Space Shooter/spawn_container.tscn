@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhmk5tc31hfyo"]
+
+[ext_resource type="Script" path="res://scripts/spawn_container.gd" id="1_3ohgb"]
+
+[node name="SpawnContainer" type="Node2D"]
+script = ExtResource("1_3ohgb")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="SpawnPosition" type="Node2D" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="SpawnPosition"]
+position = Vector2(1250, 150)
+
+[node name="Marker2D2" type="Marker2D" parent="SpawnPosition"]
+position = Vector2(1250, 250)
+
+[node name="Marker2D3" type="Marker2D" parent="SpawnPosition"]
+position = Vector2(1250, 359)
+
+[node name="Marker2D4" type="Marker2D" parent="SpawnPosition"]
+position = Vector2(1250, 450)
+
+[node name="Marker2D5" type="Marker2D" parent="SpawnPosition"]
+position = Vector2(1250, 550)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

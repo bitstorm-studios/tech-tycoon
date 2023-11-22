@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=3 uid="uid://1n61lo7nd7ba"]
+
+[ext_resource type="Script" path="res://scripts/laser.gd" id="1_swpx2"]
+[ext_resource type="Texture2D" uid="uid://c84v06f0rwj13" path="res://assets/png/Lasers/laserBlue01.png" id="2_6r1wt"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j7f1n"]
+radius = 3.0
+height = 54.0
+
+[sub_resource type="Gradient" id="Gradient_t1l2j"]
+offsets = PackedFloat32Array(0.386139, 1)
+colors = PackedColorArray(0.682641, 1, 0.97646, 1, 0.463688, 0.472853, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_maadi"]
+gradient = SubResource("Gradient_t1l2j")
+
+[sub_resource type="Curve" id="Curve_vxbo5"]
+_data = [Vector2(0, 0.496933), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_08t4e"]
+curve = SubResource("Curve_vxbo5")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8is40"]
+particle_flag_disable_z = true
+spread = 0.0
+gravity = Vector3(50, 0, 0)
+initial_velocity_min = 400.0
+initial_velocity_max = 400.0
+angular_velocity_min = -360.0
+angular_velocity_max = 360.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_min = 2.0
+scale_max = 3.0
+scale_curve = SubResource("CurveTexture_08t4e")
+color_ramp = SubResource("GradientTexture1D_maadi")
+
+[node name="Laser" type="Area2D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_swpx2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(27, 0)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_j7f1n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(27, 0)
+rotation = 1.5708
+texture = ExtResource("2_6r1wt")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-35, 0)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+z_index = -1
+position = Vector2(27, 0)
+process_material = SubResource("ParticleProcessMaterial_8is40")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
