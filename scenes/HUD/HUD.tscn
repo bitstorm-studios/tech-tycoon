@@ -1,0 +1,78 @@
+[gd_scene load_steps=9 format=3 uid="uid://byjgi1w5nus31"]
+
+[ext_resource type="Texture2D" uid="uid://cy3m71hq8pjdc" path="res://assets/pause.png" id="1_igtv7"]
+[ext_resource type="Texture2D" uid="uid://cegnmgqxpy1xo" path="res://assets/carrinho.png" id="2_wvgpj"]
+[ext_resource type="Texture2D" uid="uid://dsnl43jrdysqa" path="res://assets/moeda.png" id="3_6y7p0"]
+[ext_resource type="Texture2D" uid="uid://cfukvw3qdwak4" path="res://assets/coroa.png" id="4_ol4je"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uq2gs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xp4lf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xa6d4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6rrkx"]
+
+[node name="Store" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Pause" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 53.0
+offset_bottom = 51.0
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_uq2gs")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xp4lf")
+icon = ExtResource("1_igtv7")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Store" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1029.0
+offset_top = 547.0
+offset_right = 1152.0
+offset_bottom = 649.0
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_xa6d4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6rrkx")
+icon = ExtResource("2_wvgpj")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Stats" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 998.0
+offset_top = 3.0
+offset_right = 1146.0
+offset_bottom = 43.0
+
+[node name="Money" type="HBoxContainer" parent="Stats"]
+layout_mode = 2
+
+[node name="MoneyIcon" type="TextureRect" parent="Stats/Money"]
+layout_mode = 2
+texture = ExtResource("3_6y7p0")
+expand_mode = 2
+
+[node name="MoneyValue" type="Label" parent="Stats/Money"]
+layout_mode = 2
+text = "000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Reputation" type="HBoxContainer" parent="Stats"]
+layout_mode = 2
+
+[node name="ReputationIcon" type="TextureRect" parent="Stats/Reputation"]
+layout_mode = 2
+texture = ExtResource("4_ol4je")
+expand_mode = 2
+
+[node name="ReputationValue" type="Label" parent="Stats/Reputation"]
+layout_mode = 2
+text = "000"
+horizontal_alignment = 1
+vertical_alignment = 1
