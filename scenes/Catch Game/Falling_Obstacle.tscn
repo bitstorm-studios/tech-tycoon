@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c8h3qp7e4wjn2"]
 
-[ext_resource type="Script" path="res://scripts/FallingObstacle.gd" id="1_fsl2l"]
-[ext_resource type="Texture2D" uid="uid://prdnv43h8yly" path="res://assets/icon.svg" id="1_hck5u"]
+[ext_resource type="Script" path="res://scripts/Catch Game/FallingObstacle.gd" id="1_fsl2l"]
+[ext_resource type="Texture2D" uid="uid://prdnv43h8yly" path="res://assets/Catch Game/icon.svg" id="1_hck5u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oyd40"]
 size = Vector2(64, 64)

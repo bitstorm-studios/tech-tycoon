@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c6oppqtldfxte"]
 
-[ext_resource type="Script" path="res://scripts/Player.gd" id="1_naaxr"]
-[ext_resource type="Texture2D" uid="uid://prdnv43h8yly" path="res://assets/icon.svg" id="2_td75i"]
+[ext_resource type="Script" path="res://scripts/Catch Game/Player.gd" id="1_naaxr"]
+[ext_resource type="Texture2D" uid="uid://prdnv43h8yly" path="res://assets/Catch Game/icon.svg" id="2_td75i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5qqr2"]
 size = Vector2(128, 20)

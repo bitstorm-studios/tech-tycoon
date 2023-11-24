@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://jy0ln45squ63"
-path="res://.godot/imported/wingGreen_1.png-893a149ff9eb13698ea3ae20049e8b13.ctex"
+path="res://.godot/imported/wingGreen_1.png-9f4ec9e046b26d0e30e01cba199aaf29.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/png/Parts/wingGreen_1.png"
-dest_files=["res://.godot/imported/wingGreen_1.png-893a149ff9eb13698ea3ae20049e8b13.ctex"]
+source_file="res://assets/Space Shooter/png/Parts/wingGreen_1.png"
+dest_files=["res://.godot/imported/wingGreen_1.png-9f4ec9e046b26d0e30e01cba199aaf29.ctex"]
 
 [params]
 

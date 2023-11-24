@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://n37007oy2v8d"
-path="res://.godot/imported/things_bronze.png-aa313c9f87ffbc0746fb876f7d3dce7c.ctex"
+path="res://.godot/imported/things_bronze.png-e62d04b916a22a177230102fc4df3721.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/png/Power-ups/things_bronze.png"
-dest_files=["res://.godot/imported/things_bronze.png-aa313c9f87ffbc0746fb876f7d3dce7c.ctex"]
+source_file="res://assets/Space Shooter/png/Power-ups/things_bronze.png"
+dest_files=["res://.godot/imported/things_bronze.png-e62d04b916a22a177230102fc4df3721.ctex"]
 
 [params]
 

@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://c62mn2mpm6gs8"]
 
-[ext_resource type="Script" path="res://scripts/Background.gd" id="1_v1lpv"]
-[ext_resource type="PackedScene" uid="uid://c6oppqtldfxte" path="res://scenes/Player.tscn" id="3_t70lp"]
-[ext_resource type="Script" path="res://scripts/Points.gd" id="4_43nuu"]
-[ext_resource type="FontFile" uid="uid://4miq0wwwk4mu" path="res://assets/font/kenney-blocks.ttf" id="4_i0h6t"]
+[ext_resource type="Script" path="res://scripts/Catch Game/Background.gd" id="1_v1lpv"]
+[ext_resource type="PackedScene" uid="uid://c6oppqtldfxte" path="res://scenes/Catch Game/Player.tscn" id="3_t70lp"]
+[ext_resource type="Script" path="res://scripts/Catch Game/Points.gd" id="4_43nuu"]
+[ext_resource type="FontFile" uid="uid://4miq0wwwk4mu" path="res://assets/Catch Game/font/kenney-blocks.ttf" id="4_i0h6t"]
 
 [sub_resource type="Gradient" id="Gradient_sdec7"]
 colors = PackedColorArray(0.389287, 0.389287, 0.389287, 1, 0.517184, 0.517184, 0.517184, 1)

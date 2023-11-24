@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bjew2rm7dktex"
-path="res://.godot/imported/star_bronze.png-43ea29f4f103b8363ad9f17e8c079f8b.ctex"
+path="res://.godot/imported/star_bronze.png-f309a777a790487de87c9b5b2ebc6bd5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/png/Power-ups/star_bronze.png"
-dest_files=["res://.godot/imported/star_bronze.png-43ea29f4f103b8363ad9f17e8c079f8b.ctex"]
+source_file="res://assets/Space Shooter/png/Power-ups/star_bronze.png"
+dest_files=["res://.godot/imported/star_bronze.png-f309a777a790487de87c9b5b2ebc6bd5.ctex"]
 
 [params]
 

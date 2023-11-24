@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b88cgvjm24rnt"
-path="res://.godot/imported/engine1.png-38f5f0b2114d584db0c15b33b41a4c0b.ctex"
+path="res://.godot/imported/engine1.png-4a23aff31f496f6253850c01bf77f2e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/png/Parts/engine1.png"
-dest_files=["res://.godot/imported/engine1.png-38f5f0b2114d584db0c15b33b41a4c0b.ctex"]
+source_file="res://assets/Space Shooter/png/Parts/engine1.png"
+dest_files=["res://.godot/imported/engine1.png-4a23aff31f496f6253850c01bf77f2e6.ctex"]
 
 [params]
 

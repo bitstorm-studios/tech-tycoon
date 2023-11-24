@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cl8c5p02838u1"]
 
-[ext_resource type="Script" path="res://scripts/GameOverUI.gd" id="1_14inv"]
-[ext_resource type="FontFile" uid="uid://c1kp42ykltgal" path="res://assets/font/Kenney Blocks.ttf" id="2_dwsmx"]
+[ext_resource type="Script" path="res://scripts/Space Shooter/GameOverUI.gd" id="1_14inv"]
+[ext_resource type="FontFile" uid="uid://c1kp42ykltgal" path="res://assets/Space Shooter/font/Kenney Blocks.ttf" id="2_dwsmx"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ks3to"]
 font = ExtResource("2_dwsmx")

@@ -5,7 +5,7 @@ signal took_damage
 @export var speed :int = 350
 @onready var laser_container = $LaserContainer # a cena so podera carregar apos o lasercontainer carregar 
 
-var laser_scene :PackedScene = preload("res://scenes/laser.tscn")
+var laser_scene :PackedScene = preload("res://scenes/Space Shooter/laser.tscn")
 var can_i_shoot = true # variavel para impedir tiros sequenciais infinitos
 
 func _ready():

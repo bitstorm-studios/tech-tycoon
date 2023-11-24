@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://e241vs7drwme"
-path="res://.godot/imported/sfx_laser2.wav-a9b3ed3b9dd7e84862322c92c5e067e3.sample"
+path="res://.godot/imported/sfx_laser2.wav-316704387c653a5532ec015eed095aba.sample"
 
 [deps]
 
-source_file="res://assets/audio/sfx_laser2.wav"
-dest_files=["res://.godot/imported/sfx_laser2.wav-a9b3ed3b9dd7e84862322c92c5e067e3.sample"]
+source_file="res://assets/Space Shooter/audio/sfx_laser2.wav"
+dest_files=["res://.godot/imported/sfx_laser2.wav-316704387c653a5532ec015eed095aba.sample"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://chsk6orew3ucj"
-path="res://.godot/imported/playerShip3_red.png-ae90981f655a8c46c0ecb7bedcc21766.ctex"
+path="res://.godot/imported/playerShip3_red.png-3d9fe1d976a829fa2fccd3ffc600a328.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/png/playerShip3_red.png"
-dest_files=["res://.godot/imported/playerShip3_red.png-ae90981f655a8c46c0ecb7bedcc21766.ctex"]
+source_file="res://assets/Space Shooter/png/playerShip3_red.png"
+dest_files=["res://.godot/imported/playerShip3_red.png-3d9fe1d976a829fa2fccd3ffc600a328.ctex"]
 
 [params]
 

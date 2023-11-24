@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://b4ivgos0w0uin"]
 
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_usj23"]
-[ext_resource type="Texture2D" uid="uid://c3yo3fvnyqb1u" path="res://assets/png/playerShip2_green.png" id="2_tlael"]
-[ext_resource type="AudioStream" uid="uid://e241vs7drwme" path="res://assets/audio/sfx_laser2.wav" id="3_h20vj"]
+[ext_resource type="Script" path="res://scripts/Space Shooter/player.gd" id="1_usj23"]
+[ext_resource type="Texture2D" uid="uid://c3yo3fvnyqb1u" path="res://assets/Space Shooter/png/playerShip2_green.png" id="2_tlael"]
+[ext_resource type="AudioStream" uid="uid://e241vs7drwme" path="res://assets/Space Shooter/audio/sfx_laser2.wav" id="3_h20vj"]
 
 [sub_resource type="Gradient" id="Gradient_o485c"]
 colors = PackedColorArray(1, 0.878333, 0.27, 1, 0.4, 1, 1, 1)

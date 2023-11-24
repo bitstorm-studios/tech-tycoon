@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bhmk5tc31hfyo"]
 
-[ext_resource type="Script" path="res://scripts/spawn_container.gd" id="1_3ohgb"]
+[ext_resource type="Script" path="res://scripts/Space Shooter/spawn_container.gd" id="1_3ohgb"]
 
 [node name="SpawnContainer" type="Node2D"]
 script = ExtResource("1_3ohgb")

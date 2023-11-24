@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cq3teyhblfej8"
-path="res://.godot/imported/enemyBlack1.png-684836147d76ad39b01f4c7b5fc84ef2.ctex"
+path="res://.godot/imported/enemyBlack1.png-f114b77ff95bc8866bddbf5e6b6d2f13.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/png/Enemies/enemyBlack1.png"
-dest_files=["res://.godot/imported/enemyBlack1.png-684836147d76ad39b01f4c7b5fc84ef2.ctex"]
+source_file="res://assets/Space Shooter/png/Enemies/enemyBlack1.png"
+dest_files=["res://.godot/imported/enemyBlack1.png-f114b77ff95bc8866bddbf5e6b6d2f13.ctex"]
 
 [params]
 

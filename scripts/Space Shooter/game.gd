@@ -6,7 +6,7 @@ extends Node2D
 
 var player_points: int
 var player_lifes: int
-var game_over_scene = preload("res://scenes/game_over_ui.tscn")
+var game_over_scene = preload("res://scenes/Space Shooter/game_over_ui.tscn")
 
 func _ready():
 	player_lifes = 3

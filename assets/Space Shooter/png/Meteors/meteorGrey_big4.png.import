@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5r42xr3vupcg"
-path="res://.godot/imported/meteorGrey_big4.png-ad88ebf74bfbca8fda87f85a14b7a318.ctex"
+path="res://.godot/imported/meteorGrey_big4.png-c4525221c0189abb06bf10ed8fa85120.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/png/Meteors/meteorGrey_big4.png"
-dest_files=["res://.godot/imported/meteorGrey_big4.png-ad88ebf74bfbca8fda87f85a14b7a318.ctex"]
+source_file="res://assets/Space Shooter/png/Meteors/meteorGrey_big4.png"
+dest_files=["res://.godot/imported/meteorGrey_big4.png-c4525221c0189abb06bf10ed8fa85120.ctex"]
 
 [params]
 

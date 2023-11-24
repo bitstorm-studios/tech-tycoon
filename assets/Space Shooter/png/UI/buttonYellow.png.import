@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://7php1sb1ojx5"
-path="res://.godot/imported/buttonYellow.png-3804aee5641d427f45887c5d429e8d04.ctex"
+path="res://.godot/imported/buttonYellow.png-c7752c3fbfa7ce3d7ffc587b68d2fda0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/png/UI/buttonYellow.png"
-dest_files=["res://.godot/imported/buttonYellow.png-3804aee5641d427f45887c5d429e8d04.ctex"]
+source_file="res://assets/Space Shooter/png/UI/buttonYellow.png"
+dest_files=["res://.godot/imported/buttonYellow.png-c7752c3fbfa7ce3d7ffc587b68d2fda0.ctex"]
 
 [params]
 

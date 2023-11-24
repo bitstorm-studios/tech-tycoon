@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://di7fkwtmce7xw"
-path="res://.godot/imported/playerLife1_orange.png-cac7ee60c2cc4a409d18c9df352b4185.ctex"
+path="res://.godot/imported/playerLife1_orange.png-2bec2be96c1c292c44f8b606e43f5f17.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/png/UI/playerLife1_orange.png"
-dest_files=["res://.godot/imported/playerLife1_orange.png-cac7ee60c2cc4a409d18c9df352b4185.ctex"]
+source_file="res://assets/Space Shooter/png/UI/playerLife1_orange.png"
+dest_files=["res://.godot/imported/playerLife1_orange.png-2bec2be96c1c292c44f8b606e43f5f17.ctex"]
 
 [params]
 

@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://3qneuka50jp8"]
 
-[ext_resource type="Script" path="res://scripts/ui.gd" id="1_5kc7e"]
-[ext_resource type="Texture2D" uid="uid://cvg0o5w8bfja1" path="res://assets/backgrounds/blue.png" id="1_7ea18"]
-[ext_resource type="FontFile" uid="uid://c1kp42ykltgal" path="res://assets/font/Kenney Blocks.ttf" id="2_bgvla"]
+[ext_resource type="Script" path="res://scripts/Space Shooter/ui.gd" id="1_5kc7e"]
+[ext_resource type="Texture2D" uid="uid://cvg0o5w8bfja1" path="res://assets/Space Shooter/backgrounds/blue.png" id="1_7ea18"]
+[ext_resource type="FontFile" uid="uid://c1kp42ykltgal" path="res://assets/Space Shooter/font/Kenney Blocks.ttf" id="2_bgvla"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vgjf0"]
 content_margin_left = 20.0

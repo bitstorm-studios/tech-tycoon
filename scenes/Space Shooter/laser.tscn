@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://1n61lo7nd7ba"]
 
-[ext_resource type="Script" path="res://scripts/laser.gd" id="1_swpx2"]
-[ext_resource type="Texture2D" uid="uid://c84v06f0rwj13" path="res://assets/png/Lasers/laserBlue01.png" id="2_6r1wt"]
+[ext_resource type="Script" path="res://scripts/Space Shooter/laser.gd" id="1_swpx2"]
+[ext_resource type="Texture2D" uid="uid://c84v06f0rwj13" path="res://assets/Space Shooter/png/Lasers/laserBlue01.png" id="2_6r1wt"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j7f1n"]
 radius = 3.0

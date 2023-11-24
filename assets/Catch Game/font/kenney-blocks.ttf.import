@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://4miq0wwwk4mu"
-path="res://.godot/imported/kenney-blocks.ttf-1107ced4d90d982b23354a2e51ae66fc.fontdata"
+path="res://.godot/imported/kenney-blocks.ttf-cbed75df24b516f3c01709f0f145c4df.fontdata"
 
 [deps]
 
-source_file="res://assets/font/kenney-blocks.ttf"
-dest_files=["res://.godot/imported/kenney-blocks.ttf-1107ced4d90d982b23354a2e51ae66fc.fontdata"]
+source_file="res://assets/Catch Game/font/kenney-blocks.ttf"
+dest_files=["res://.godot/imported/kenney-blocks.ttf-cbed75df24b516f3c01709f0f145c4df.fontdata"]
 
 [params]
 

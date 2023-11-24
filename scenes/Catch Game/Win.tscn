@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://boiw3we4sqx28"]
 
-[ext_resource type="FontFile" uid="uid://4miq0wwwk4mu" path="res://assets/font/kenney-blocks.ttf" id="1_c2hin"]
-[ext_resource type="Script" path="res://scripts/Win.gd" id="2_48vxn"]
+[ext_resource type="FontFile" uid="uid://4miq0wwwk4mu" path="res://assets/Catch Game/font/kenney-blocks.ttf" id="1_c2hin"]
+[ext_resource type="Script" path="res://scripts/Catch Game/Win.gd" id="2_48vxn"]
 
 [node name="Win" type="Control"]
 process_mode = 2

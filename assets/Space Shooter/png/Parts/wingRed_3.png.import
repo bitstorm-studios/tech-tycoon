@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cp5nwkln2f763"
-path="res://.godot/imported/wingRed_3.png-7cb7a5696d2ca754322408b51b1b1f20.ctex"
+path="res://.godot/imported/wingRed_3.png-d0f3682035c5dc3a355b8bb38acad838.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/png/Parts/wingRed_3.png"
-dest_files=["res://.godot/imported/wingRed_3.png-7cb7a5696d2ca754322408b51b1b1f20.ctex"]
+source_file="res://assets/Space Shooter/png/Parts/wingRed_3.png"
+dest_files=["res://.godot/imported/wingRed_3.png-d0f3682035c5dc3a355b8bb38acad838.ctex"]
 
 [params]
 

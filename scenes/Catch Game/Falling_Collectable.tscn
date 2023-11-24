@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bg0qvu2jqipbt"]
 
-[ext_resource type="Script" path="res://scripts/FallingCollectable.gd" id="1_8eeh5"]
-[ext_resource type="Texture2D" uid="uid://c4oktn7ggg45c" path="res://assets/microsoft.png" id="2_p7lyy"]
+[ext_resource type="Script" path="res://scripts/Catch Game/FallingCollectable.gd" id="1_8eeh5"]
+[ext_resource type="Texture2D" uid="uid://c4oktn7ggg45c" path="res://assets/Catch Game/microsoft.png" id="2_p7lyy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eiuox"]
 size = Vector2(32, 31)

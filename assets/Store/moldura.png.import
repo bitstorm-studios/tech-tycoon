@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bks4ehoj6l4xp"
-path="res://.godot/imported/moldura.png-de67b008d98492557b490a5d609d6bbc.ctex"
+path="res://.godot/imported/moldura.png-f5dcc9d5a717997b73b57fe572ab8b62.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/moldura.png"
-dest_files=["res://.godot/imported/moldura.png-de67b008d98492557b490a5d609d6bbc.ctex"]
+source_file="res://assets/Store/moldura.png"
+dest_files=["res://.godot/imported/moldura.png-f5dcc9d5a717997b73b57fe572ab8b62.ctex"]
 
 [params]
 

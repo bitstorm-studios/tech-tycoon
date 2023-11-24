@@ -2,7 +2,7 @@ extends Node2D
 
 signal spawn_enemy(enemy)
 @onready var spawn_positions: Node2D = $SpawnPosition
-var enemy_scene: PackedScene = preload("res://scenes/enemy.tscn")
+var enemy_scene: PackedScene = preload("res://scenes//Space Shooter/enemy.tscn")
 
 func _on_timer_timeout():
 	var spawn_position_array = spawn_positions.get_children() #armazenar tudo que esta no no spawn_positions em um array

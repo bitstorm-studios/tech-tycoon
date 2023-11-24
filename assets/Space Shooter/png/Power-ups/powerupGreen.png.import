@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dnglkwe13j8t5"
-path="res://.godot/imported/powerupGreen.png-fac84fd663fdb7fea894e7458de2272f.ctex"
+path="res://.godot/imported/powerupGreen.png-1415c50c2a6698e4d24503d0f628de91.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/png/Power-ups/powerupGreen.png"
-dest_files=["res://.godot/imported/powerupGreen.png-fac84fd663fdb7fea894e7458de2272f.ctex"]
+source_file="res://assets/Space Shooter/png/Power-ups/powerupGreen.png"
+dest_files=["res://.godot/imported/powerupGreen.png-1415c50c2a6698e4d24503d0f628de91.ctex"]
 
 [params]
 

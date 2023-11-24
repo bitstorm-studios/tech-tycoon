@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dryloe7ylvnfc"
-path="res://.godot/imported/explode.wav-cfae5cfb6a02bfb408c9d57edb8ba93d.sample"
+path="res://.godot/imported/explode.wav-b0f79bb523f470a3e22e8282c9cbdf3f.sample"
 
 [deps]
 
-source_file="res://assets/audio/explode.wav"
-dest_files=["res://.godot/imported/explode.wav-cfae5cfb6a02bfb408c9d57edb8ba93d.sample"]
+source_file="res://assets/Space Shooter/audio/explode.wav"
+dest_files=["res://.godot/imported/explode.wav-b0f79bb523f470a3e22e8282c9cbdf3f.sample"]
 
 [params]
 

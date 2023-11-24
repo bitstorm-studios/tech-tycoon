@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://8btk785u0aeo"]
 
-[ext_resource type="FontFile" uid="uid://4miq0wwwk4mu" path="res://assets/font/kenney-blocks.ttf" id="1_7uc0q"]
-[ext_resource type="Script" path="res://scripts/TryAgain.gd" id="2_to3t0"]
+[ext_resource type="FontFile" uid="uid://4miq0wwwk4mu" path="res://assets/Catch Game/font/kenney-blocks.ttf" id="1_7uc0q"]
+[ext_resource type="Script" path="res://scripts/Catch Game/TryAgain.gd" id="2_to3t0"]
 
 [node name="Lose" type="Control"]
 process_mode = 2
