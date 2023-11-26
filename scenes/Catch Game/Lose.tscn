@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://8btk785u0aeo"]
 
-[ext_resource type="FontFile" uid="uid://4miq0wwwk4mu" path="res://assets/Catch Game/font/kenney-blocks.ttf" id="1_7uc0q"]
+[ext_resource type="FontFile" uid="uid://4miq0wwwk4mu" path="res://assets/font/kenney-blocks.ttf" id="1_jwhy1"]
 [ext_resource type="Script" path="res://scripts/Catch Game/TryAgain.gd" id="2_to3t0"]
 
 [node name="Lose" type="Control"]
@@ -9,28 +9,36 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+[node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 300.0
-offset_top = 150.0
-offset_right = 1092.0
-offset_bottom = 307.0
-theme_override_fonts/normal_font = ExtResource("1_7uc0q")
-theme_override_font_sizes/normal_font_size = 90
-text = "Você perdeu"
+offset_top = 211.0
+offset_right = 1152.0
+offset_bottom = 368.0
+theme_override_fonts/font = ExtResource("1_jwhy1")
+theme_override_font_sizes/font_size = 90
+text = "VOCÊ PERDEU"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Button" type="Button" parent="."]
+[node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 0
-offset_left = 300.0
-offset_top = 392.0
-offset_right = 973.0
-offset_bottom = 537.0
-theme_override_fonts/font = ExtResource("1_7uc0q")
+offset_left = 1.0
+offset_top = 353.0
+offset_right = 1153.0
+offset_bottom = 530.0
+
+[node name="Button" type="Button" parent="CenterContainer"]
+custom_minimum_size = Vector2(700, 120)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_jwhy1")
 theme_override_font_sizes/font_size = 50
 text = "tentar novamente"
+icon_alignment = 1
 script = ExtResource("2_to3t0")
 
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="CenterContainer/Button" to="CenterContainer/Button" method="_on_pressed"]

@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://kvaeg7vr5u2e"]
 
-[ext_resource type="Texture2D" uid="uid://ddybta3nj3llr" path="res://assets/fundo_azul.jpeg" id="1_3area"]
-[ext_resource type="Texture2D" uid="uid://bks4ehoj6l4xp" path="res://assets/moldura.png" id="2_1hl7o"]
-[ext_resource type="Texture2D" uid="uid://bjeixepm1w65a" path="res://assets/fundo_caixa.jpg" id="3_jsjfs"]
-[ext_resource type="Script" path="res://scripts/Button.gd" id="4_oolmj"]
+[ext_resource type="Texture2D" uid="uid://ddybta3nj3llr" path="res://assets/Store/fundo_azul.jpeg" id="1_3area"]
+[ext_resource type="Texture2D" uid="uid://bks4ehoj6l4xp" path="res://assets/Store/moldura.png" id="2_1hl7o"]
+[ext_resource type="Texture2D" uid="uid://bjeixepm1w65a" path="res://assets/Store/fundo_caixa.jpg" id="3_jsjfs"]
+[ext_resource type="Script" path="res://scripts/Store/Button.gd" id="4_oolmj"]
 
 [node name="Store" type="Node2D"]
 

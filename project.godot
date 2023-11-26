@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Store"
-run/main_scene="res://scenes/store.tscn"
+config/name="Tech Tycoon"
+run/main_scene="res://scenes/HUD/HUD.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 

@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://njokdodwft5r"]
+
+[ext_resource type="FontFile" uid="uid://4miq0wwwk4mu" path="res://assets/font/kenney-blocks.ttf" id="1_q6giw"]
+[ext_resource type="Script" path="res://scripts/HUD/Unpause.gd" id="2_qskja"]
+
+[node name="Pause" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_fonts/font = ExtResource("1_q6giw")
+theme_override_font_sizes/font_size = 90
+text = "JOGO PAUSADO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 339.0
+offset_top = 431.0
+offset_right = 835.0
+offset_bottom = 568.0
+theme_override_fonts/font = ExtResource("1_q6giw")
+theme_override_font_sizes/font_size = 50
+text = "RETORNAR"
+script = ExtResource("2_qskja")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://byjgi1w5nus31"]
+[gd_scene load_steps=11 format=3 uid="uid://byjgi1w5nus31"]
 
-[ext_resource type="Texture2D" uid="uid://cy3m71hq8pjdc" path="res://assets/pause.png" id="1_igtv7"]
-[ext_resource type="Texture2D" uid="uid://cegnmgqxpy1xo" path="res://assets/carrinho.png" id="2_wvgpj"]
-[ext_resource type="Texture2D" uid="uid://dsnl43jrdysqa" path="res://assets/moeda.png" id="3_6y7p0"]
-[ext_resource type="Texture2D" uid="uid://cfukvw3qdwak4" path="res://assets/coroa.png" id="4_ol4je"]
+[ext_resource type="Texture2D" uid="uid://r5h6x53jj64i" path="res://assets/HUD/pause.png" id="1_igtv7"]
+[ext_resource type="Script" path="res://scripts/HUD/Pause.gd" id="2_7mnlp"]
+[ext_resource type="Texture2D" uid="uid://dtdmonf1j7bj1" path="res://assets/HUD/carrinho.png" id="2_wvgpj"]
+[ext_resource type="Texture2D" uid="uid://cosw4jf8dnclc" path="res://assets/HUD/moeda.png" id="3_6y7p0"]
+[ext_resource type="Script" path="res://scripts/Store/OpenStore.gd" id="4_7i1m5"]
+[ext_resource type="Texture2D" uid="uid://oklgrypyhxs" path="res://assets/HUD/coroa.png" id="4_ol4je"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uq2gs"]
 
@@ -13,7 +15,8 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6rrkx"]
 
-[node name="Store" type="Control"]
+[node name="HUD" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 0
 
@@ -28,6 +31,7 @@ icon = ExtResource("1_igtv7")
 flat = true
 icon_alignment = 1
 expand_icon = true
+script = ExtResource("2_7mnlp")
 
 [node name="Store" type="Button" parent="."]
 layout_mode = 0
@@ -41,6 +45,7 @@ icon = ExtResource("2_wvgpj")
 flat = true
 icon_alignment = 1
 expand_icon = true
+script = ExtResource("4_7i1m5")
 
 [node name="Stats" type="HBoxContainer" parent="."]
 layout_mode = 0
@@ -76,3 +81,6 @@ layout_mode = 2
 text = "000"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="pressed" from="Pause" to="Pause" method="_on_pressed"]
+[connection signal="pressed" from="Store" to="Store" method="_on_pressed"]
