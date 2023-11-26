@@ -1,18 +1,60 @@
-[gd_scene load_steps=4 format=3 uid="uid://c6oppqtldfxte"]
+[gd_scene load_steps=9 format=3 uid="uid://c6oppqtldfxte"]
 
 [ext_resource type="Script" path="res://scripts/Catch Game/Player.gd" id="1_naaxr"]
-[ext_resource type="Texture2D" uid="uid://prdnv43h8yly" path="res://assets/Catch Game/icon.svg" id="2_td75i"]
+[ext_resource type="Texture2D" uid="uid://os3sf0j3oav1" path="res://assets/Catch Game/cesta do pegue.png" id="2_lywjx"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5qqr2"]
-size = Vector2(128, 20)
+[sub_resource type="AtlasTexture" id="AtlasTexture_q018n"]
+atlas = ExtResource("2_lywjx")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qixl1"]
+atlas = ExtResource("2_lywjx")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ohcdc"]
+atlas = ExtResource("2_lywjx")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_437wj"]
+atlas = ExtResource("2_lywjx")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p82pv"]
+atlas = ExtResource("2_lywjx")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ovhg2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q018n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qixl1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ohcdc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_437wj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p82pv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_naaxr")
 
-[node name="PlayerSprite" type="Sprite2D" parent="."]
-position = Vector2(0, 578)
-texture = ExtResource("2_td75i")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_ovhg2")
+autoplay = "default"
+frame_progress = 0.413373
 
-[node name="PlayerClision" type="CollisionShape2D" parent="."]
-position = Vector2(0, 524)
-shape = SubResource("RectangleShape2D_5qqr2")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+build_mode = 1
+polygon = PackedVector2Array(32, 2, 32, 18, 26, 30, 22, 32, -22, 32, -26, 30, -32, 18, -32, 2, -26, 2, -26, 4, 26, 4, 26, 2)

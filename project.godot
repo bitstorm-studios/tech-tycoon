@@ -22,3 +22,8 @@ project/assembly_name="Store"
 [filesystem]
 
 import/blender/enabled=false
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+textures/decals/filter=0

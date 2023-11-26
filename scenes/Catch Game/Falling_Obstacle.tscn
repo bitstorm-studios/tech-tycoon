@@ -1,22 +1,49 @@
-[gd_scene load_steps=4 format=3 uid="uid://c8h3qp7e4wjn2"]
+[gd_scene load_steps=8 format=3 uid="uid://c8h3qp7e4wjn2"]
 
 [ext_resource type="Script" path="res://scripts/Catch Game/FallingObstacle.gd" id="1_fsl2l"]
-[ext_resource type="Texture2D" uid="uid://prdnv43h8yly" path="res://assets/Catch Game/icon.svg" id="1_hck5u"]
+[ext_resource type="Texture2D" uid="uid://bxmdu1omgpvvk" path="res://assets/Catch Game/naopegue.png" id="2_b70ow"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mqgb8"]
+atlas = ExtResource("2_b70ow")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i2ayq"]
+atlas = ExtResource("2_b70ow")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g54j0"]
+atlas = ExtResource("2_b70ow")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wx6u4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mqgb8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i2ayq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g54j0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oyd40"]
-size = Vector2(64, 64)
 
 [node name="Falling_Obstacle" type="Area2D"]
 script = ExtResource("1_fsl2l")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(32, 32)
-rotation = 3.14159
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_hck5u")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_wx6u4")
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(32, 32)
+scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_oyd40")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]

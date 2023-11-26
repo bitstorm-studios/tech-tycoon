@@ -22,7 +22,7 @@ texture = SubResource("GradientTexture2D_3f34w")
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Player" parent="." instance=ExtResource("3_t70lp")]
-position = Vector2(623, 70)
+position = Vector2(552, 615)
 
 [node name="HUD" type="Control" parent="."]
 process_mode = 2

@@ -12,7 +12,7 @@ func _ready():
 	var screen_size = get_viewport_rect().size
 	print(screen_size)
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	velocity = Vector2.ZERO # [0,0] zera os vectors em x e y
 	if Input.is_key_pressed(KEY_W):
 		velocity.y = -speed

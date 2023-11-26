@@ -15,7 +15,7 @@ func die():
 	emit_signal("give_points", points)
 	queue_free()
 
-func _on_area_entered(area):
+func _on_area_entered(_area):
 	die()
 
 func _on_body_entered(body):

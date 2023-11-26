@@ -4,7 +4,7 @@ var collectable_scene: PackedScene = preload("res://scenes/Catch Game/Falling_Co
 var obstacle_scene: PackedScene = preload("res://scenes/Catch Game/Falling_Obstacle.tscn")
 var win_scene: PackedScene = preload("res://scenes/Catch Game/Win.tscn")
 var lose_scene:PackedScene = preload("res://scenes/Catch Game/Lose.tscn")
-var interval = 0.8
+var interval = 0.5
 var player_points = 0
 var player_life = 3
 
