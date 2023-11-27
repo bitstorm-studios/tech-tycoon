@@ -1,4 +1,5 @@
 extends Button
 
 func _on_pressed():
-	get_tree().get_root().remove_child(res://scenes/HUD/Pause.tscn))
+	var pause_scene = get_node("/root/Pause")
+	pause_scene.queue_free()

@@ -5,3 +5,4 @@
 [node name="Game" type="Node2D"]
 
 [node name="HUD" parent="." instance=ExtResource("1_wup74")]
+metadata/_edit_use_anchors_ = true
