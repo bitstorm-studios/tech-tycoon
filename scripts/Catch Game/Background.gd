@@ -1,10 +1,10 @@
 extends Node2D
 
-var collectable_scene: PackedScene = preload("res://scenes/Falling_Collectable.tscn")
-var obstacle_scene: PackedScene = preload("res://scenes/Falling_Obstacle.tscn")
-var win_scene: PackedScene = preload("res://scenes/Win.tscn")
-var lose_scene:PackedScene = preload("res://scenes/Lose.tscn")
-var interval = 0.8
+var collectable_scene: PackedScene = preload("res://scenes/Catch Game/Falling_Collectable.tscn")
+var obstacle_scene: PackedScene = preload("res://scenes/Catch Game/Falling_Obstacle.tscn")
+var win_scene: PackedScene = preload("res://scenes/Catch Game/Win.tscn")
+var lose_scene:PackedScene = preload("res://scenes/Catch Game/Lose.tscn")
+var interval = 0.5
 var player_points = 0
 var player_life = 3
 

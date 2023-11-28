@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://boiw3we4sqx28"]
 
-[ext_resource type="FontFile" uid="uid://4miq0wwwk4mu" path="res://assets/font/kenney-blocks.ttf" id="1_c2hin"]
-[ext_resource type="Script" path="res://scripts/Win.gd" id="2_48vxn"]
+[ext_resource type="FontFile" uid="uid://4miq0wwwk4mu" path="res://assets/font/kenney-blocks.ttf" id="1_f6pkb"]
+[ext_resource type="Script" path="res://scripts/Catch Game/Win.gd" id="2_48vxn"]
 
 [node name="Win" type="Control"]
 process_mode = 2
@@ -12,37 +12,32 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 365.0
-offset_top = 84.0
-offset_right = 972.0
-offset_bottom = 225.0
-theme_override_fonts/normal_font = ExtResource("1_c2hin")
-theme_override_font_sizes/normal_font_size = 90
-bbcode_enabled = true
-text = "PARABÉNS "
+offset_top = 113.0
+offset_right = 1152.0
+offset_bottom = 391.0
+theme_override_fonts/font = ExtResource("1_f6pkb")
+theme_override_font_sizes/font_size = 90
+text = "PARABÉNS
+VOCÊ VENCEU "
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+[node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 0
-offset_left = 279.0
-offset_top = 204.0
-offset_right = 1071.0
-offset_bottom = 424.0
-theme_override_fonts/normal_font = ExtResource("1_c2hin")
-theme_override_font_sizes/normal_font_size = 90
-text = "VOCÊ VENCEU"
+offset_left = -1.0
+offset_top = 386.0
+offset_right = 1151.0
+offset_bottom = 559.0
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="CenterContainer"]
 process_mode = 2
-layout_mode = 0
-offset_left = 438.0
-offset_top = 455.0
-offset_right = 832.0
-offset_bottom = 591.0
-theme_override_fonts/font = ExtResource("1_c2hin")
+custom_minimum_size = Vector2(400, 120)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_f6pkb")
 theme_override_font_sizes/font_size = 50
 text = "CONCLUIR"
 script = ExtResource("2_48vxn")
 
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="CenterContainer/Button" to="CenterContainer/Button" method="_on_pressed"]

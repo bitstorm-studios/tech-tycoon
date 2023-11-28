@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://c62mn2mpm6gs8"]
 
-[ext_resource type="Script" path="res://scripts/Background.gd" id="1_v1lpv"]
-[ext_resource type="PackedScene" uid="uid://c6oppqtldfxte" path="res://scenes/Player.tscn" id="3_t70lp"]
-[ext_resource type="Script" path="res://scripts/Points.gd" id="4_43nuu"]
-[ext_resource type="FontFile" uid="uid://4miq0wwwk4mu" path="res://assets/font/kenney-blocks.ttf" id="4_i0h6t"]
+[ext_resource type="Script" path="res://scripts/Catch Game/Background.gd" id="1_v1lpv"]
+[ext_resource type="PackedScene" uid="uid://c6oppqtldfxte" path="res://scenes/Catch Game/Player.tscn" id="3_t70lp"]
+[ext_resource type="FontFile" uid="uid://4miq0wwwk4mu" path="res://assets/font/kenney-blocks.ttf" id="4_0es6w"]
+[ext_resource type="Script" path="res://scripts/Catch Game/Points.gd" id="4_43nuu"]
 
 [sub_resource type="Gradient" id="Gradient_sdec7"]
 colors = PackedColorArray(0.389287, 0.389287, 0.389287, 1, 0.517184, 0.517184, 0.517184, 1)
@@ -22,7 +22,7 @@ texture = SubResource("GradientTexture2D_3f34w")
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Player" parent="." instance=ExtResource("3_t70lp")]
-position = Vector2(623, 70)
+position = Vector2(552, 615)
 
 [node name="HUD" type="Control" parent="."]
 process_mode = 2
@@ -38,7 +38,7 @@ offset_left = 14.0
 offset_top = 1.0
 offset_right = 344.0
 offset_bottom = 76.0
-theme_override_fonts/font = ExtResource("4_i0h6t")
+theme_override_fonts/font = ExtResource("4_0es6w")
 theme_override_font_sizes/font_size = 30
 text = "Pontuação: 0/10"
 vertical_alignment = 1
@@ -49,7 +49,7 @@ offset_left = 391.0
 offset_top = -1.0
 offset_right = 612.0
 offset_bottom = 76.0
-theme_override_fonts/font = ExtResource("4_i0h6t")
+theme_override_fonts/font = ExtResource("4_0es6w")
 theme_override_font_sizes/font_size = 30
 text = "Vida: 3/3"
 vertical_alignment = 1

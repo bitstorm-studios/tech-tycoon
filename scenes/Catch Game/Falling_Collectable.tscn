@@ -1,22 +1,53 @@
-[gd_scene load_steps=4 format=3 uid="uid://bg0qvu2jqipbt"]
+[gd_scene load_steps=8 format=3 uid="uid://bg0qvu2jqipbt"]
 
-[ext_resource type="Script" path="res://scripts/FallingCollectable.gd" id="1_8eeh5"]
-[ext_resource type="Texture2D" uid="uid://c4oktn7ggg45c" path="res://assets/microsoft.png" id="2_p7lyy"]
+[ext_resource type="Script" path="res://scripts/Catch Game/FallingCollectable.gd" id="1_8eeh5"]
+[ext_resource type="Texture2D" uid="uid://ckq4cwf33orbq" path="res://assets/Catch Game/pegue.png" id="2_8wnav"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_eiuox"]
-size = Vector2(32, 31)
+[sub_resource type="AtlasTexture" id="AtlasTexture_jfcx6"]
+atlas = ExtResource("2_8wnav")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qgvh1"]
+atlas = ExtResource("2_8wnav")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8r2jo"]
+atlas = ExtResource("2_8wnav")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0yth0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jfcx6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qgvh1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8r2jo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2jobs"]
+size = Vector2(52, 44)
 
 [node name="FallingObject" type="Area2D"]
 script = ExtResource("1_8eeh5")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.021, 0.02)
-texture = ExtResource("2_p7lyy")
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_0yth0")
+autoplay = "default"
+frame_progress = 0.448707
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_eiuox")
-
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+shape = SubResource("RectangleShape2D_2jobs")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

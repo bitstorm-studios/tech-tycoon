@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://prdnv43h8yly"
-path="res://.godot/imported/icon.svg-56083ea2a1f1a4f1e49773bdc6d7826c.ctex"
+path="res://.godot/imported/icon.svg-075387cdcd74352f4ddcb48a752ad511.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icon.svg"
-dest_files=["res://.godot/imported/icon.svg-56083ea2a1f1a4f1e49773bdc6d7826c.ctex"]
+source_file="res://assets/Catch Game/icon.svg"
+dest_files=["res://.godot/imported/icon.svg-075387cdcd74352f4ddcb48a752ad511.ctex"]
 
 [params]
 

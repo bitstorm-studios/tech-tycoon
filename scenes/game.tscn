@@ -1,3 +1,8 @@
-[gd_scene format=3 uid="uid://bknm3op2klp5c"]
+[gd_scene load_steps=2 format=3 uid="uid://bknm3op2klp5c"]
+
+[ext_resource type="PackedScene" uid="uid://byjgi1w5nus31" path="res://scenes/HUD/HUD.tscn" id="1_wup74"]
 
 [node name="Game" type="Node2D"]
+
+[node name="HUD" parent="." instance=ExtResource("1_wup74")]
+metadata/_edit_use_anchors_ = true
