@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://byjgi1w5nus31"]
+[gd_scene load_steps=12 format=3 uid="uid://byjgi1w5nus31"]
 
 [ext_resource type="Texture2D" uid="uid://r5h6x53jj64i" path="res://assets/HUD/pause.png" id="1_igtv7"]
 [ext_resource type="Script" path="res://scripts/HUD/Pause.gd" id="2_7mnlp"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cosw4jf8dnclc" path="res://assets/HUD/moeda.png" id="3_6y7p0"]
 [ext_resource type="Script" path="res://scripts/Store/OpenStore.gd" id="4_7i1m5"]
 [ext_resource type="Texture2D" uid="uid://oklgrypyhxs" path="res://assets/HUD/coroa.png" id="4_ol4je"]
+[ext_resource type="Script" path="res://scripts/HUD/Service_accept.gd" id="7_gnayc"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uq2gs"]
 
@@ -82,5 +83,15 @@ text = "000"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="ServiceAccept" type="Button" parent="."]
+layout_mode = 0
+offset_left = 495.0
+offset_top = 277.0
+offset_right = 686.0
+offset_bottom = 351.0
+text = "Aceitar serviço"
+script = ExtResource("7_gnayc")
+
 [connection signal="pressed" from="Pause" to="Pause" method="_on_pressed"]
 [connection signal="pressed" from="Store" to="Store" method="_on_pressed"]
+[connection signal="pressed" from="ServiceAccept" to="ServiceAccept" method="_on_pressed"]

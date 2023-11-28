@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://b4ivgos0w0uin"]
 
 [ext_resource type="Script" path="res://scripts/Space Shooter/player.gd" id="1_usj23"]
-[ext_resource type="Texture2D" uid="uid://c3yo3fvnyqb1u" path="res://assets/Space Shooter/png/playerShip2_green.png" id="2_tlael"]
+[ext_resource type="Texture2D" uid="uid://b5qqiy30o3i7f" path="res://assets/Space Shooter/sprites/Awing.png" id="2_1aouy"]
 [ext_resource type="AudioStream" uid="uid://e241vs7drwme" path="res://assets/Space Shooter/audio/sfx_laser2.wav" id="3_h20vj"]
 
 [sub_resource type="Gradient" id="Gradient_o485c"]
@@ -45,17 +45,26 @@ speed = 300
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = 1.5708
-texture = ExtResource("2_tlael")
+scale = Vector2(3, 3)
+texture = ExtResource("2_1aouy")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(136.868, -28.3773)
 rotation = 1.5708
-polygon = PackedVector2Array(-2.00014, -38, -11.0001, -18, -56, 6.0002, -38.9999, 34.0001, -16.9999, 30.0001, -11.9999, 38, 11.0001, 38, 17.0001, 28.9999, 37.0001, 34.9999, 56, 5.9998, 11.9999, -17, 2.99987, -37)
+scale = Vector2(1.19134, 4.04015)
+polygon = PackedVector2Array(9.55029, 21.9962, -8.91618, 32.3919, -8.91612, 37.3422, -3.87977, 37.3422, -3.87967, 45.0151, 51.5201, 45.0151, 51.52, 37.5896, 57.3958, 37.5896, 57.3957, 32.6393, 38.929, 21.9962)
 
 [node name="LaserContainer" type="Node" parent="."]
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 z_index = -1
-position = Vector2(-38, 0)
+position = Vector2(-36, -22)
+amount = 48
+process_material = SubResource("ParticleProcessMaterial_nitd1")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="."]
+z_index = -1
+position = Vector2(-36, 22)
 amount = 48
 process_material = SubResource("ParticleProcessMaterial_nitd1")
 
