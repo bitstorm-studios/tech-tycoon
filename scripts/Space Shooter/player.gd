@@ -16,11 +16,19 @@ func _physics_process(_delta):
 	velocity = Vector2.ZERO # [0,0] zera os vectors em x e y
 	if Input.is_key_pressed(KEY_W):
 		velocity.y = -speed
+	elif Input.is_key_pressed(KEY_UP):
+		velocity.y = -speed
 	if Input.is_key_pressed(KEY_S):
+		velocity.y = speed
+	elif Input.is_key_pressed(KEY_DOWN):
 		velocity.y = speed
 	if Input.is_key_pressed(KEY_A):
 		velocity.x = -speed
+	elif Input.is_key_pressed(KEY_LEFT):
+		velocity.x = -speed
 	if Input.is_key_pressed(KEY_D):
+		velocity.x = speed
+	elif Input.is_key_pressed(KEY_RIGHT):
 		velocity.x = speed
 	move_and_slide() # nao multiplica velocity por delta pq o move_and_slide ja utiliza ela
 	

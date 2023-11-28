@@ -11,7 +11,7 @@ colors = PackedColorArray(0.389287, 0.389287, 0.389287, 1, 0.517184, 0.517184, 0
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_3f34w"]
 gradient = SubResource("Gradient_sdec7")
 
-[node name="Background" type="Node2D"]
+[node name="CatchGame" type="Node2D"]
 script = ExtResource("1_v1lpv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

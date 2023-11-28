@@ -8,8 +8,11 @@ func _physics_process(_delta):
 
 	if Input.is_key_pressed(KEY_RIGHT):
 		velocity.x += run_speed
+	elif Input.is_key_pressed(KEY_D):
+		velocity.x += run_speed
 	if Input.is_key_pressed(KEY_LEFT):
 		velocity.x -= run_speed
-		
+	elif Input.is_key_pressed(KEY_A):
+		velocity.x -= run_speed	
 	global_position.x = clamp(global_position.x, 0, screen.x)
 	move_and_slide()

@@ -1,4 +1,5 @@
 extends Button
 
 func _on_pressed():
-	get_tree().quit()
+	var node = get_node("/root/CatchGame")
+	node.queue_free()
