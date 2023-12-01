@@ -10,6 +10,8 @@ wait_time = 2.0
 autostart = true
 
 [node name="SpawnPosition" type="Node2D" parent="."]
+position = Vector2(43, 0)
+metadata/_edit_group_ = true
 
 [node name="Marker2D" type="Marker2D" parent="SpawnPosition"]
 position = Vector2(1250, 150)

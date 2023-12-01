@@ -26,8 +26,8 @@ position = Vector2(115, 337)
 motion_mirroring = Vector2(1152, 0)
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_right = 1270.0
+offset_bottom = 721.0
 texture = ExtResource("5_1k3ov")
 expand_mode = 1
 stretch_mode = 1

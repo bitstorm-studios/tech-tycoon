@@ -38,10 +38,10 @@ script = ExtResource("2_7mnlp")
 [node name="Store" type="Button" parent="."]
 process_mode = 1
 layout_mode = 0
-offset_left = 1029.0
-offset_top = 547.0
-offset_right = 1152.0
-offset_bottom = 649.0
+offset_left = 1149.0
+offset_top = 617.0
+offset_right = 1272.0
+offset_bottom = 719.0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_xa6d4")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_6rrkx")
 icon = ExtResource("2_wvgpj")
@@ -52,10 +52,11 @@ script = ExtResource("4_7i1m5")
 
 [node name="Stats" type="HBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 998.0
-offset_top = 3.0
-offset_right = 1146.0
-offset_bottom = 43.0
+offset_left = 1117.0
+offset_top = 4.0
+offset_right = 1265.0
+offset_bottom = 44.0
+metadata/_edit_group_ = true
 
 [node name="Money" type="HBoxContainer" parent="Stats"]
 layout_mode = 2
@@ -87,10 +88,10 @@ vertical_alignment = 1
 
 [node name="ServiceAccept" type="Button" parent="."]
 layout_mode = 0
-offset_left = 495.0
-offset_top = 277.0
-offset_right = 686.0
-offset_bottom = 351.0
+offset_left = 550.0
+offset_top = 334.0
+offset_right = 741.0
+offset_bottom = 408.0
 text = "Aceitar serviço"
 script = ExtResource("7_gnayc")
 

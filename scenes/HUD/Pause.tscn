@@ -14,8 +14,8 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_right = 1271.0
+offset_bottom = 724.0
 theme_override_fonts/font = ExtResource("1_q6giw")
 theme_override_font_sizes/font_size = 90
 text = "JOGO PAUSADO"
@@ -24,10 +24,10 @@ vertical_alignment = 1
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 339.0
-offset_top = 431.0
-offset_right = 835.0
-offset_bottom = 568.0
+offset_left = 377.0
+offset_top = 438.0
+offset_right = 873.0
+offset_bottom = 575.0
 theme_override_fonts/font = ExtResource("1_q6giw")
 theme_override_font_sizes/font_size = 50
 text = "RETORNAR"
