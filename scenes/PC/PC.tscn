@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://dqlh68kvkhnhe"]
+[gd_scene load_steps=6 format=3 uid="uid://dqlh68kvkhnhe"]
 
 [ext_resource type="Texture2D" uid="uid://ca2cbleiskr7w" path="res://assets/PC/Mesa.png" id="1_fjdo7"]
 [ext_resource type="Texture2D" uid="uid://bqgj77ijspc8x" path="res://assets/PC/PC.png" id="2_fk600"]
 [ext_resource type="Script" path="res://scripts/PC/PC.gd" id="3_il75m"]
 [ext_resource type="Texture2D" uid="uid://c0uotc8qe034t" path="res://assets/PC/tampa.png" id="3_okwmo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kr6no"]
 
 [node name="PC" type="Control"]
 layout_mode = 3
@@ -55,6 +57,7 @@ offset_left = 108.0
 offset_top = 142.0
 offset_right = 222.0
 offset_bottom = 255.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kr6no")
 
 [node name="RAM" type="Button" parent="Panel/PC"]
 layout_mode = 0

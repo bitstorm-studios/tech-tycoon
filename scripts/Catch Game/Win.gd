@@ -1,5 +1,6 @@
 extends Button
 
 func _on_pressed():
-	var node = get_node("/root/CatchGame")
+	get_tree().paused = false
+	var node = get_node("/root/Game/CatchGame")
 	node.queue_free()
