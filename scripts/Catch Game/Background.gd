@@ -32,7 +32,7 @@ func _on_timer_timeout():
 	
 func on_collect():
 	player_points += 1
-	if (player_points == 10):
+	if (player_points == 3):
 		get_tree().paused = true
 		var win_instance = win_scene.instantiate()
 		add_child(win_instance) 

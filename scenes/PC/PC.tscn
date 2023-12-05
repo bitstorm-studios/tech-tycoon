@@ -1,13 +1,14 @@
 [gd_scene load_steps=5 format=3 uid="uid://dqlh68kvkhnhe"]
 
+[ext_resource type="Script" path="res://scripts/PC/PC_Scene.gd" id="1_7ispj"]
 [ext_resource type="Texture2D" uid="uid://ca2cbleiskr7w" path="res://assets/PC/Mesa.png" id="1_fjdo7"]
 [ext_resource type="Texture2D" uid="uid://bqgj77ijspc8x" path="res://assets/PC/PC.png" id="2_fk600"]
-[ext_resource type="Script" path="res://scripts/PC/PC.gd" id="3_il75m"]
 [ext_resource type="Texture2D" uid="uid://c0uotc8qe034t" path="res://assets/PC/tampa.png" id="3_okwmo"]
 
 [node name="PC" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_7ispj")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -22,7 +23,6 @@ offset_right = 875.0
 offset_bottom = 518.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_group_ = true
 
 [node name="Mesa" type="TextureRect" parent="Panel"]
 layout_mode = 1
@@ -46,17 +46,15 @@ offset_top = -48.0
 offset_right = 505.0
 offset_bottom = 452.0
 texture = ExtResource("2_fk600")
-script = ExtResource("3_il75m")
-metadata/_edit_group_ = true
 
-[node name="Processador" type="Button" parent="Panel/PC"]
+[node name="Processador_button" type="Button" parent="Panel/PC"]
 layout_mode = 0
 offset_left = 108.0
 offset_top = 142.0
 offset_right = 222.0
 offset_bottom = 255.0
 
-[node name="RAM" type="Button" parent="Panel/PC"]
+[node name="RAM_button" type="Button" parent="Panel/PC"]
 layout_mode = 0
 offset_left = 278.0
 offset_top = 140.0
@@ -83,6 +81,15 @@ offset_top = 74.0
 offset_right = 523.0
 offset_bottom = 455.0
 
-[connection signal="pressed" from="Panel/PC/Processador" to="Panel/PC" method="_on_processador_pressed"]
-[connection signal="pressed" from="Panel/PC/RAM" to="Panel/PC" method="_on_ram_pressed"]
-[connection signal="pressed" from="Panel/PC/Tampa/Tampa_button" to="Panel/PC" method="_on_tampa_button_pressed"]
+[node name="Exit_PC" type="Button" parent="."]
+layout_mode = 1
+offset_left = 880.0
+offset_top = 121.0
+offset_right = 908.0
+offset_bottom = 152.0
+text = "X"
+
+[connection signal="pressed" from="Panel/PC/Processador_button" to="." method="_on_processador_button_pressed"]
+[connection signal="pressed" from="Panel/PC/RAM_button" to="." method="_on_ram_button_pressed"]
+[connection signal="pressed" from="Panel/PC/Tampa/Tampa_button" to="." method="_on_tampa_button_pressed"]
+[connection signal="pressed" from="Exit_PC" to="." method="_on_exit_pc_pressed"]
