@@ -4,12 +4,17 @@ var collectable_scene: PackedScene = preload("res://scenes/Catch Game/Falling_Co
 var obstacle_scene: PackedScene = preload("res://scenes/Catch Game/Falling_Obstacle.tscn")
 var win_scene: PackedScene = preload("res://scenes/Catch Game/Win.tscn")
 var lose_scene:PackedScene = preload("res://scenes/Catch Game/Lose.tscn")
+var player_scene:PackedScene = preload("res://scenes/Catch Game/Player.tscn")
 var interval = 0.5
 var player_points = 0
 var player_life = 3
 
 func _ready():
 	$Timer.start(interval)
+	var player_instance = player_scene.instantiate()
+	var spawn_position: Node2D = $Marker2D
+	player_instance.global_position = spawn_position.global_position
+	add_child(player_instance)
 
 func _on_timer_timeout():
 	var screen = get_viewport_rect().size 

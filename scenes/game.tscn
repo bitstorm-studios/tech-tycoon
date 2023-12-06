@@ -15,7 +15,6 @@ point_count = 3
 script = ExtResource("1_jorwv")
 
 [node name="HUD" parent="." instance=ExtResource("1_wup74")]
-metadata/_edit_use_anchors_ = true
 
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_nsd8t")

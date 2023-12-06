@@ -10,9 +10,10 @@ process_mode = 3
 script = ExtResource("1_rrb6e")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(582, 375)
+position = Vector2(641, 434)
 scale = Vector2(1.62837, 1.26461)
 texture = ExtResource("2_1hl7o")
+metadata/_edit_group_ = true
 
 [node name="ColorRect" type="ColorRect" parent="Sprite2D"]
 offset_left = -273.0
