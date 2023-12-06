@@ -25,7 +25,7 @@ script = ExtResource("1_5kc7e")
 
 [node name="BackgroundUI" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 1270.0
+offset_right = 1280.0
 offset_bottom = 80.0
 texture = ExtResource("1_7ea18")
 expand_mode = 1

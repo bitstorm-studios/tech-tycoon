@@ -10,8 +10,18 @@
 script = ExtResource("1_v1lpv")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 1270.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 80.0
+offset_right = 1280.0
 offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 texture = ExtResource("2_fwp8h")
 expand_mode = 1
 stretch_mode = 1
@@ -22,13 +32,13 @@ stretch_mode = 1
 process_mode = 2
 layout_mode = 3
 anchors_preset = 0
-offset_right = 232.0
-offset_bottom = 40.0
+offset_right = 1280.0
+offset_bottom = 80.0
 script = ExtResource("4_43nuu")
 
 [node name="BackgroundUI" type="TextureRect" parent="HUD"]
 layout_mode = 0
-offset_right = 1270.0
+offset_right = 1280.0
 offset_bottom = 80.0
 texture = ExtResource("5_fb0s7")
 expand_mode = 1
@@ -40,15 +50,18 @@ offset_right = 376.0
 offset_bottom = 80.0
 theme_override_fonts/font = ExtResource("4_0es6w")
 theme_override_font_sizes/font_size = 30
-text = "Pontuação: 0/10"
+text = "Pontuação: 0/3"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Life" type="Label" parent="HUD"]
-layout_mode = 0
-offset_left = 1036.0
-offset_right = 1270.0
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -234.0
 offset_bottom = 80.0
+grow_horizontal = 0
 theme_override_fonts/font = ExtResource("4_0es6w")
 theme_override_font_sizes/font_size = 30
 text = "Vida: 3/3"
