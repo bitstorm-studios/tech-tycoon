@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://bif42g1j1ie4o"]
+
+[ext_resource type="FontFile" uid="uid://4miq0wwwk4mu" path="res://assets/font/kenney-blocks.ttf" id="1_01grh"]
+[ext_resource type="Script" path="res://scripts/Dialog/Dialog.gd" id="1_phxrd"]
+
+[node name="Dialog" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -31.0
+offset_right = 2.0
+offset_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Text" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 451.0
+offset_top = -403.0
+offset_right = 491.0
+offset_bottom = -363.0
+script = ExtResource("1_phxrd")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Text"]
+layout_mode = 2
+offset_top = 647.0
+offset_right = 468.0
+offset_bottom = 720.0
+theme_override_fonts/normal_font = ExtResource("1_01grh")
+metadata/_edit_group_ = true
+
+[node name="Timer" type="Timer" parent="Text"]
+wait_time = 0.005
+
+[connection signal="timeout" from="Text/Timer" to="Text" method="_on_timer_timeout"]
