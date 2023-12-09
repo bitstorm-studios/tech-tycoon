@@ -1,37 +1,61 @@
-[gd_scene load_steps=3 format=3 uid="uid://bif42g1j1ie4o"]
+[gd_scene load_steps=5 format=3 uid="uid://bif42g1j1ie4o"]
 
 [ext_resource type="FontFile" uid="uid://4miq0wwwk4mu" path="res://assets/font/kenney-blocks.ttf" id="1_01grh"]
 [ext_resource type="Script" path="res://scripts/Dialog/Dialog.gd" id="1_phxrd"]
+
+[sub_resource type="Gradient" id="Gradient_0qfeg"]
+colors = PackedColorArray(0.223529, 0.113725, 0.0509804, 1, 0.223529, 0.113725, 0.0509804, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_jb2s1"]
+gradient = SubResource("Gradient_0qfeg")
 
 [node name="Dialog" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 2.0
-offset_top = -31.0
-offset_right = 2.0
-offset_bottom = -31.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Text" type="NinePatchRect" parent="."]
-layout_mode = 0
-offset_left = 451.0
-offset_top = -403.0
-offset_right = 491.0
-offset_bottom = -363.0
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.041
+anchor_bottom = 0.041
+offset_left = 397.0
+offset_top = 153.48
+offset_right = 928.0
+offset_bottom = 333.48
+texture = SubResource("GradientTexture1D_jb2s1")
 script = ExtResource("1_phxrd")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Text"]
 layout_mode = 2
-offset_top = 647.0
-offset_right = 468.0
-offset_bottom = 720.0
+offset_left = 15.0
+offset_top = 14.0
+offset_right = 515.0
+offset_bottom = 132.0
 theme_override_fonts/normal_font = ExtResource("1_01grh")
 metadata/_edit_group_ = true
 
 [node name="Timer" type="Timer" parent="Text"]
 wait_time = 0.005
 
+[node name="Buttons" type="HBoxContainer" parent="Text"]
+layout_mode = 0
+offset_left = 391.0
+offset_top = 138.0
+offset_right = 528.0
+offset_bottom = 178.0
+alignment = 1
+
+[node name="Recusar" type="Button" parent="Text/Buttons"]
+layout_mode = 2
+text = "Recusar"
+
+[node name="Aceitar" type="Button" parent="Text/Buttons"]
+layout_mode = 2
+text = "Aceitar"
+
 [connection signal="timeout" from="Text/Timer" to="Text" method="_on_timer_timeout"]
+[connection signal="pressed" from="Text/Buttons/Aceitar" to="Text" method="_on_aceitar_pressed"]
