@@ -24,9 +24,10 @@ anchors_preset = 0
 [node name="Pause" type="Button" parent="."]
 process_mode = 1
 layout_mode = 0
-offset_left = 1.0
-offset_right = 53.0
-offset_bottom = 51.0
+offset_left = 11.0
+offset_top = 11.0
+offset_right = 63.0
+offset_bottom = 62.0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_uq2gs")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_xp4lf")
 icon = ExtResource("1_igtv7")
@@ -38,10 +39,10 @@ script = ExtResource("2_7mnlp")
 [node name="Store" type="Button" parent="."]
 process_mode = 1
 layout_mode = 0
-offset_left = 1149.0
-offset_top = 617.0
-offset_right = 1272.0
-offset_bottom = 719.0
+offset_left = 1105.0
+offset_top = 400.0
+offset_right = 1268.0
+offset_bottom = 507.0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_xa6d4")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_6rrkx")
 icon = ExtResource("2_wvgpj")
@@ -52,10 +53,10 @@ script = ExtResource("4_7i1m5")
 
 [node name="Stats" type="HBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 1117.0
-offset_top = 4.0
-offset_right = 1265.0
-offset_bottom = 44.0
+offset_left = 1121.0
+offset_top = 11.0
+offset_right = 1269.0
+offset_bottom = 51.0
 metadata/_edit_group_ = true
 
 [node name="Money" type="HBoxContainer" parent="Stats"]

@@ -7,7 +7,7 @@ extends NinePatchRect
 var message = "Olá, meu computador está muito lento, quero que você formate ele e instale uma nova memória RAM."
 
 func _input(event):
-	if event is InputEventKey or InputEventMouseButton:
+	if event is InputEventMouseButton:
 		dialog.visible_characters = dialog.text.length()
 		
 func show_message():
@@ -23,7 +23,6 @@ func _on_timer_timeout():
 	dialog.visible_characters += 1
 
 func _on_aceitar_pressed():
-	print("click")
 	get_node("/root/Game/MainClient").hide()
 	get_node("/root/Game/HUD/Balcao").hide()
 	var PC_scene_instantiate = PC_scene.instantiate()
