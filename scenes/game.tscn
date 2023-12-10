@@ -1,19 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://bknm3op2klp5c"]
+[gd_scene load_steps=4 format=3 uid="uid://bknm3op2klp5c"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_jorwv"]
 [ext_resource type="PackedScene" uid="uid://byjgi1w5nus31" path="res://scenes/HUD/HUD.tscn" id="1_wup74"]
-[ext_resource type="PackedScene" uid="uid://caxf4an2mcwld" path="res://scenes/Clients/Client.tscn" id="3_lrqx4"]
 
 [sub_resource type="Curve2D" id="Curve2D_nsd8t"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -195, 506, 0, 0, 0, 0, 305, 506)
+"points": PackedVector2Array(0, 0, 0, 0, -194, 518, 0, 0, 0, 0, 387, 518, 0, 0, 0, 0, -194, 518)
 }
-point_count = 2
+point_count = 3
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_jorwv")
-
-[node name="HUD" parent="." instance=ExtResource("1_wup74")]
 
 [node name="MainClient" type="Node2D" parent="."]
 
@@ -21,19 +18,15 @@ script = ExtResource("1_jorwv")
 curve = SubResource("Curve2D_nsd8t")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="MainClient/Path2D"]
-position = Vector2(-194.96, 506)
-h_offset = 0.04
+position = Vector2(-194, 518)
+rotates = false
 loop = false
 
-[node name="Client" parent="MainClient/Path2D/PathFollow2D" instance=ExtResource("3_lrqx4")]
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = -130.04
-offset_top = -650.0
-offset_right = -130.04
-offset_bottom = -650.0
-grow_horizontal = 1
-grow_vertical = 1
+[node name="Timer" type="Timer" parent="MainClient"]
+wait_time = 2.0
+
+[node name="HUD" parent="." instance=ExtResource("1_wup74")]
 
 [node name="MainPC" type="Node2D" parent="."]
+
+[connection signal="timeout" from="MainClient/Timer" to="." method="_on_timer_timeout"]

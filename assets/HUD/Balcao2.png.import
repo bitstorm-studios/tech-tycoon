@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtdmonf1j7bj1"
-path="res://.godot/imported/carrinho.png-b8d7a4474b2357c3d8bb6a5fc2d57164.ctex"
+uid="uid://bldl0g6o34agb"
+path="res://.godot/imported/Balcao2.png-7e323fe3c0047fc75105f233c30098bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/HUD/carrinho.png"
-dest_files=["res://.godot/imported/carrinho.png-b8d7a4474b2357c3d8bb6a5fc2d57164.ctex"]
+source_file="res://assets/HUD/Balcao2.png"
+dest_files=["res://.godot/imported/Balcao2.png-7e323fe3c0047fc75105f233c30098bc.ctex"]
 
 [params]
 

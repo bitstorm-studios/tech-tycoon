@@ -24,6 +24,11 @@ func _on_timer_timeout():
 
 func _on_aceitar_pressed():
 	get_node("/root/Game/MainClient").hide()
-	get_node("/root/Game/HUD/Balcao").hide()
+	get_node("/root/Game/HUD/Will Hide").hide()
 	var PC_scene_instantiate = PC_scene.instantiate()
 	get_tree().get_root().get_node("/root/Game/MainPC").add_child(PC_scene_instantiate)
+
+
+func _on_recusar_pressed():
+	get_parent().queue_free()
+	get_node("/root/Game").set_physics_process(true)

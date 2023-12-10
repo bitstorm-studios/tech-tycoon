@@ -11,14 +11,14 @@ func _on_ram_button_pressed():
 	get_tree().get_root().get_node("/root/Game").add_child(space_shooter_scene_instantiate)
 	get_node("Panel/PC/RAM_button").disabled = true
 	get_node("/root/Game/MainPC").hide()
-	get_node("/root/Game/HUD/Store").hide()
+	get_node("/root/Game/HUD/Will Hide").hide()
 
 func _on_processador_button_pressed():
 	var catch_game_scene_instantiate = catch_game_scene.instantiate()
 	get_tree().get_root().get_node("/root/Game").add_child(catch_game_scene_instantiate)
 	get_node("Panel/PC/Processador_button").disabled = true
 	get_node("/root/Game/MainPC").hide()	
-	get_node("/root/Game/HUD/Store").hide()
+	get_node("/root/Game/HUD/Will Hide").hide()
 
 func _on_exit_pc_pressed():
 	self.queue_free()
