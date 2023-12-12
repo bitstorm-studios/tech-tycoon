@@ -10,6 +10,6 @@ anchor_bottom = 1.0
 grow_vertical = 0
 
 [node name="Sprite" type="Sprite2D" parent="."]
-position = Vector2(1.52588e-05, -142)
+position = Vector2(3.63798e-12, -149)
 scale = Vector2(5.6, 5.6)
 texture = ExtResource("1_ln0hk")

@@ -4,6 +4,7 @@ extends NinePatchRect
 @onready var timer = $Timer
 @onready var buttons = $Buttons
 @onready var PC_scene = preload("res://scenes/PC/PC.tscn")
+var angry_larry = load("res://assets/Clients/Larry_Bravo.png")
 var message = "Olá, meu computador está muito lento, quero que você formate ele e instale uma nova memória RAM."
 
 func _input(event):
@@ -28,7 +29,7 @@ func _on_aceitar_pressed():
 	var PC_scene_instantiate = PC_scene.instantiate()
 	get_tree().get_root().get_node("/root/Game/MainPC").add_child(PC_scene_instantiate)
 
-
 func _on_recusar_pressed():
 	get_parent().queue_free()
-	get_node("/root/Game").set_physics_process(true)
+	get_node("/root/Game/MainClient/Path2D/PathFollow2D/Client/Sprite").texture = angry_larry	
+	get_node("/root/Game").is_walking = true
