@@ -1,32 +1,64 @@
-[gd_scene load_steps=12 format=3 uid="uid://byjgi1w5nus31"]
+[gd_scene load_steps=13 format=3 uid="uid://byjgi1w5nus31"]
 
 [ext_resource type="Texture2D" uid="uid://r5h6x53jj64i" path="res://assets/HUD/pause.png" id="1_igtv7"]
 [ext_resource type="Script" path="res://scripts/HUD/Pause.gd" id="2_7mnlp"]
-[ext_resource type="Texture2D" uid="uid://dtdmonf1j7bj1" path="res://assets/HUD/carrinho.png" id="2_wvgpj"]
+[ext_resource type="Texture2D" uid="uid://f357hcvpb8gw" path="res://assets/HUD/Campainha.png" id="2_xh86k"]
 [ext_resource type="Texture2D" uid="uid://cosw4jf8dnclc" path="res://assets/HUD/moeda.png" id="3_6y7p0"]
 [ext_resource type="Script" path="res://scripts/Store/OpenStore.gd" id="4_7i1m5"]
 [ext_resource type="Texture2D" uid="uid://oklgrypyhxs" path="res://assets/HUD/coroa.png" id="4_ol4je"]
-[ext_resource type="Script" path="res://scripts/HUD/Service_accept.gd" id="7_gnayc"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uq2gs"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xp4lf"]
+[ext_resource type="Texture2D" uid="uid://i234ff2cpj0i" path="res://assets/HUD/PC_Loja.png" id="5_dwo8b"]
+[ext_resource type="Texture2D" uid="uid://dv0w1ggvoe4d7" path="res://assets/HUD/Balcao.png" id="8_yve0k"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xa6d4"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6rrkx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uq2gs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xp4lf"]
 
 [node name="HUD" type="Control"]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 0
 
+[node name="Will Hide" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Balcao" type="Sprite2D" parent="Will Hide"]
+position = Vector2(640.114, 602)
+scale = Vector2(5.71327, 5.625)
+texture = ExtResource("8_yve0k")
+
+[node name="Campainha" type="Sprite2D" parent="Will Hide"]
+position = Vector2(385, 495)
+scale = Vector2(4.6, 4.6)
+texture = ExtResource("2_xh86k")
+
+[node name="Store" type="Button" parent="Will Hide"]
+process_mode = 1
+layout_mode = 0
+offset_left = 1014.0
+offset_top = 356.0
+offset_right = 1274.0
+offset_bottom = 526.0
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_xa6d4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6rrkx")
+icon = ExtResource("5_dwo8b")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("4_7i1m5")
+
 [node name="Pause" type="Button" parent="."]
 process_mode = 1
 layout_mode = 0
-offset_left = 1.0
-offset_right = 53.0
-offset_bottom = 51.0
+offset_left = 11.0
+offset_top = 11.0
+offset_right = 63.0
+offset_bottom = 62.0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_uq2gs")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_xp4lf")
 icon = ExtResource("1_igtv7")
@@ -35,27 +67,12 @@ icon_alignment = 1
 expand_icon = true
 script = ExtResource("2_7mnlp")
 
-[node name="Store" type="Button" parent="."]
-process_mode = 1
-layout_mode = 0
-offset_left = 1149.0
-offset_top = 617.0
-offset_right = 1272.0
-offset_bottom = 719.0
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_xa6d4")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_6rrkx")
-icon = ExtResource("2_wvgpj")
-flat = true
-icon_alignment = 1
-expand_icon = true
-script = ExtResource("4_7i1m5")
-
 [node name="Stats" type="HBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 1117.0
-offset_top = 4.0
-offset_right = 1265.0
-offset_bottom = 44.0
+offset_left = 1121.0
+offset_top = 11.0
+offset_right = 1269.0
+offset_bottom = 51.0
 metadata/_edit_group_ = true
 
 [node name="Money" type="HBoxContainer" parent="Stats"]
@@ -86,15 +103,5 @@ text = "000"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ServiceAccept" type="Button" parent="."]
-layout_mode = 0
-offset_left = 550.0
-offset_top = 334.0
-offset_right = 741.0
-offset_bottom = 408.0
-text = "Aceitar serviço"
-script = ExtResource("7_gnayc")
-
+[connection signal="pressed" from="Will Hide/Store" to="Will Hide/Store" method="_on_pressed"]
 [connection signal="pressed" from="Pause" to="Pause" method="_on_pressed"]
-[connection signal="pressed" from="Store" to="Store" method="_on_pressed"]
-[connection signal="pressed" from="ServiceAccept" to="ServiceAccept" method="_on_pressed"]
