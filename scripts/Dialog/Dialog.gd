@@ -36,5 +36,6 @@ func _on_aceitar_pressed():
 	buttons.hide()
 
 func _on_recusar_pressed():
+	get_parent().queue_free()
 	get_node("/root/Game/MainClient/Path2D/PathFollow2D/Client/Sprite").texture = angry_larry	
 	get_node("/root/Game").is_walking = true
