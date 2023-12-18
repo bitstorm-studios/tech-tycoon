@@ -7,6 +7,7 @@ extends Node2D
 var player_points: int
 var player_lifes: int
 var game_over_scene = preload("res://scenes/Space Shooter/game_over_ui.tscn")
+var win_scene = preload("res://scenes/Space Shooter/Win.tscn")
 
 func _ready():
 	player_lifes = 3
@@ -26,11 +27,16 @@ func on_give_points(points: int):
 	$HitSound.play()
 	player_points += points
 	ui.add_points(player_points)
+	if player_points == 30:
+		get_tree().paused = true
+		var win_instance = win_scene.instantiate()
+		ui.add_child(win_instance) 
 
 func _on_player_took_damage():
 	player_lifes -= 1
 	ui.set_lifes(player_lifes)
 	if player_lifes == 0:
+		self.paused = true
 		player.die()
 		$ExplodeSound.play()
 		var game_over_instance = game_over_scene.instantiate()

@@ -7,6 +7,7 @@ var client_instance
 var dialog_scene = preload("res://scenes/Dialog/Dialog.tscn")
 @export var is_walking = true
 var has_stopped = false
+var message = "Olá, meu computador está muito lento, quero que você formate ele e instale uma nova memória RAM."
 
 func _ready():
 	_create_client()
@@ -35,7 +36,7 @@ func _show_dialog():
 	var dialog_instance = dialog_scene.instantiate()
 	get_node("/root/Game/MainClient").add_child(dialog_instance)
 	var dialog = get_node("/root/Game/MainClient/Dialog/Text")
-	dialog.show_message()
+	dialog.show_message(message)
 	
 func _new_client():
 	path.progress_ratio = 0
