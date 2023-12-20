@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddybta3nj3llr"
-path="res://.godot/imported/fundo_azul.jpeg-3d80fc87ff6fdbef46a2eadcee148a2c.ctex"
+uid="uid://bn52c64sopxrr"
+path="res://.godot/imported/Monster.png-0484c1a4397f0150c9cbc7c08628fb1c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Store/fundo_azul.jpeg"
-dest_files=["res://.godot/imported/fundo_azul.jpeg-3d80fc87ff6fdbef46a2eadcee148a2c.ctex"]
+source_file="res://assets/Store/Monster.png"
+dest_files=["res://.godot/imported/Monster.png-0484c1a4397f0150c9cbc7c08628fb1c.ctex"]
 
 [params]
 

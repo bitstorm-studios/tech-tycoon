@@ -1,5 +1,5 @@
 extends Node2D
 
-func _on_button_pressed():
+func _on_close_pressed():
 	get_tree().paused = false
-	self.queue_free()
+	self.hide()

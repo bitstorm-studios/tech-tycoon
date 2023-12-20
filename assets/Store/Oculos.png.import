@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjeixepm1w65a"
-path="res://.godot/imported/fundo_caixa.jpg-0b5cecf7dda32f127f7e82b6a779990d.ctex"
+uid="uid://rtbwor7er5aq"
+path="res://.godot/imported/Oculos.png-5eb8162d21664616c55a947909cabe1e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Store/fundo_caixa.jpg"
-dest_files=["res://.godot/imported/fundo_caixa.jpg-0b5cecf7dda32f127f7e82b6a779990d.ctex"]
+source_file="res://assets/Store/Oculos.png"
+dest_files=["res://.godot/imported/Oculos.png-5eb8162d21664616c55a947909cabe1e.ctex"]
 
 [params]
 

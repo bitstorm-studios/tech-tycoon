@@ -1,152 +1,141 @@
-[gd_scene load_steps=5 format=3 uid="uid://kvaeg7vr5u2e"]
+[gd_scene load_steps=17 format=3 uid="uid://kvaeg7vr5u2e"]
 
-[ext_resource type="Script" path="res://scripts/Store/Store.gd" id="1_rrb6e"]
-[ext_resource type="Texture2D" uid="uid://bks4ehoj6l4xp" path="res://assets/Store/moldura.png" id="2_1hl7o"]
-[ext_resource type="Texture2D" uid="uid://bjeixepm1w65a" path="res://assets/Store/fundo_caixa.jpg" id="3_jsjfs"]
-[ext_resource type="Script" path="res://scripts/Store/Button.gd" id="4_oolmj"]
+[ext_resource type="Script" path="res://scripts/Store/Store.gd" id="1_ynrle"]
+[ext_resource type="Texture2D" uid="uid://cxu5u8nagn8y2" path="res://assets/Store/Loja.png" id="2_7ssd1"]
+[ext_resource type="Script" path="res://scripts/Store/StoreButtons.gd" id="3_4nbeu"]
+[ext_resource type="Texture2D" uid="uid://dejjyi8obidru" path="res://assets/Store/Biblia.png" id="3_ruu4q"]
+[ext_resource type="Texture2D" uid="uid://b2w56ldpqhd3w" path="res://assets/Store/Dinheiros.png" id="4_5ryfw"]
+[ext_resource type="ButtonGroup" uid="uid://c2823ge15880c" path="res://scripts/Store/Store_Buttons.tres" id="4_p5wl7"]
+[ext_resource type="Texture2D" uid="uid://dif3q4xwks1w2" path="res://assets/Store/Furadeira.png" id="5_6vyyh"]
+[ext_resource type="Texture2D" uid="uid://bn52c64sopxrr" path="res://assets/Store/Monster.png" id="6_ief6k"]
+[ext_resource type="Texture2D" uid="uid://rtbwor7er5aq" path="res://assets/Store/Oculos.png" id="7_7rv1t"]
+[ext_resource type="Texture2D" uid="uid://dhbjpl1jpur7j" path="res://assets/Store/Satan.png" id="8_byjcw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wpfwa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_opuxh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g5no3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jy2hg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_33uyu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hhb73"]
 
 [node name="Store" type="Node2D"]
 process_mode = 3
-script = ExtResource("1_rrb6e")
+script = ExtResource("1_ynrle")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(641, 434)
-scale = Vector2(1.62837, 1.26461)
-texture = ExtResource("2_1hl7o")
-metadata/_edit_group_ = true
+position = Vector2(640, 360)
+scale = Vector2(5.61403, 5.625)
+texture = ExtResource("2_7ssd1")
 
-[node name="ColorRect" type="ColorRect" parent="Sprite2D"]
-offset_left = -273.0
-offset_top = -262.0
-offset_right = 278.0
-offset_bottom = 171.0
-color = Color(0.72549, 0.478431, 0.337255, 0.8)
+[node name="Control" type="Control" parent="Sprite2D"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("3_4nbeu")
+group = ExtResource("4_p5wl7")
 
-[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
-position = Vector2(-204.732, -180.644)
-scale = Vector2(0.159898, 0.310998)
-texture = ExtResource("3_jsjfs")
+[node name="Bíblia" type="Button" parent="Sprite2D/Control"]
+layout_mode = 0
+offset_left = -74.0
+offset_top = -24.0
+offset_right = -42.0
+offset_bottom = 8.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wpfwa")
+toggle_mode = true
+button_group = ExtResource("4_p5wl7")
+icon = ExtResource("3_ruu4q")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
-[node name="Button" type="Button" parent="Sprite2D/Sprite2D"]
-offset_left = -307.0
-offset_top = 96.0
-offset_right = 307.0
-offset_bottom = 204.0
-theme_override_font_sizes/font_size = 50
-text = "COMPRAR"
-script = ExtResource("4_oolmj")
+[node name="Dinheiros" type="Button" parent="Sprite2D/Control"]
+layout_mode = 0
+offset_left = -26.0
+offset_top = -24.0
+offset_right = 6.0
+offset_bottom = 8.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_opuxh")
+toggle_mode = true
+button_group = ExtResource("4_p5wl7")
+icon = ExtResource("4_5ryfw")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
-[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D"]
-position = Vector2(-66.6926, -179.374)
-scale = Vector2(0.159898, 0.310998)
-texture = ExtResource("3_jsjfs")
+[node name="Furadeira" type="Button" parent="Sprite2D/Control"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = -24.0
+offset_right = 54.0
+offset_bottom = 8.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g5no3")
+toggle_mode = true
+button_group = ExtResource("4_p5wl7")
+icon = ExtResource("5_6vyyh")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
-[node name="Button" type="Button" parent="Sprite2D/Sprite2D2"]
-offset_left = -307.0
-offset_top = 96.0
-offset_right = 307.0
-offset_bottom = 204.0
-theme_override_font_sizes/font_size = 50
-text = "COMPRAR"
-script = ExtResource("4_oolmj")
+[node name="Monster" type="Button" parent="Sprite2D/Control"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = -24.0
+offset_right = 102.0
+offset_bottom = 8.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jy2hg")
+toggle_mode = true
+button_group = ExtResource("4_p5wl7")
+icon = ExtResource("6_ief6k")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
-[node name="Sprite2D3" type="Sprite2D" parent="Sprite2D"]
-position = Vector2(71.1764, -177.945)
-scale = Vector2(0.159898, 0.310998)
-texture = ExtResource("3_jsjfs")
+[node name="Oculos" type="Button" parent="Sprite2D/Control"]
+layout_mode = 0
+offset_left = -74.0
+offset_top = 17.0
+offset_right = -42.0
+offset_bottom = 49.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_33uyu")
+toggle_mode = true
+button_group = ExtResource("4_p5wl7")
+icon = ExtResource("7_7rv1t")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
-[node name="Button" type="Button" parent="Sprite2D/Sprite2D3"]
-offset_left = -307.0
-offset_top = 96.0
-offset_right = 307.0
-offset_bottom = 204.0
-theme_override_font_sizes/font_size = 50
-text = "COMPRAR"
-script = ExtResource("4_oolmj")
+[node name="Satan" type="Button" parent="Sprite2D/Control"]
+layout_mode = 0
+offset_left = -26.0
+offset_top = 17.0
+offset_right = 6.0
+offset_bottom = 49.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hhb73")
+toggle_mode = true
+button_group = ExtResource("4_p5wl7")
+icon = ExtResource("8_byjcw")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
-[node name="Sprite2D4" type="Sprite2D" parent="Sprite2D"]
-position = Vector2(204.001, -176.515)
-scale = Vector2(0.159898, 0.310998)
-texture = ExtResource("3_jsjfs")
+[node name="Close" type="Button" parent="Sprite2D/Control"]
+layout_mode = 0
+offset_left = 105.984
+offset_top = -64.0
+offset_right = 113.984
+offset_bottom = -56.0
+toggle_mode = true
+button_group = ExtResource("4_p5wl7")
+flat = true
 
-[node name="Button" type="Button" parent="Sprite2D/Sprite2D4"]
-offset_left = -307.0
-offset_top = 96.0
-offset_right = 307.0
-offset_bottom = 204.0
-theme_override_font_sizes/font_size = 50
-text = "COMPRAR"
-script = ExtResource("4_oolmj")
-
-[node name="Sprite2D5" type="Sprite2D" parent="Sprite2D"]
-position = Vector2(-206.073, 23.424)
-scale = Vector2(0.159898, 0.310998)
-texture = ExtResource("3_jsjfs")
-
-[node name="Button" type="Button" parent="Sprite2D/Sprite2D5"]
-offset_left = -307.0
-offset_top = 96.0
-offset_right = 307.0
-offset_bottom = 204.0
-theme_override_font_sizes/font_size = 50
-text = "COMPRAR"
-script = ExtResource("4_oolmj")
-
-[node name="Sprite2D6" type="Sprite2D" parent="Sprite2D"]
-position = Vector2(-68.0337, 24.6942)
-scale = Vector2(0.159898, 0.310998)
-texture = ExtResource("3_jsjfs")
-
-[node name="Button" type="Button" parent="Sprite2D/Sprite2D6"]
-offset_left = -307.0
-offset_top = 96.0
-offset_right = 307.0
-offset_bottom = 204.0
-theme_override_font_sizes/font_size = 50
-text = "COMPRAR"
-script = ExtResource("4_oolmj")
-
-[node name="Sprite2D7" type="Sprite2D" parent="Sprite2D"]
-position = Vector2(69.8352, 26.1235)
-scale = Vector2(0.159898, 0.310998)
-texture = ExtResource("3_jsjfs")
-
-[node name="Button" type="Button" parent="Sprite2D/Sprite2D7"]
-offset_left = -307.0
-offset_top = 96.0
-offset_right = 307.0
-offset_bottom = 204.0
-theme_override_font_sizes/font_size = 50
-text = "COMPRAR"
-script = ExtResource("4_oolmj")
-
-[node name="Sprite2D8" type="Sprite2D" parent="Sprite2D"]
-position = Vector2(202.66, 27.5527)
-scale = Vector2(0.159898, 0.310998)
-texture = ExtResource("3_jsjfs")
-
-[node name="Button" type="Button" parent="Sprite2D/Sprite2D8"]
-offset_left = -307.0
-offset_top = 96.0
-offset_right = 307.0
-offset_bottom = 204.0
-theme_override_font_sizes/font_size = 50
-text = "COMPRAR"
-script = ExtResource("4_oolmj")
-
-[node name="Button" type="Button" parent="Sprite2D"]
-offset_left = 300.3
-offset_top = -290.999
-offset_right = 342.3
-offset_bottom = -243.999
-text = "X"
-
-[connection signal="pressed" from="Sprite2D/Sprite2D/Button" to="Sprite2D/Sprite2D/Button" method="_on_pressed"]
-[connection signal="pressed" from="Sprite2D/Sprite2D2/Button" to="Sprite2D/Sprite2D2/Button" method="_on_pressed"]
-[connection signal="pressed" from="Sprite2D/Sprite2D3/Button" to="Sprite2D/Sprite2D3/Button" method="_on_pressed"]
-[connection signal="pressed" from="Sprite2D/Sprite2D4/Button" to="Sprite2D/Sprite2D4/Button" method="_on_pressed"]
-[connection signal="pressed" from="Sprite2D/Sprite2D5/Button" to="Sprite2D/Sprite2D5/Button" method="_on_pressed"]
-[connection signal="pressed" from="Sprite2D/Sprite2D6/Button" to="Sprite2D/Sprite2D6/Button" method="_on_pressed"]
-[connection signal="pressed" from="Sprite2D/Sprite2D7/Button" to="Sprite2D/Sprite2D7/Button" method="_on_pressed"]
-[connection signal="pressed" from="Sprite2D/Sprite2D8/Button" to="Sprite2D/Sprite2D8/Button" method="_on_pressed"]
-[connection signal="pressed" from="Sprite2D/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Sprite2D/Control/Bíblia" to="Sprite2D/Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Sprite2D/Control/Dinheiros" to="Sprite2D/Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Sprite2D/Control/Furadeira" to="Sprite2D/Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Sprite2D/Control/Monster" to="Sprite2D/Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Sprite2D/Control/Oculos" to="Sprite2D/Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Sprite2D/Control/Satan" to="Sprite2D/Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Sprite2D/Control/Close" to="." method="_on_close_pressed"]
