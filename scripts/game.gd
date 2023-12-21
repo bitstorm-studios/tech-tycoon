@@ -2,10 +2,12 @@ extends Node2D
 
 @onready var path = $MainClient/Path2D/PathFollow2D
 @onready var timer = $MainClient/Timer
+@export var is_walking = true
+@export var money = 0
+@export var fame = 0
 var client_scene = preload("res://scenes/Clients/Client.tscn")
 var client_instance
 var dialog_scene = preload("res://scenes/Dialog/Dialog.tscn")
-@export var is_walking = true
 var has_stopped = false
 var message = "Olá, meu computador está muito lento, quero que você formate ele e instale uma nova memória RAM."
 
