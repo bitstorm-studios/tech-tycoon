@@ -50,7 +50,7 @@ offset_right = 376.0
 offset_bottom = 80.0
 theme_override_fonts/font = ExtResource("4_0es6w")
 theme_override_font_sizes/font_size = 30
-text = "Pontuação: 0/3"
+text = "Pontuação: 0/5"
 horizontal_alignment = 1
 vertical_alignment = 1
 

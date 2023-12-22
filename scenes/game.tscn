@@ -24,6 +24,7 @@ loop = false
 
 [node name="Timer" type="Timer" parent="MainClient"]
 wait_time = 2.0
+one_shot = true
 
 [node name="HUD" parent="." instance=ExtResource("1_wup74")]
 

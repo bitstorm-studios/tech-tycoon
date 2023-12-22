@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bks4ehoj6l4xp"
-path="res://.godot/imported/moldura.png-f5dcc9d5a717997b73b57fe572ab8b62.ctex"
+uid="uid://cxu5u8nagn8y2"
+path="res://.godot/imported/Loja.png-ecb40434554ae6fad69b297f91ea37d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Store/moldura.png"
-dest_files=["res://.godot/imported/moldura.png-f5dcc9d5a717997b73b57fe572ab8b62.ctex"]
+source_file="res://assets/Store/Loja.png"
+dest_files=["res://.godot/imported/Loja.png-ecb40434554ae6fad69b297f91ea37d6.ctex"]
 
 [params]
 

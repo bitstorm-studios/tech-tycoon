@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://njokdodwft5r"]
+[gd_scene load_steps=5 format=3 uid="uid://njokdodwft5r"]
 
 [ext_resource type="FontFile" uid="uid://4miq0wwwk4mu" path="res://assets/font/kenney-blocks.ttf" id="1_q6giw"]
 [ext_resource type="Script" path="res://scripts/HUD/Unpause.gd" id="2_qskja"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_brsih"]
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_njobj"]
+events = [SubResource("InputEventKey_brsih")]
 
 [node name="Pause" type="Control"]
 process_mode = 3
@@ -30,6 +36,7 @@ offset_right = 873.0
 offset_bottom = 575.0
 theme_override_fonts/font = ExtResource("1_q6giw")
 theme_override_font_sizes/font_size = 50
+shortcut = SubResource("Shortcut_njobj")
 text = "RETORNAR"
 script = ExtResource("2_qskja")
 

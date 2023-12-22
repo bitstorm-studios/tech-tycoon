@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://byjgi1w5nus31"]
+[gd_scene load_steps=18 format=3 uid="uid://byjgi1w5nus31"]
 
 [ext_resource type="Texture2D" uid="uid://r5h6x53jj64i" path="res://assets/HUD/pause.png" id="1_igtv7"]
 [ext_resource type="Script" path="res://scripts/HUD/Pause.gd" id="2_7mnlp"]
@@ -7,15 +7,28 @@
 [ext_resource type="Script" path="res://scripts/Store/OpenStore.gd" id="4_7i1m5"]
 [ext_resource type="Texture2D" uid="uid://oklgrypyhxs" path="res://assets/HUD/coroa.png" id="4_ol4je"]
 [ext_resource type="Texture2D" uid="uid://i234ff2cpj0i" path="res://assets/HUD/PC_Loja.png" id="5_dwo8b"]
+[ext_resource type="Script" path="res://scripts/HUD/Stats.gd" id="7_thvdp"]
 [ext_resource type="Texture2D" uid="uid://dv0w1ggvoe4d7" path="res://assets/HUD/Balcao.png" id="8_yve0k"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xa6d4"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6rrkx"]
 
+[sub_resource type="InputEventKey" id="InputEventKey_iqjyn"]
+keycode = 80
+
+[sub_resource type="Shortcut" id="Shortcut_10set"]
+events = [SubResource("InputEventKey_iqjyn")]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uq2gs"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xp4lf"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_hspxt"]
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_ok46f"]
+events = [SubResource("InputEventKey_hspxt")]
 
 [node name="HUD" type="Control"]
 process_mode = 3
@@ -46,6 +59,7 @@ offset_right = 1274.0
 offset_bottom = 526.0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_xa6d4")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_6rrkx")
+shortcut = SubResource("Shortcut_10set")
 icon = ExtResource("5_dwo8b")
 flat = true
 icon_alignment = 1
@@ -61,6 +75,7 @@ offset_right = 63.0
 offset_bottom = 62.0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_uq2gs")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_xp4lf")
+shortcut = SubResource("Shortcut_ok46f")
 icon = ExtResource("1_igtv7")
 flat = true
 icon_alignment = 1
@@ -73,6 +88,7 @@ offset_left = 1121.0
 offset_top = 11.0
 offset_right = 1269.0
 offset_bottom = 51.0
+script = ExtResource("7_thvdp")
 metadata/_edit_group_ = true
 
 [node name="Money" type="HBoxContainer" parent="Stats"]

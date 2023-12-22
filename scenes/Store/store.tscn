@@ -1,152 +1,305 @@
-[gd_scene load_steps=5 format=3 uid="uid://kvaeg7vr5u2e"]
+[gd_scene load_steps=43 format=3 uid="uid://kvaeg7vr5u2e"]
 
-[ext_resource type="Script" path="res://scripts/Store/Store.gd" id="1_rrb6e"]
-[ext_resource type="Texture2D" uid="uid://bks4ehoj6l4xp" path="res://assets/Store/moldura.png" id="2_1hl7o"]
-[ext_resource type="Texture2D" uid="uid://bjeixepm1w65a" path="res://assets/Store/fundo_caixa.jpg" id="3_jsjfs"]
-[ext_resource type="Script" path="res://scripts/Store/Button.gd" id="4_oolmj"]
+[ext_resource type="Script" path="res://scripts/Store/Store.gd" id="1_ynrle"]
+[ext_resource type="Texture2D" uid="uid://cxu5u8nagn8y2" path="res://assets/Store/Loja.png" id="2_7ssd1"]
+[ext_resource type="Script" path="res://scripts/Store/StoreButtons.gd" id="3_4nbeu"]
+[ext_resource type="Texture2D" uid="uid://dejjyi8obidru" path="res://assets/Store/Biblia.png" id="3_ruu4q"]
+[ext_resource type="Texture2D" uid="uid://b2w56ldpqhd3w" path="res://assets/Store/Dinheiros.png" id="4_5ryfw"]
+[ext_resource type="ButtonGroup" uid="uid://c2823ge15880c" path="res://scripts/Store/Store_Buttons.tres" id="4_p5wl7"]
+[ext_resource type="Texture2D" uid="uid://dif3q4xwks1w2" path="res://assets/Store/Furadeira.png" id="5_6vyyh"]
+[ext_resource type="Texture2D" uid="uid://62wevd6g7eub" path="res://assets/Store/LivroHover.png" id="5_ohqew"]
+[ext_resource type="Texture2D" uid="uid://bn52c64sopxrr" path="res://assets/Store/Monster.png" id="6_ief6k"]
+[ext_resource type="Texture2D" uid="uid://rtbwor7er5aq" path="res://assets/Store/Oculos.png" id="7_7rv1t"]
+[ext_resource type="Texture2D" uid="uid://dgd3a17yowe70" path="res://assets/Store/Livro.png" id="10_s0eoh"]
+[ext_resource type="Texture2D" uid="uid://qdedd5wvwnfn" path="res://assets/Store/PS5.png" id="11_t6gsd"]
+[ext_resource type="Texture2D" uid="uid://cikcrws0ue3cw" path="res://assets/Store/Cubo.png" id="12_ccko0"]
+[ext_resource type="FontFile" uid="uid://4miq0wwwk4mu" path="res://assets/font/kenney-blocks.ttf" id="13_owmpw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yqg4b"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hgc2j"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+texture = ExtResource("5_ohqew")
+region_rect = Rect2(0, 0, 34, 40)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v8mj6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hi8p2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pkkp6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_opuxh"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_410gv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g5no3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o51jq"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jy2hg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l61ey"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_33uyu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_00y66"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hhb73"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d1bg5"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t0cey"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3fbum"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dhys8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lhfwj"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g0q11"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e3gdl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_alo8n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0lh4m"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_q3rxc"]
+keycode = 4194305
+
+[sub_resource type="InputEventKey" id="InputEventKey_5s6jq"]
+device = -1
+keycode = 80
+unicode = 80
+
+[sub_resource type="Shortcut" id="Shortcut_crl2v"]
+events = [SubResource("InputEventKey_q3rxc"), SubResource("InputEventKey_5s6jq")]
+
+[sub_resource type="Animation" id="Animation_civc6"]
+resource_name = "popup"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fs8s6"]
+_data = {
+"popup": SubResource("Animation_civc6")
+}
 
 [node name="Store" type="Node2D"]
 process_mode = 3
-script = ExtResource("1_rrb6e")
+position = Vector2(-74, -53)
+script = ExtResource("1_ynrle")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(641, 434)
-scale = Vector2(1.62837, 1.26461)
-texture = ExtResource("2_1hl7o")
+position = Vector2(712.5, 415.5)
+scale = Vector2(4.97807, 4.75781)
+texture = ExtResource("2_7ssd1")
+
+[node name="Control" type="Control" parent="Sprite2D"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("3_4nbeu")
+group = ExtResource("4_p5wl7")
+
+[node name="Bíblia" type="Button" parent="Sprite2D/Control"]
+layout_mode = 0
+offset_left = -75.029
+offset_top = -24.9064
+offset_right = -41.029
+offset_bottom = 15.0936
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yqg4b")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hgc2j")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_v8mj6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hi8p2")
+toggle_mode = true
+button_group = ExtResource("4_p5wl7")
+icon = ExtResource("3_ruu4q")
+flat = true
+icon_alignment = 1
+
+[node name="Dinheiros" type="Button" parent="Sprite2D/Control"]
+layout_mode = 0
+offset_left = -27.0
+offset_top = -25.0
+offset_right = 7.0
+offset_bottom = 15.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_pkkp6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_opuxh")
+toggle_mode = true
+button_group = ExtResource("4_p5wl7")
+icon = ExtResource("4_5ryfw")
+icon_alignment = 1
+
+[node name="Furadeira" type="Button" parent="Sprite2D/Control"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = -25.0
+offset_right = 55.0
+offset_bottom = 15.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_410gv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g5no3")
+toggle_mode = true
+button_group = ExtResource("4_p5wl7")
+icon = ExtResource("5_6vyyh")
+flat = true
+icon_alignment = 1
+
+[node name="Monster" type="Button" parent="Sprite2D/Control"]
+layout_mode = 0
+offset_left = 69.0
+offset_top = -25.0
+offset_right = 103.0
+offset_bottom = 15.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_o51jq")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jy2hg")
+toggle_mode = true
+button_group = ExtResource("4_p5wl7")
+icon = ExtResource("6_ief6k")
+flat = true
+icon_alignment = 1
+
+[node name="Oculos" type="Button" parent="Sprite2D/Control"]
+layout_mode = 0
+offset_left = -75.0
+offset_top = 16.0
+offset_right = -41.0
+offset_bottom = 56.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_l61ey")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_33uyu")
+toggle_mode = true
+button_group = ExtResource("4_p5wl7")
+icon = ExtResource("7_7rv1t")
+flat = true
+icon_alignment = 1
+
+[node name="Livro" type="Button" parent="Sprite2D/Control"]
+layout_mode = 0
+offset_left = -27.0185
+offset_top = 16.0788
+offset_right = 6.98154
+offset_bottom = 56.0788
+theme_override_styles/normal = SubResource("StyleBoxEmpty_00y66")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hhb73")
+toggle_mode = true
+button_group = ExtResource("4_p5wl7")
+icon = ExtResource("10_s0eoh")
+flat = true
+icon_alignment = 1
+
+[node name="PS5" type="Button" parent="Sprite2D/Control"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 16.0
+offset_right = 55.0
+offset_bottom = 56.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_d1bg5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_t0cey")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_3fbum")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dhys8")
+icon = ExtResource("11_t6gsd")
+flat = true
+
+[node name="Cubo" type="Button" parent="Sprite2D/Control"]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 16.0
+offset_right = 103.0
+offset_bottom = 56.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_lhfwj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g0q11")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_e3gdl")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_alo8n")
+icon = ExtResource("12_ccko0")
+flat = true
+
+[node name="Close" type="Button" parent="Sprite2D/Control"]
+layout_mode = 0
+offset_left = 105.984
+offset_top = -64.0
+offset_right = 113.984
+offset_bottom = -56.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0lh4m")
+toggle_mode = true
+button_group = ExtResource("4_p5wl7")
+shortcut = SubResource("Shortcut_crl2v")
+flat = true
+
+[node name="Control" type="Panel" parent="Sprite2D/Control"]
+visible = false
+layout_mode = 0
+offset_left = -99.9383
+offset_top = -11.665
+offset_right = 98.0617
+offset_bottom = 9.33498
 metadata/_edit_group_ = true
 
-[node name="ColorRect" type="ColorRect" parent="Sprite2D"]
-offset_left = -273.0
-offset_top = -262.0
-offset_right = 278.0
-offset_bottom = 171.0
-color = Color(0.72549, 0.478431, 0.337255, 0.8)
+[node name="Label" type="Label" parent="Sprite2D/Control/Control"]
+layout_mode = 0
+offset_right = 198.0
+offset_bottom = 21.0
+theme_override_fonts/font = ExtResource("13_owmpw")
+theme_override_font_sizes/font_size = 12
+text = "Dinheiro insuficiente !"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
-position = Vector2(-204.732, -180.644)
-scale = Vector2(0.159898, 0.310998)
-texture = ExtResource("3_jsjfs")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D/Control/Control"]
+libraries = {
+"": SubResource("AnimationLibrary_fs8s6")
+}
 
-[node name="Button" type="Button" parent="Sprite2D/Sprite2D"]
-offset_left = -307.0
-offset_top = 96.0
-offset_right = 307.0
-offset_bottom = 204.0
-theme_override_font_sizes/font_size = 50
-text = "COMPRAR"
-script = ExtResource("4_oolmj")
+[node name="Timer" type="Timer" parent="Sprite2D/Control/Control"]
+one_shot = true
 
-[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D"]
-position = Vector2(-66.6926, -179.374)
-scale = Vector2(0.159898, 0.310998)
-texture = ExtResource("3_jsjfs")
-
-[node name="Button" type="Button" parent="Sprite2D/Sprite2D2"]
-offset_left = -307.0
-offset_top = 96.0
-offset_right = 307.0
-offset_bottom = 204.0
-theme_override_font_sizes/font_size = 50
-text = "COMPRAR"
-script = ExtResource("4_oolmj")
-
-[node name="Sprite2D3" type="Sprite2D" parent="Sprite2D"]
-position = Vector2(71.1764, -177.945)
-scale = Vector2(0.159898, 0.310998)
-texture = ExtResource("3_jsjfs")
-
-[node name="Button" type="Button" parent="Sprite2D/Sprite2D3"]
-offset_left = -307.0
-offset_top = 96.0
-offset_right = 307.0
-offset_bottom = 204.0
-theme_override_font_sizes/font_size = 50
-text = "COMPRAR"
-script = ExtResource("4_oolmj")
-
-[node name="Sprite2D4" type="Sprite2D" parent="Sprite2D"]
-position = Vector2(204.001, -176.515)
-scale = Vector2(0.159898, 0.310998)
-texture = ExtResource("3_jsjfs")
-
-[node name="Button" type="Button" parent="Sprite2D/Sprite2D4"]
-offset_left = -307.0
-offset_top = 96.0
-offset_right = 307.0
-offset_bottom = 204.0
-theme_override_font_sizes/font_size = 50
-text = "COMPRAR"
-script = ExtResource("4_oolmj")
-
-[node name="Sprite2D5" type="Sprite2D" parent="Sprite2D"]
-position = Vector2(-206.073, 23.424)
-scale = Vector2(0.159898, 0.310998)
-texture = ExtResource("3_jsjfs")
-
-[node name="Button" type="Button" parent="Sprite2D/Sprite2D5"]
-offset_left = -307.0
-offset_top = 96.0
-offset_right = 307.0
-offset_bottom = 204.0
-theme_override_font_sizes/font_size = 50
-text = "COMPRAR"
-script = ExtResource("4_oolmj")
-
-[node name="Sprite2D6" type="Sprite2D" parent="Sprite2D"]
-position = Vector2(-68.0337, 24.6942)
-scale = Vector2(0.159898, 0.310998)
-texture = ExtResource("3_jsjfs")
-
-[node name="Button" type="Button" parent="Sprite2D/Sprite2D6"]
-offset_left = -307.0
-offset_top = 96.0
-offset_right = 307.0
-offset_bottom = 204.0
-theme_override_font_sizes/font_size = 50
-text = "COMPRAR"
-script = ExtResource("4_oolmj")
-
-[node name="Sprite2D7" type="Sprite2D" parent="Sprite2D"]
-position = Vector2(69.8352, 26.1235)
-scale = Vector2(0.159898, 0.310998)
-texture = ExtResource("3_jsjfs")
-
-[node name="Button" type="Button" parent="Sprite2D/Sprite2D7"]
-offset_left = -307.0
-offset_top = 96.0
-offset_right = 307.0
-offset_bottom = 204.0
-theme_override_font_sizes/font_size = 50
-text = "COMPRAR"
-script = ExtResource("4_oolmj")
-
-[node name="Sprite2D8" type="Sprite2D" parent="Sprite2D"]
-position = Vector2(202.66, 27.5527)
-scale = Vector2(0.159898, 0.310998)
-texture = ExtResource("3_jsjfs")
-
-[node name="Button" type="Button" parent="Sprite2D/Sprite2D8"]
-offset_left = -307.0
-offset_top = 96.0
-offset_right = 307.0
-offset_bottom = 204.0
-theme_override_font_sizes/font_size = 50
-text = "COMPRAR"
-script = ExtResource("4_oolmj")
-
-[node name="Button" type="Button" parent="Sprite2D"]
-offset_left = 300.3
-offset_top = -290.999
-offset_right = 342.3
-offset_bottom = -243.999
-text = "X"
-
-[connection signal="pressed" from="Sprite2D/Sprite2D/Button" to="Sprite2D/Sprite2D/Button" method="_on_pressed"]
-[connection signal="pressed" from="Sprite2D/Sprite2D2/Button" to="Sprite2D/Sprite2D2/Button" method="_on_pressed"]
-[connection signal="pressed" from="Sprite2D/Sprite2D3/Button" to="Sprite2D/Sprite2D3/Button" method="_on_pressed"]
-[connection signal="pressed" from="Sprite2D/Sprite2D4/Button" to="Sprite2D/Sprite2D4/Button" method="_on_pressed"]
-[connection signal="pressed" from="Sprite2D/Sprite2D5/Button" to="Sprite2D/Sprite2D5/Button" method="_on_pressed"]
-[connection signal="pressed" from="Sprite2D/Sprite2D6/Button" to="Sprite2D/Sprite2D6/Button" method="_on_pressed"]
-[connection signal="pressed" from="Sprite2D/Sprite2D7/Button" to="Sprite2D/Sprite2D7/Button" method="_on_pressed"]
-[connection signal="pressed" from="Sprite2D/Sprite2D8/Button" to="Sprite2D/Sprite2D8/Button" method="_on_pressed"]
-[connection signal="pressed" from="Sprite2D/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Sprite2D/Control/Bíblia" to="Sprite2D/Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Sprite2D/Control/Dinheiros" to="Sprite2D/Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Sprite2D/Control/Furadeira" to="Sprite2D/Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Sprite2D/Control/Monster" to="Sprite2D/Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Sprite2D/Control/Oculos" to="Sprite2D/Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Sprite2D/Control/Livro" to="Sprite2D/Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Sprite2D/Control/PS5" to="Sprite2D/Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Sprite2D/Control/Cubo" to="Sprite2D/Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Sprite2D/Control/Close" to="." method="_on_close_pressed"]
+[connection signal="timeout" from="Sprite2D/Control/Control/Timer" to="Sprite2D/Control" method="_on_timer_timeout"]

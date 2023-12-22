@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://boiw3we4sqx28"]
+[gd_scene load_steps=3 format=3 uid="uid://n6ko1qtva44r"]
 
-[ext_resource type="FontFile" uid="uid://4miq0wwwk4mu" path="res://assets/font/kenney-blocks.ttf" id="1_f6pkb"]
-[ext_resource type="Script" path="res://scripts/Catch Game/Win.gd" id="2_48vxn"]
+[ext_resource type="FontFile" uid="uid://4miq0wwwk4mu" path="res://assets/font/kenney-blocks.ttf" id="1_5ibu6"]
+[ext_resource type="Script" path="res://scripts/Space Shooter/Win.gd" id="2_v5csr"]
 
 [node name="Win" type="Control"]
 process_mode = 2
@@ -15,9 +15,9 @@ grow_vertical = 2
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
 offset_top = 113.0
-offset_right = 1282.0
+offset_right = 1275.0
 offset_bottom = 391.0
-theme_override_fonts/font = ExtResource("1_f6pkb")
+theme_override_fonts/font = ExtResource("1_5ibu6")
 theme_override_font_sizes/font_size = 90
 text = "PARABÉNS
 VOCÊ VENCEU "
@@ -28,16 +28,16 @@ vertical_alignment = 1
 layout_mode = 0
 offset_left = -1.0
 offset_top = 386.0
-offset_right = 1279.0
+offset_right = 1277.0
 offset_bottom = 559.0
 
 [node name="Button" type="Button" parent="CenterContainer"]
 process_mode = 2
 custom_minimum_size = Vector2(400, 120)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_f6pkb")
+theme_override_fonts/font = ExtResource("1_5ibu6")
 theme_override_font_sizes/font_size = 50
 text = "CONCLUIR"
-script = ExtResource("2_48vxn")
+script = ExtResource("2_v5csr")
 
 [connection signal="pressed" from="CenterContainer/Button" to="CenterContainer/Button" method="_on_pressed"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddybta3nj3llr"
-path="res://.godot/imported/fundo_azul.jpeg-3d80fc87ff6fdbef46a2eadcee148a2c.ctex"
+uid="uid://dgd3a17yowe70"
+path="res://.godot/imported/Livro.png-f8a871e0fee32bc10712512c8aa3f643.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Store/fundo_azul.jpeg"
-dest_files=["res://.godot/imported/fundo_azul.jpeg-3d80fc87ff6fdbef46a2eadcee148a2c.ctex"]
+source_file="res://assets/Store/Livro.png"
+dest_files=["res://.godot/imported/Livro.png-f8a871e0fee32bc10712512c8aa3f643.ctex"]
 
 [params]
 
