@@ -33,36 +33,36 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -300.0
-offset_top = -200.0
-offset_right = 300.0
-offset_bottom = 200.0
+offset_left = -632.0
+offset_top = -354.0
+offset_right = 648.0
+offset_bottom = 366.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_fjdo7")
 
 [node name="PC" type="TextureRect" parent="Panel"]
 layout_mode = 1
-offset_left = 5.0
-offset_top = -48.0
-offset_right = 505.0
-offset_bottom = 452.0
+offset_right = 500.0
+offset_bottom = 500.0
 texture = ExtResource("2_fk600")
+metadata/_edit_group_ = true
 
 [node name="Processador_button" type="Button" parent="Panel/PC"]
 layout_mode = 0
-offset_left = 108.0
-offset_top = 142.0
-offset_right = 222.0
-offset_bottom = 255.0
+offset_left = 56.0
+offset_top = 112.0
+offset_right = 196.0
+offset_bottom = 265.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kr6no")
+flat = true
 
 [node name="RAM_button" type="Button" parent="Panel/PC"]
 layout_mode = 0
-offset_left = 278.0
-offset_top = 140.0
-offset_right = 327.0
-offset_bottom = 330.0
+offset_left = 261.0
+offset_top = 107.0
+offset_right = 322.0
+offset_bottom = 362.0
 
 [node name="Tampa" type="TextureRect" parent="Panel/PC"]
 layout_mode = 1
@@ -71,18 +71,17 @@ anchor_left = 0.544
 anchor_top = 0.522
 anchor_right = 0.544
 anchor_bottom = 0.522
-offset_left = -320.0
-offset_top = -281.0
-offset_right = 203.0
-offset_bottom = 181.0
+offset_left = -272.0
+offset_top = -261.0
+offset_right = 228.0
+offset_bottom = 239.0
 texture = ExtResource("3_okwmo")
 
 [node name="Tampa_button" type="Button" parent="Panel/PC/Tampa"]
 layout_mode = 0
-offset_left = 106.0
-offset_top = 74.0
-offset_right = 523.0
-offset_bottom = 455.0
+offset_right = 500.0
+offset_bottom = 500.0
+flat = true
 
 [connection signal="pressed" from="Panel/PC/Processador_button" to="." method="_on_processador_button_pressed"]
 [connection signal="pressed" from="Panel/PC/RAM_button" to="." method="_on_ram_button_pressed"]
