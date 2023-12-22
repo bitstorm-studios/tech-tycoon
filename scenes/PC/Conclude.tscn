@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bxkyrvauyleqy"]
+[gd_scene load_steps=3 format=3 uid="uid://bxkyrvauyleqy"]
 
 [ext_resource type="Script" path="res://scripts/PC/Finish.gd" id="1_hl13o"]
+[ext_resource type="FontFile" uid="uid://4miq0wwwk4mu" path="res://assets/font/kenney-blocks.ttf" id="2_q6rsk"]
 
 [node name="Conclude" type="Control"]
 layout_mode = 3
@@ -13,10 +14,12 @@ script = ExtResource("1_hl13o")
 
 [node name="Finish" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1052.0
-offset_top = 156.0
-offset_right = 1268.0
-offset_bottom = 209.0
+offset_left = 963.0
+offset_top = 228.0
+offset_right = 1264.0
+offset_bottom = 297.0
+theme_override_fonts/font = ExtResource("2_q6rsk")
+theme_override_font_sizes/font_size = 25
 text = "Concluir Pedido"
 
 [node name="OutTime" type="Timer" parent="."]

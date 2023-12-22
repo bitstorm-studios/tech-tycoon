@@ -29,6 +29,3 @@ func _on_processador_button_pressed():
 	if pendent_tasks == 0:
 		var finish_intance = finish_scene.instantiate()
 		self.add_child(finish_intance)
-
-func _on_exit_pc_pressed():
-	self.queue_free()

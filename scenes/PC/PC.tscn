@@ -84,15 +84,6 @@ offset_top = 74.0
 offset_right = 523.0
 offset_bottom = 455.0
 
-[node name="Exit_PC" type="Button" parent="."]
-layout_mode = 1
-offset_left = 880.0
-offset_top = 121.0
-offset_right = 908.0
-offset_bottom = 152.0
-text = "X"
-
 [connection signal="pressed" from="Panel/PC/Processador_button" to="." method="_on_processador_button_pressed"]
 [connection signal="pressed" from="Panel/PC/RAM_button" to="." method="_on_ram_button_pressed"]
 [connection signal="pressed" from="Panel/PC/Tampa/Tampa_button" to="." method="_on_tampa_button_pressed"]
-[connection signal="pressed" from="Exit_PC" to="." method="_on_exit_pc_pressed"]

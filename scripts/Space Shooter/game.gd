@@ -27,7 +27,7 @@ func on_give_points(points: int):
 	$HitSound.play()
 	player_points += points
 	ui.add_points(player_points)
-	if player_points == 30:
+	if player_points == 50:
 		get_tree().paused = true
 		var win_instance = win_scene.instantiate()
 		ui.add_child(win_instance) 

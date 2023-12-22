@@ -15,7 +15,7 @@ grow_vertical = 2
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
 offset_top = 113.0
-offset_right = 1152.0
+offset_right = 1275.0
 offset_bottom = 391.0
 theme_override_fonts/font = ExtResource("1_5ibu6")
 theme_override_font_sizes/font_size = 90
@@ -28,7 +28,7 @@ vertical_alignment = 1
 layout_mode = 0
 offset_left = -1.0
 offset_top = 386.0
-offset_right = 1151.0
+offset_right = 1277.0
 offset_bottom = 559.0
 
 [node name="Button" type="Button" parent="CenterContainer"]
