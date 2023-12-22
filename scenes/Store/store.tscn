@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://kvaeg7vr5u2e"]
+[gd_scene load_steps=43 format=3 uid="uid://kvaeg7vr5u2e"]
 
 [ext_resource type="Script" path="res://scripts/Store/Store.gd" id="1_ynrle"]
 [ext_resource type="Texture2D" uid="uid://cxu5u8nagn8y2" path="res://assets/Store/Loja.png" id="2_7ssd1"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b2w56ldpqhd3w" path="res://assets/Store/Dinheiros.png" id="4_5ryfw"]
 [ext_resource type="ButtonGroup" uid="uid://c2823ge15880c" path="res://scripts/Store/Store_Buttons.tres" id="4_p5wl7"]
 [ext_resource type="Texture2D" uid="uid://dif3q4xwks1w2" path="res://assets/Store/Furadeira.png" id="5_6vyyh"]
+[ext_resource type="Texture2D" uid="uid://62wevd6g7eub" path="res://assets/Store/LivroHover.png" id="5_ohqew"]
 [ext_resource type="Texture2D" uid="uid://bn52c64sopxrr" path="res://assets/Store/Monster.png" id="6_ief6k"]
 [ext_resource type="Texture2D" uid="uid://rtbwor7er5aq" path="res://assets/Store/Oculos.png" id="7_7rv1t"]
 [ext_resource type="Texture2D" uid="uid://dgd3a17yowe70" path="res://assets/Store/Livro.png" id="10_s0eoh"]
@@ -19,6 +20,14 @@ content_margin_left = 0.0
 content_margin_top = 0.0
 content_margin_right = 0.0
 content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hgc2j"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+texture = ExtResource("5_ohqew")
+region_rect = Rect2(0, 0, 34, 40)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v8mj6"]
 
@@ -86,6 +95,17 @@ content_margin_bottom = 0.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0lh4m"]
 
+[sub_resource type="InputEventKey" id="InputEventKey_q3rxc"]
+keycode = 4194305
+
+[sub_resource type="InputEventKey" id="InputEventKey_5s6jq"]
+device = -1
+keycode = 80
+unicode = 80
+
+[sub_resource type="Shortcut" id="Shortcut_crl2v"]
+events = [SubResource("InputEventKey_q3rxc"), SubResource("InputEventKey_5s6jq")]
+
 [sub_resource type="Animation" id="Animation_civc6"]
 resource_name = "popup"
 length = 0.3
@@ -130,6 +150,7 @@ offset_top = -24.9064
 offset_right = -41.029
 offset_bottom = 15.0936
 theme_override_styles/normal = SubResource("StyleBoxEmpty_yqg4b")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hgc2j")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_v8mj6")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_hi8p2")
 toggle_mode = true
@@ -242,6 +263,7 @@ offset_bottom = -56.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_0lh4m")
 toggle_mode = true
 button_group = ExtResource("4_p5wl7")
+shortcut = SubResource("Shortcut_crl2v")
 flat = true
 
 [node name="Control" type="Panel" parent="Sprite2D/Control"]
