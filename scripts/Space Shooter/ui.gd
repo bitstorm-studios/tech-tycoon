@@ -7,4 +7,4 @@ func set_lifes(lifes: int):
 	lifes_label.text = "Lifes: " + str(lifes)
 	
 func add_points(points: int):
-	score_label.text = "Score: " + str(points)
+	score_label.text = "Score: " + str(points) + "/6"

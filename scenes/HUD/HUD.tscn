@@ -66,6 +66,8 @@ icon_alignment = 1
 expand_icon = true
 script = ExtResource("4_7i1m5")
 
+[node name="MainPC" type="Node2D" parent="."]
+
 [node name="Pause" type="Button" parent="."]
 process_mode = 1
 layout_mode = 0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cl8c5p02838u1"]
+[gd_scene load_steps=4 format=3 uid="uid://cl8c5p02838u1"]
 
 [ext_resource type="Script" path="res://scripts/Space Shooter/GameOverUI.gd" id="1_14inv"]
 [ext_resource type="FontFile" uid="uid://c1kp42ykltgal" path="res://assets/Space Shooter/font/Kenney Blocks.ttf" id="2_dwsmx"]
@@ -6,10 +6,6 @@
 [sub_resource type="LabelSettings" id="LabelSettings_ks3to"]
 font = ExtResource("2_dwsmx")
 font_size = 42
-
-[sub_resource type="LabelSettings" id="LabelSettings_wpghk"]
-font = ExtResource("2_dwsmx")
-font_size = 32
 
 [node name="GameOverUI" type="Control"]
 layout_mode = 3
@@ -40,30 +36,14 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -200.0
-offset_top = 20.0
+offset_top = 50.0
 offset_right = 200.0
-offset_bottom = 90.0
+offset_bottom = 120.0
 grow_horizontal = 2
-text = "Game over"
+text = "você perdeu"
 label_settings = SubResource("LabelSettings_ks3to")
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="ScoreLabel" type="Label" parent="Panel"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "Score: 9999"
-label_settings = SubResource("LabelSettings_wpghk")
 
 [node name="RetryButton" type="Button" parent="Panel"]
 layout_mode = 1
@@ -80,6 +60,6 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("2_dwsmx")
 theme_override_font_sizes/font_size = 25
-text = "Retry!"
+text = "tentar de novo!"
 
 [connection signal="pressed" from="Panel/RetryButton" to="." method="_on_button_pressed"]

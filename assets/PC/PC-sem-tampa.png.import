@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmlnsgqog63t5"
-path="res://.godot/imported/pc1.png-4a3c2a7786fd5787e7d4cde986abf36a.ctex"
+uid="uid://bnjeabx5rtb4e"
+path="res://.godot/imported/PC-sem-tampa.png-edc472185b5f69641614ba164b98143a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/PC/pc1.png"
-dest_files=["res://.godot/imported/pc1.png-4a3c2a7786fd5787e7d4cde986abf36a.ctex"]
+source_file="res://assets/PC/PC-sem-tampa.png"
+dest_files=["res://.godot/imported/PC-sem-tampa.png-edc472185b5f69641614ba164b98143a.ctex"]
 
 [params]
 

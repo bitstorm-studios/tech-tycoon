@@ -19,38 +19,34 @@ curve = SubResource("Curve_45gko")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_nitd1"]
 lifetime_randomness = 0.5
+particle_flag_disable_z = true
 emission_shape = 1
 emission_sphere_radius = 0.01
-particle_flag_disable_z = true
-direction = Vector3(-1, 0, 0)
+direction = Vector3(0, 1, 0)
 spread = 5.0
-gravity = Vector3(-200, 0, 0)
 initial_velocity_min = 200.0
 initial_velocity_max = 300.0
 angular_velocity_min = -720.0
 angular_velocity_max = 720.0
-orbit_velocity_min = 0.0
-orbit_velocity_max = 0.0
-scale_min = 5.0
-scale_max = 8.0
+gravity = Vector3(0, 200, 0)
+scale_min = 6.0
+scale_max = 9.0
 scale_curve = SubResource("CurveTexture_w61sk")
 color_ramp = SubResource("GradientTexture1D_uvb40")
 turbulence_noise_strength = 2.13
 turbulence_noise_scale = 10.0
 
 [node name="Player" type="CharacterBody2D"]
-collision_mask = 2
+collision_mask = 10
 script = ExtResource("1_usj23")
 speed = 300
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-rotation = 1.5708
 scale = Vector2(3, 3)
 texture = ExtResource("2_1aouy")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(136.868, -28.3773)
-rotation = 1.5708
+position = Vector2(-28, -137)
 scale = Vector2(1.19134, 4.04015)
 polygon = PackedVector2Array(9.55029, 21.9962, -8.91618, 32.3919, -8.91612, 37.3422, -3.87977, 37.3422, -3.87967, 45.0151, 51.5201, 45.0151, 51.52, 37.5896, 57.3958, 37.5896, 57.3957, 32.6393, 38.929, 21.9962)
 
@@ -58,14 +54,14 @@ polygon = PackedVector2Array(9.55029, 21.9962, -8.91618, 32.3919, -8.91612, 37.3
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 z_index = -1
-position = Vector2(-36, -22)
+position = Vector2(-22, 40)
 amount = 48
 process_material = SubResource("ParticleProcessMaterial_nitd1")
 
 [node name="GPUParticles2D2" type="GPUParticles2D" parent="."]
 z_index = -1
-position = Vector2(-36, 22)
-amount = 48
+position = Vector2(21, 39)
+amount = 50
 process_material = SubResource("ParticleProcessMaterial_nitd1")
 
 [node name="LaserSound" type="AudioStreamPlayer2D" parent="."]

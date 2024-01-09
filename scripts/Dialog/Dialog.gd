@@ -45,7 +45,7 @@ func _on_aceitar_pressed():
 	get_node("/root/Game/HUD/Will Hide").hide()
 	get_node("Buttons").hide()
 	var PC_scene_instantiate = PC_scene.instantiate()
-	get_tree().get_root().get_node("/root/Game/MainPC").add_child(PC_scene_instantiate)
+	get_tree().get_root().get_node("/root/Game/HUD/MainPC").add_child(PC_scene_instantiate)
 	buttons.hide()
 	payment.hide()
 

@@ -1,7 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://1n61lo7nd7ba"]
+[gd_scene load_steps=9 format=3 uid="uid://exwseekymeka"]
 
-[ext_resource type="Script" path="res://scripts/Space Shooter/laser.gd" id="1_swpx2"]
-[ext_resource type="Texture2D" uid="uid://bn02m32hkleop" path="res://assets/Space Shooter/sprites/laserBlue01.png" id="2_h8nt1"]
+[ext_resource type="Script" path="res://scripts/Space Shooter/enemy_laser.gd" id="1_rcm1x"]
+[ext_resource type="Texture2D" uid="uid://b2sulsduglvxe" path="res://assets/Space Shooter/sprites/laserRed01.png" id="2_16x81"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j7f1n"]
 radius = 3.0
@@ -9,7 +9,7 @@ height = 54.0
 
 [sub_resource type="Gradient" id="Gradient_t1l2j"]
 offsets = PackedFloat32Array(0.386139, 1)
-colors = PackedColorArray(0.682641, 1, 0.97646, 1, 0.463688, 0.472853, 1, 1)
+colors = PackedColorArray(0.984094, 0.463897, 0.158294, 1, 1, 0.157323, 0.132533, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_maadi"]
 gradient = SubResource("Gradient_t1l2j")
@@ -23,36 +23,34 @@ curve = SubResource("Curve_vxbo5")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8is40"]
 particle_flag_disable_z = true
-direction = Vector3(0, 1, 0)
+direction = Vector3(0, -400, 0)
 spread = 0.0
 initial_velocity_min = 400.0
 initial_velocity_max = 400.0
 angular_velocity_min = -360.0
 angular_velocity_max = 360.0
-gravity = Vector3(0, 50, 0)
+gravity = Vector3(0, -30, 0)
 scale_min = 2.0
 scale_max = 3.0
 scale_curve = SubResource("CurveTexture_08t4e")
 color_ramp = SubResource("GradientTexture1D_maadi")
 
-[node name="Laser" type="Area2D"]
-z_index = -1
-collision_layer = 4
-collision_mask = 2
-script = ExtResource("1_swpx2")
+[node name="Enemy Laser" type="Area2D"]
+collision_layer = 8
+script = ExtResource("1_rcm1x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_j7f1n")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_h8nt1")
+rotation = 3.14159
+texture = ExtResource("2_16x81")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 z_index = -1
-position = Vector2(0, -1)
 process_material = SubResource("ParticleProcessMaterial_8is40")
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

@@ -36,7 +36,7 @@ layout_mode = 1
 offset_right = 500.0
 offset_bottom = 80.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_vgjf0")
-text = "Score: 0"
+text = "Score: 0/6"
 label_settings = SubResource("LabelSettings_4744y")
 vertical_alignment = 1
 
