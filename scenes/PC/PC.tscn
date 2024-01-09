@@ -19,6 +19,7 @@ font = ExtResource("3_i84rk")
 font_size = 24
 
 [node name="PC" type="Control"]
+process_mode = 1
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_7ispj")

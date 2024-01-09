@@ -1,43 +1,66 @@
-[gd_scene load_steps=3 format=3 uid="uid://boiw3we4sqx28"]
+[gd_scene load_steps=4 format=3 uid="uid://boiw3we4sqx28"]
 
-[ext_resource type="FontFile" uid="uid://4miq0wwwk4mu" path="res://assets/font/kenney-blocks.ttf" id="1_f6pkb"]
+[ext_resource type="FontFile" uid="uid://c1kp42ykltgal" path="res://assets/Space Shooter/font/Kenney Blocks.ttf" id="1_4yaur"]
 [ext_resource type="Script" path="res://scripts/Catch Game/Win.gd" id="2_48vxn"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_cx5r8"]
+font = ExtResource("1_4yaur")
+font_size = 42
+
 [node name="Win" type="Control"]
-process_mode = 2
+process_mode = 3
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+script = ExtResource("2_48vxn")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -125.0
+offset_right = 200.0
+offset_bottom = 125.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_group_ = true
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_top = 113.0
-offset_right = 1282.0
-offset_bottom = 391.0
-theme_override_fonts/font = ExtResource("1_f6pkb")
-theme_override_font_sizes/font_size = 90
-text = "PARABÉNS
-VOCÊ VENCEU "
+[node name="WinLabel" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 17.0
+offset_right = 200.0
+offset_bottom = 148.0
+grow_horizontal = 2
+text = "parabéns
+você venceu !"
+label_settings = SubResource("LabelSettings_cx5r8")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
-layout_mode = 0
-offset_left = -1.0
-offset_top = 386.0
-offset_right = 1279.0
-offset_bottom = 559.0
+[node name="Continue" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -80.0
+offset_right = 150.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_4yaur")
+theme_override_font_sizes/font_size = 25
+text = "continuar"
 
-[node name="Button" type="Button" parent="CenterContainer"]
-process_mode = 2
-custom_minimum_size = Vector2(400, 120)
-layout_mode = 2
-theme_override_fonts/font = ExtResource("1_f6pkb")
-theme_override_font_sizes/font_size = 50
-text = "CONCLUIR"
-script = ExtResource("2_48vxn")
-
-[connection signal="pressed" from="CenterContainer/Button" to="CenterContainer/Button" method="_on_pressed"]
+[connection signal="pressed" from="Panel/Continue" to="." method="_on_continue_pressed"]

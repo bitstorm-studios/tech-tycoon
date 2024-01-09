@@ -49,5 +49,4 @@ func _on_player_took_damage():
 		player.die()
 		$ExplodeSound.play()
 		var game_over_instance = game_over_scene.instantiate()
-		game_over_instance.add_points(player_points)
 		ui.add_child(game_over_instance)

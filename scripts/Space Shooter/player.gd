@@ -6,10 +6,7 @@ signal took_damage
 @onready var laser_container = $LaserContainer # a cena so podera carregar apos o lasercontainer carregar 
 
 var laser_scene :PackedScene = preload("res://scenes/Space Shooter/laser.tscn")
-var can_i_shoot = true # variavel para impedir tiros sequenciais infinitos
-
-func _ready():
-	var screen_size = get_viewport_rect().size
+var can_i_shoot = true # variavel para impedir tiros sequenciais infinitosd
 
 func _physics_process(_delta):
 	velocity = Vector2.ZERO # [0,0] zera os vectors em x e y
