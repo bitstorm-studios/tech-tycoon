@@ -256,10 +256,11 @@ flat = true
 
 [node name="Close" type="Button" parent="Sprite2D/Control"]
 layout_mode = 0
-offset_left = 105.984
-offset_top = -64.0
-offset_right = 113.984
-offset_bottom = -56.0
+offset_left = 106.367
+offset_top = -63.5797
+offset_right = 114.367
+offset_bottom = -55.5797
+mouse_default_cursor_shape = 2
 theme_override_styles/focus = SubResource("StyleBoxEmpty_0lh4m")
 toggle_mode = true
 button_group = ExtResource("4_p5wl7")

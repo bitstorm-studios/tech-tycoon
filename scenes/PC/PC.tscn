@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://dqlh68kvkhnhe"]
+[gd_scene load_steps=13 format=3 uid="uid://dqlh68kvkhnhe"]
 
 [ext_resource type="Script" path="res://scripts/PC/PC_Scene.gd" id="1_7ispj"]
 [ext_resource type="Texture2D" uid="uid://ca2cbleiskr7w" path="res://assets/PC/Mesa.png" id="1_fjdo7"]
 [ext_resource type="Texture2D" uid="uid://dm4quawx1qlrt" path="res://assets/PC/PC-sem-componentes.png" id="3_04ll1"]
 [ext_resource type="FontFile" uid="uid://4miq0wwwk4mu" path="res://assets/font/kenney-blocks.ttf" id="3_i84rk"]
+[ext_resource type="Texture2D" uid="uid://drddk51q8kkso" path="res://assets/PC/unfinishedtaskbox-1.png.png" id="4_a2wm6"]
 [ext_resource type="Texture2D" uid="uid://cl6ck1ik5l0aj" path="res://assets/PC/PC-processador.png" id="4_mjng8"]
 [ext_resource type="Texture2D" uid="uid://c2pmgc2oe18c6" path="res://assets/PC/PC-hd.png" id="5_f4fxn"]
 [ext_resource type="Texture2D" uid="uid://dq8vlf7t5we6i" path="res://assets/PC/PC-ram.png" id="5_f6kke"]
@@ -73,44 +74,58 @@ label_settings = SubResource("LabelSettings_kx0gl")
 
 [node name="Tasks_container" type="VBoxContainer" parent="Panel/Mesa/Tasks_panel"]
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = 8
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-offset_left = -135.0
-offset_top = 100.0
-offset_right = 135.0
-offset_bottom = 500.0
+anchor_bottom = 0.5
+offset_left = -143.0
+offset_top = -205.0
+offset_right = 144.0
+offset_bottom = 292.0
 grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Task_1" type="Label" parent="Panel/Mesa/Tasks_panel/Tasks_container"]
-custom_minimum_size = Vector2(200, 100)
+[node name="Task1_container" type="HBoxContainer" parent="Panel/Mesa/Tasks_panel/Tasks_container"]
+layout_mode = 2
+
+[node name="Check_1" type="TextureRect" parent="Panel/Mesa/Tasks_panel/Tasks_container/Task1_container"]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("4_a2wm6")
+stretch_mode = 2
+
+[node name="Task_1" type="Label" parent="Panel/Mesa/Tasks_panel/Tasks_container/Task1_container"]
+custom_minimum_size = Vector2(250, 100)
 layout_mode = 2
 text = "Formatar o HD"
 label_settings = SubResource("LabelSettings_e4cth")
+horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 2
 justification_flags = 162
 
-[node name="Task_2" type="Label" parent="Panel/Mesa/Tasks_panel/Tasks_container"]
-custom_minimum_size = Vector2(200, 100)
+[node name="Task2_container" type="HBoxContainer" parent="Panel/Mesa/Tasks_panel/Tasks_container"]
+layout_mode = 2
+
+[node name="Check_2" type="TextureRect" parent="Panel/Mesa/Tasks_panel/Tasks_container/Task2_container"]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("4_a2wm6")
+stretch_mode = 2
+
+[node name="Task_2" type="Label" parent="Panel/Mesa/Tasks_panel/Tasks_container/Task2_container"]
+custom_minimum_size = Vector2(250, 100)
 layout_mode = 2
 text = "Instalar uma memória RAM"
 label_settings = SubResource("LabelSettings_e4cth")
+horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 2
 justification_flags = 162
 
-[node name="Finish_container" type="HBoxContainer" parent="Panel/Mesa/Tasks_panel"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -135.0
-offset_top = -90.0
-offset_right = 135.0
-offset_bottom = -15.0
-grow_horizontal = 2
-grow_vertical = 0
+[node name="Finish_container" type="HBoxContainer" parent="Panel/Mesa/Tasks_panel/Tasks_container"]
+layout_mode = 2
 
 [node name="PC" type="TextureRect" parent="Panel"]
 layout_mode = 1
