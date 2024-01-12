@@ -1,0 +1,86 @@
+[gd_scene load_steps=5 format=3 uid="uid://cd8n8w7t7i2es"]
+
+[ext_resource type="FontFile" uid="uid://4miq0wwwk4mu" path="res://assets/font/kenney-blocks.ttf" id="1_51dp7"]
+[ext_resource type="Script" path="res://scripts/Space Shooter/Tutorial.gd" id="1_lvgqa"]
+[ext_resource type="FontFile" uid="uid://vh5v3w00tnw3" path="res://assets/font/DePixel/depixelhalbfett.otf" id="2_tarm8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t3wnx"]
+bg_color = Color(0.223529, 0.113725, 0.0509804, 1)
+
+[node name="Tutorial" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lvgqa")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_t3wnx")
+
+[node name="Título" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 322.0
+offset_top = 61.0
+offset_right = 952.0
+offset_bottom = 141.0
+theme_override_fonts/font = ExtResource("1_51dp7")
+theme_override_font_sizes/font_size = 50
+text = "Destrua os Virus"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Descrição" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 137.0
+offset_right = 1222.0
+offset_bottom = 281.0
+theme_override_fonts/font = ExtResource("2_tarm8")
+theme_override_font_sizes/font_size = 25
+text = "Seu objetivo é eliminar os viruas que tomaram essa máquina, para isso acerte eles com seu lazer mas tome cuidado, eles também irão te atacar."
+horizontal_alignment = 3
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Aviso" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 374.0
+offset_right = 1216.0
+offset_bottom = 518.0
+theme_override_colors/font_color = Color(0.882353, 0.603922, 0, 1)
+theme_override_fonts/font = ExtResource("2_tarm8")
+theme_override_font_sizes/font_size = 30
+text = "Atencao ! Voce possui uma unica chance de completar essa tarefa ."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Controles" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 269.0
+offset_right = 1217.0
+offset_bottom = 369.0
+theme_override_fonts/font = ExtResource("2_tarm8")
+theme_override_font_sizes/font_size = 25
+text = "Utilize W, A, S, D ou as setas para mover e ESPAÇO para atacar"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Começar" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 321.0
+offset_top = 551.0
+offset_right = 871.0
+offset_bottom = 701.0
+theme_override_fonts/font = ExtResource("1_51dp7")
+theme_override_font_sizes/font_size = 50
+text = "COMEÇAR"
+
+[connection signal="pressed" from="Panel/Começar" to="." method="_on_começar_pressed"]

@@ -1,0 +1,84 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1vs5ci3wber1"]
+
+[ext_resource type="Script" path="res://scripts/Catch Game/Começar.gd" id="1_00lb3"]
+[ext_resource type="FontFile" uid="uid://4miq0wwwk4mu" path="res://assets/font/kenney-blocks.ttf" id="1_mce1n"]
+[ext_resource type="FontFile" uid="uid://vh5v3w00tnw3" path="res://assets/font/DePixel/depixelhalbfett.otf" id="3_8y88p"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q5cl3"]
+bg_color = Color(0.223529, 0.113725, 0.0509804, 1)
+
+[node name="Tutorial" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+script = ExtResource("1_00lb3")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+offset_right = 1280.0
+offset_bottom = 720.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_q5cl3")
+
+[node name="Título" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 322.0
+offset_top = 61.0
+offset_right = 952.0
+offset_bottom = 141.0
+theme_override_fonts/font = ExtResource("1_mce1n")
+theme_override_font_sizes/font_size = 50
+text = "Instale o Windows"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Descrição" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 137.0
+offset_right = 1222.0
+offset_bottom = 337.0
+theme_override_fonts/font = ExtResource("3_8y88p")
+theme_override_font_sizes/font_size = 25
+text = "Seu objetivo e instalar o windows nessa maquina, para isso voce deve coletar os objetos verdes e evitar os vermelhos."
+horizontal_alignment = 3
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Aviso" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 374.0
+offset_right = 1216.0
+offset_bottom = 518.0
+theme_override_colors/font_color = Color(0.882353, 0.603922, 0, 1)
+theme_override_fonts/font = ExtResource("3_8y88p")
+theme_override_font_sizes/font_size = 30
+text = "Atencao ! Voce possui uma unica chance de completar essa tarefa ."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Controles" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 269.0
+offset_right = 1217.0
+offset_bottom = 369.0
+theme_override_fonts/font = ExtResource("3_8y88p")
+theme_override_font_sizes/font_size = 25
+text = "Utilize A, D ou as setas para mover"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Começar" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 321.0
+offset_top = 551.0
+offset_right = 871.0
+offset_bottom = 701.0
+theme_override_fonts/font = ExtResource("1_mce1n")
+theme_override_font_sizes/font_size = 50
+text = "COMEÇAR"
+
+[connection signal="pressed" from="Panel/Começar" to="." method="_on_começar_pressed"]

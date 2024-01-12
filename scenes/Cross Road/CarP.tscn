@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://1e1gck1ivlvc"]
+
+[ext_resource type="Script" path="res://scripts/Cross Road/Car.gd" id="1_th6jw"]
+[ext_resource type="Script" path="res://scripts/Cross Road/CarP.gd" id="2_jleqx"]
+[ext_resource type="Texture2D" uid="uid://e8g8uwobodl6" path="res://assets/Cross Road/TopDown Vehicles v1.17/Civic Branco.png" id="4_2ayqf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_slk1v"]
+size = Vector2(56, 36)
+
+[node name="Path" type="PathFollow2D"]
+loop = false
+script = ExtResource("1_th6jw")
+
+[node name="Car" type="CharacterBody2D" parent="."]
+
+[node name="Sprite" type="Sprite2D" parent="Car"]
+texture = ExtResource("4_2ayqf")
+flip_h = true
+script = ExtResource("2_jleqx")
+
+[node name="Colisao" type="CollisionShape2D" parent="Car"]
+position = Vector2(2, 3)
+shape = SubResource("RectangleShape2D_slk1v")

@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://beieivmrx4uyt"]
+
+[ext_resource type="Texture2D" uid="uid://ccpaceerk54js" path="res://assets/Cross Road/TopDown Vehicles v1.17/Onibus Amarelo.png" id="1_7iwxn"]
+[ext_resource type="Script" path="res://scripts/Cross Road/CarGG.gd" id="1_65n1a"]
+[ext_resource type="Script" path="res://scripts/Cross Road/Car.gd" id="1_l7ias"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6saal"]
+size = Vector2(115, 51)
+
+[node name="Path" type="PathFollow2D"]
+loop = false
+script = ExtResource("1_l7ias")
+
+[node name="CarGg" type="CharacterBody2D" parent="."]
+
+[node name="Sprite" type="Sprite2D" parent="CarGg"]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_7iwxn")
+flip_h = true
+script = ExtResource("1_65n1a")
+
+[node name="Colisao" type="CollisionShape2D" parent="CarGg"]
+position = Vector2(2.5, -5.5)
+shape = SubResource("RectangleShape2D_6saal")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
