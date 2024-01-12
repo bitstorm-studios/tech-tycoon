@@ -1,12 +1,15 @@
-[gd_scene load_steps=20 format=3 uid="uid://byjgi1w5nus31"]
+[gd_scene load_steps=23 format=3 uid="uid://byjgi1w5nus31"]
 
 [ext_resource type="Texture2D" uid="uid://r5h6x53jj64i" path="res://assets/HUD/pause.png" id="1_igtv7"]
 [ext_resource type="Texture2D" uid="uid://gt180d0nxms1" path="res://assets/HUD/HUD_balcao.png" id="1_jl71a"]
+[ext_resource type="Texture2D" uid="uid://3fvcbsm5pt4" path="res://assets/HUD/HUD_parede.png" id="1_u0t27"]
 [ext_resource type="Script" path="res://scripts/HUD/Pause.gd" id="2_7mnlp"]
 [ext_resource type="Texture2D" uid="uid://cosw4jf8dnclc" path="res://assets/HUD/moeda.png" id="3_6y7p0"]
 [ext_resource type="Script" path="res://scripts/Store/OpenStore.gd" id="4_7i1m5"]
 [ext_resource type="Texture2D" uid="uid://oklgrypyhxs" path="res://assets/HUD/coroa.png" id="4_ol4je"]
-[ext_resource type="Script" path="res://scripts/HUD/Stats.gd" id="7_thvdp"]
+[ext_resource type="Script" path="res://scripts/HUD/Money.gd" id="6_isfvk"]
+[ext_resource type="Script" path="res://scripts/HUD/Reputation.gd" id="8_gb718"]
+[ext_resource type="Texture2D" uid="uid://c7ebhfydqy3jj" path="res://assets/HUD/HUD_superior.png" id="10_47n4y"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_140j0"]
 atlas = ExtResource("1_jl71a")
@@ -68,9 +71,16 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Will Hide"]
-position = Vector2(640, 360)
-scale = Vector2(1.883, 1.871)
+[node name="Parede" type="TextureRect" parent="Will Hide"]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("1_u0t27")
+
+[node name="Balcao" type="AnimatedSprite2D" parent="Will Hide"]
+z_index = 2
+position = Vector2(640, 358)
+scale = Vector2(1.871, 1.859)
 sprite_frames = SubResource("SpriteFrames_wlrpe")
 metadata/_edit_lock_ = true
 
@@ -108,42 +118,54 @@ icon_alignment = 1
 expand_icon = true
 script = ExtResource("2_7mnlp")
 
-[node name="Stats" type="HBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 1121.0
-offset_top = 11.0
-offset_right = 1269.0
-offset_bottom = 51.0
-script = ExtResource("7_thvdp")
-metadata/_edit_group_ = true
-
-[node name="Money" type="HBoxContainer" parent="Stats"]
+[node name="Money" type="HBoxContainer" parent="."]
+z_index = 4
 layout_mode = 2
+offset_left = 854.0
+offset_top = 17.0
+offset_right = 1047.0
+offset_bottom = 57.0
+script = ExtResource("6_isfvk")
 
-[node name="MoneyIcon" type="TextureRect" parent="Stats/Money"]
+[node name="MoneyIcon" type="TextureRect" parent="Money"]
 layout_mode = 2
 texture = ExtResource("3_6y7p0")
 expand_mode = 2
 
-[node name="MoneyValue" type="Label" parent="Stats/Money"]
+[node name="MoneyValue" type="Label" parent="Money"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "000"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Reputation" type="HBoxContainer" parent="Stats"]
+[node name="Reputation" type="HBoxContainer" parent="."]
+z_index = 4
 layout_mode = 2
+offset_left = 1070.0
+offset_top = 17.0
+offset_right = 1261.0
+offset_bottom = 57.0
+script = ExtResource("8_gb718")
 
-[node name="ReputationIcon" type="TextureRect" parent="Stats/Reputation"]
+[node name="ReputationIcon" type="TextureRect" parent="Reputation"]
 layout_mode = 2
 texture = ExtResource("4_ol4je")
 expand_mode = 2
 
-[node name="ReputationValue" type="Label" parent="Stats/Reputation"]
+[node name="ReputationValue" type="Label" parent="Reputation"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "000"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="HUD_superior" type="TextureRect" parent="."]
+z_index = 3
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 79.0
+texture = ExtResource("10_47n4y")
 
 [connection signal="pressed" from="Will Hide/Store" to="Will Hide/Store" method="_on_pressed"]
 [connection signal="pressed" from="Pause" to="Pause" method="_on_pressed"]

@@ -12,6 +12,8 @@ point_count = 3
 [node name="Game" type="Node2D"]
 script = ExtResource("1_jorwv")
 
+[node name="HUD" parent="." instance=ExtResource("1_wup74")]
+
 [node name="MainClient" type="Node2D" parent="."]
 
 [node name="Path2D" type="Path2D" parent="MainClient"]
@@ -25,7 +27,5 @@ loop = false
 [node name="Timer" type="Timer" parent="MainClient"]
 wait_time = 2.0
 one_shot = true
-
-[node name="HUD" parent="." instance=ExtResource("1_wup74")]
 
 [connection signal="timeout" from="MainClient/Timer" to="." method="_on_timer_timeout"]
