@@ -5,19 +5,20 @@
 [ext_resource type="Texture2D" uid="uid://e8g8uwobodl6" path="res://assets/Cross Road/TopDown Vehicles v1.17/Civic Branco.png" id="4_2ayqf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_slk1v"]
-size = Vector2(56, 36)
+size = Vector2(45.5, 29.5)
 
 [node name="Path" type="PathFollow2D"]
+rotates = false
 loop = false
 script = ExtResource("1_th6jw")
 
 [node name="Car" type="CharacterBody2D" parent="."]
 
 [node name="Sprite" type="Sprite2D" parent="Car"]
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("4_2ayqf")
-flip_h = true
 script = ExtResource("2_jleqx")
 
 [node name="Colisao" type="CollisionShape2D" parent="Car"]
-position = Vector2(2, 3)
+position = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_slk1v")

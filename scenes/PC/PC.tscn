@@ -43,20 +43,21 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -632.0
-offset_top = -354.0
-offset_right = 648.0
-offset_bottom = 366.0
+offset_left = -640.0
+offset_top = -360.0
+offset_right = 640.0
+offset_bottom = 360.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_fjdo7")
 
 [node name="Tasks_panel" type="Panel" parent="Panel/Mesa"]
 layout_mode = 0
-offset_left = 941.0
-offset_top = 73.0
-offset_right = 1241.0
-offset_bottom = 673.0
+offset_left = 945.0
+offset_top = 98.0
+offset_right = 1245.0
+offset_bottom = 698.0
+metadata/_edit_group_ = true
 
 [node name="Title" type="Label" parent="Panel/Mesa/Tasks_panel"]
 layout_mode = 1
@@ -119,14 +120,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -360.0
-offset_top = -300.0
-offset_right = 240.0
-offset_bottom = 300.0
+offset_left = -363.0
+offset_top = -262.0
+offset_right = 237.0
+offset_bottom = 338.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_04ll1")
-metadata/_edit_lock_ = true
 
 [node name="CPU" type="TextureRect" parent="Panel/PC"]
 layout_mode = 0

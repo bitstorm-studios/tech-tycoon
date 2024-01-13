@@ -5,9 +5,10 @@
 [ext_resource type="Script" path="res://scripts/Cross Road/CarG.gd" id="1_hoff3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xott5"]
-size = Vector2(90, 47)
+size = Vector2(90, 43)
 
 [node name="Path" type="PathFollow2D"]
+rotates = false
 loop = false
 script = ExtResource("1_1q6d1")
 
@@ -16,9 +17,8 @@ script = ExtResource("1_1q6d1")
 [node name="Sprite" type="Sprite2D" parent="CarG"]
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_f6l3g")
-flip_h = true
 script = ExtResource("1_hoff3")
 
 [node name="Colisao" type="CollisionShape2D" parent="CarG"]
-position = Vector2(1, -3.5)
+position = Vector2(-1, -1)
 shape = SubResource("RectangleShape2D_xott5")

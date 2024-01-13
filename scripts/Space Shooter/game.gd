@@ -28,7 +28,7 @@ func _ready():
 	
 func _process(delta):
 	scroll_background.offset.y += 169*delta
-	if scroll_background.offset.y >= get_viewport().get_window().size.y:
+	if scroll_background.offset.y >= 720:
 		scroll_background.offset.y = 0
 
 func on_give_points(points: int):

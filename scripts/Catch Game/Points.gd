@@ -1,7 +1,11 @@
 extends Control
 
-func show_points(points):
-	$Score.text = "Pontuação: " + str(points) + "/5"
+@onready var fundo = $AnimatedSprite2D
+@onready var pontos = get_node
 
-func show_life(life):
-	$Life.text = "Vida: " + str(life) + "/3"
+func show_points():
+	fundo.frame += 1
+	
+func show_life():
+	fundo.frame -= 1
+	get_node("/root/Game/CatchGame").player_points -= 1

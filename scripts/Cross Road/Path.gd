@@ -6,7 +6,7 @@ preload("res://scenes/Cross Road/CarG.tscn"),
 preload("res://scenes/Cross Road/CarGG.tscn")]
 
 var timer = 0
-var spawnTime = randf_range(0.4, 1)
+var spawnTime = randf_range(0.8, 1.3)
 
 func _process(delta):
 	timer = timer + delta
@@ -15,5 +15,5 @@ func _process(delta):
 		var random_car:PackedScene = car_array.pick_random()
 		var car_instatiate = random_car.instantiate()
 		self.add_child(car_instatiate)
-		spawnTime = randf_range(0.3, 0.8)
+		spawnTime = randf_range(0.8, 1.3)
 		timer = 0

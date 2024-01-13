@@ -5,6 +5,8 @@ extends Node2D
 @export var is_walking = true
 @export var money = 0
 @export var fame = 0
+@export var first_time_shooter = true
+@export var first_time_catch = true
 var client_scene = preload("res://scenes/Clients/Client.tscn")
 var client_instance
 var dialog_scene = preload("res://scenes/Dialog/Dialog.tscn")
