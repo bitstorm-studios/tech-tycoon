@@ -1,6 +1,8 @@
 extends Control
 
+var catch_tutorial:PackedScene = preload("res://scenes/Catch Game/Tutorial.tscn")
 var catch_game_scene:PackedScene = preload("res://scenes/Catch Game/Background.tscn")
+var space_shooter_tutorial:PackedScene = preload("res://scenes/Space Shooter/Tutorial.tscn")
 var space_shooter_scene:PackedScene = preload("res://scenes/Space Shooter/game.tscn")
 var finish_scene:PackedScene = preload("res://scenes/PC/Conclude.tscn")
 var pendent_tasks = 2
@@ -9,13 +11,25 @@ func _on_tampa_button_pressed():
 	get_node("Panel/PC/Tampa").queue_free()
 	
 func lauch_space_shooter():
-	var space_shooter_scene_instantiate = space_shooter_scene.instantiate()
-	get_tree().get_root().get_node("/root/Game").add_child(space_shooter_scene_instantiate)
+	var space_shooter_instantiate
+	if get_node("/root/Game").first_time_shooter:
+		space_shooter_instantiate = space_shooter_tutorial.instantiate()
+		get_node("/root/Game").first_time_shooter = false
+	elif not get_node("/root/Game").first_time_shooter:
+		space_shooter_instantiate = space_shooter_scene.instantiate()
+		
+	get_tree().get_root().get_node("/root/Game").add_child(space_shooter_instantiate)
 	get_node("/root/Game/HUD").hide()
 
 func launch_catch_game():
-	var catch_game_scene_instantiate = catch_game_scene.instantiate()
-	get_tree().get_root().get_node("/root/Game").add_child(catch_game_scene_instantiate)
+	var catch_game_instantiate
+	if get_node("/root/Game").first_time_catch:
+		catch_game_instantiate = catch_tutorial.instantiate()
+		get_node("/root/Game").first_time_catch = false
+	elif not get_node("/root/Game").first_time_catch:
+		catch_game_instantiate = catch_game_scene.instantiate()
+		
+	get_tree().get_root().get_node("/root/Game").add_child(catch_game_instantiate)
 	get_node("/root/Game/HUD").hide()
 
 func check_finish():

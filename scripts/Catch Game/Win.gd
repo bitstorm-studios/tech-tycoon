@@ -1,6 +1,9 @@
 extends Control
 
-func _on_continue_pressed():
+func _ready():
+	$Panel/Timer.start()
+
+func _on_timer_timeout():
 	get_tree().paused = false
-	get_parent().queue_free()
+	get_node("/root/Game/CatchGame").queue_free()
 	get_node("/root/Game/HUD").show()

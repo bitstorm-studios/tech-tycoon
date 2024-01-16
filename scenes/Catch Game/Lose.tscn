@@ -1,11 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://cnsp3nuoxlmra"]
 
 [ext_resource type="Script" path="res://scripts/Catch Game/Retry.gd" id="1_eufso"]
-[ext_resource type="FontFile" uid="uid://c1kp42ykltgal" path="res://assets/Space Shooter/font/Kenney Blocks.ttf" id="2_e6yqg"]
+[ext_resource type="FontFile" uid="uid://vh5v3w00tnw3" path="res://assets/font/DePixel/depixelhalbfett.otf" id="2_yl71o"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_6ep46"]
-font = ExtResource("2_e6yqg")
-font_size = 42
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a03tp"]
+bg_color = Color(0.223529, 0.113725, 0.0509804, 1)
 
 [node name="Control" type="Control"]
 process_mode = 3
@@ -26,38 +25,21 @@ offset_right = 840.0
 offset_bottom = 485.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_group_ = true
 
-[node name="GameOverLabel" type="Label" parent="Panel"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -200.0
-offset_top = 50.0
-offset_right = 200.0
-offset_bottom = 120.0
-grow_horizontal = 2
-text = "você perdeu"
-label_settings = SubResource("LabelSettings_6ep46")
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_right = 402.0
+offset_bottom = 251.0
+theme_override_fonts/font = ExtResource("2_yl71o")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_a03tp")
+text = "Você perdeu, seu pagamento sofretá uma penalidade !"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
 
-[node name="RetryButton" type="Button" parent="Panel"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -150.0
-offset_top = -80.0
-offset_right = 150.0
-offset_bottom = -30.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_fonts/font = ExtResource("2_e6yqg")
-theme_override_font_sizes/font_size = 25
-text = "tentar de novo!"
+[node name="Timer" type="Timer" parent="Panel"]
+wait_time = 1.5
+one_shot = true
 
-[connection signal="pressed" from="Panel/RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="timeout" from="Panel/Timer" to="." method="_on_timer_timeout"]

@@ -6,7 +6,7 @@ var win_scene: PackedScene = preload("res://scenes/Catch Game/Win.tscn")
 var lose_scene:PackedScene = preload("res://scenes/Catch Game/Lose.tscn")
 var player_scene:PackedScene = preload("res://scenes/Catch Game/Player.tscn")
 var interval = 0.3
-var player_points = 0
+@export var player_points = 0
 var player_life = 3
 
 func _ready():
@@ -37,12 +37,12 @@ func _on_timer_timeout():
 	
 func on_collect():
 	player_points += 1
-	if (player_points == 5):
+	if (player_points == 8):
 		get_tree().paused = true
 		var win_instance = win_scene.instantiate()
 		add_child(win_instance) 
 		
-	$HUD.show_points(player_points)
+	$HUD.show_points()
 
 func on_decrease():
 	player_life -= 1
@@ -51,4 +51,4 @@ func on_decrease():
 		var lose_instance = lose_scene.instantiate()
 		add_child(lose_instance) 
 		
-	$HUD.show_life(player_life)
+	$HUD.show_life()
