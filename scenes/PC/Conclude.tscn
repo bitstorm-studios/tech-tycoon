@@ -1,24 +1,39 @@
-[gd_scene load_steps=3 format=3 uid="uid://bxkyrvauyleqy"]
+[gd_scene load_steps=5 format=3 uid="uid://bxkyrvauyleqy"]
 
 [ext_resource type="Script" path="res://scripts/PC/Finish.gd" id="1_hl13o"]
-[ext_resource type="FontFile" uid="uid://4miq0wwwk4mu" path="res://assets/font/kenney-blocks.ttf" id="2_q6rsk"]
+[ext_resource type="FontFile" uid="uid://vh5v3w00tnw3" path="res://assets/font/DePixel/depixelhalbfett.otf" id="2_gci0p"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6wjne"]
+bg_color = Color(0, 0, 0, 0.588235)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jkqac"]
+bg_color = Color(1, 0.745098, 0.34902, 0.588235)
 
 [node name="Conclude" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -1280.0
+offset_bottom = -720.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hl13o")
 
 [node name="Finish" type="Button" parent="."]
 layout_mode = 1
-offset_right = 282.0
-offset_bottom = 75.0
-theme_override_fonts/font = ExtResource("2_q6rsk")
-theme_override_font_sizes/font_size = 25
-text = "Concluir Pedido"
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -125.0
+offset_right = 125.0
+offset_bottom = 55.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_gci0p")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_6wjne")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jkqac")
+text = "Concluir Pedido!"
 
 [node name="OutTime" type="Timer" parent="."]
 one_shot = true
