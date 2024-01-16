@@ -85,15 +85,15 @@ scale = Vector2(5.61403, 5.625)
 texture = ExtResource("2_1rhgb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Will Hide"]
-position = Vector2(648, 366)
+position = Vector2(639, 360)
 scale = Vector2(5.61404, 5.625)
 sprite_frames = SubResource("SpriteFrames_2xkwx")
 
 [node name="Button" type="Button" parent="Will Hide/AnimatedSprite2D"]
-offset_left = 87.0
-offset_top = 34.0
-offset_right = 112.0
-offset_bottom = 62.0
+offset_left = 87.2812
+offset_top = 33.9556
+offset_right = 112.281
+offset_bottom = 61.9556
 theme_override_styles/focus = SubResource("StyleBoxEmpty_r1ktk")
 flat = true
 script = ExtResource("3_mgc6a")
@@ -113,8 +113,6 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("4_7i1m5")
-
-[node name="MainPC" type="Node2D" parent="."]
 
 [node name="Pause" type="Button" parent="."]
 process_mode = 1

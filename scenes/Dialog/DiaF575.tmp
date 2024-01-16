@@ -121,7 +121,6 @@ texture_normal = ExtResource("6_gqhgm")
 stretch_mode = 0
 
 [node name="FameIcon" type="TextureRect" parent="Buttons/Recusar"]
-layout_mode = 0
 offset_left = 14.0
 offset_top = 11.0
 offset_right = 54.0
@@ -130,7 +129,6 @@ texture = ExtResource("4_xnf7o")
 expand_mode = 2
 
 [node name="FameValue" type="Label" parent="Buttons/Recusar"]
-layout_mode = 0
 offset_left = 69.0
 offset_top = 21.0
 offset_right = 124.0
