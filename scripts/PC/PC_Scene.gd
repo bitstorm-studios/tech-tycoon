@@ -6,11 +6,13 @@ var space_shooter_tutorial:PackedScene = preload("res://scenes/Space Shooter/Tut
 var space_shooter_scene:PackedScene = preload("res://scenes/Space Shooter/game.tscn")
 var finish_scene:PackedScene = preload("res://scenes/PC/Conclude.tscn")
 var pendent_tasks = 2
+@export var failed_tasks = 0
 
 func _on_tampa_button_pressed():
 	get_node("Panel/PC/Tampa").queue_free()
 	
 func lauch_space_shooter():
+	self.hide()
 	var space_shooter_instantiate
 	if get_node("/root/Game").first_time_shooter:
 		space_shooter_instantiate = space_shooter_tutorial.instantiate()
@@ -22,6 +24,7 @@ func lauch_space_shooter():
 	get_node("/root/Game/HUD").hide()
 
 func launch_catch_game():
+	self.hide()
 	var catch_game_instantiate
 	if get_node("/root/Game").first_time_catch:
 		catch_game_instantiate = catch_tutorial.instantiate()
