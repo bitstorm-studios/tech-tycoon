@@ -1,7 +1,7 @@
 extends TextureRect
 
-var possible_parts = [load("res://assets/DragDrop/PC-hd.png"), load("res://assets/DragDrop/PC-placa-de-video.png"), 
-					  load("res://assets/DragDrop/PC-processador.png"), load("res://assets/DragDrop/PC-ram.png")]
+@export var possible_parts = [load("res://assets/DragDrop/PC-hd.png"), load("res://assets/DragDrop/PC-placa-de-video.png"), 
+							  load("res://assets/DragDrop/PC-processador.png"), load("res://assets/DragDrop/PC-ram.png")]
 
 func _get_drag_data(_at_position):
 	var data = {}

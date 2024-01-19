@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dqlh68kvkhnhe"]
+[gd_scene load_steps=18 format=3 uid="uid://dqlh68kvkhnhe"]
 
 [ext_resource type="Script" path="res://scripts/PC/PC_Scene.gd" id="1_7ispj"]
 [ext_resource type="Texture2D" uid="uid://ca2cbleiskr7w" path="res://assets/PC/Mesa.png" id="1_fjdo7"]
@@ -14,7 +14,6 @@
 [ext_resource type="Script" path="res://scripts/PC/DroppableCPU.gd" id="8_hvotm"]
 [ext_resource type="Script" path="res://scripts/PC/DroppableHD.gd" id="10_akio5"]
 [ext_resource type="Script" path="res://scripts/PC/DroppableRAM.gd" id="12_caf8r"]
-[ext_resource type="PackedScene" uid="uid://dgh6pux85c8q7" path="res://scenes/DragDrop/DragDrop.tscn" id="13_4b3sb"]
 [ext_resource type="Script" path="res://scripts/PC/DroppableGPU.gd" id="14_l473v"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_kx0gl"]
@@ -160,88 +159,51 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_04ll1")
 
-[node name="CPU" type="TextureRect" parent="Panel/PC"]
+[node name="CPU" type="TextureButton" parent="Panel/PC"]
 layout_mode = 0
-offset_left = 3.0
-offset_top = 12.0
-offset_right = 595.0
-offset_bottom = 578.0
-texture = ExtResource("4_mjng8")
+offset_left = 78.0
+offset_top = 86.0
+offset_right = 289.0
+offset_bottom = 315.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("4_mjng8")
+stretch_mode = 0
 script = ExtResource("8_hvotm")
 
-[node name="HD" type="TextureRect" parent="Panel/PC"]
+[node name="HD" type="TextureButton" parent="Panel/PC"]
 layout_mode = 0
-offset_right = 600.0
-offset_bottom = 600.0
-texture = ExtResource("5_f4fxn")
+offset_left = 239.0
+offset_top = 24.0
+offset_right = 584.0
+offset_bottom = 305.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("5_f4fxn")
+stretch_mode = 0
 script = ExtResource("10_akio5")
-metadata/_edit_lock_ = true
 
-[node name="RAM" type="TextureRect" parent="Panel/PC"]
+[node name="RAM" type="TextureButton" parent="Panel/PC"]
 layout_mode = 0
-offset_right = 600.0
-offset_bottom = 600.0
-texture = ExtResource("5_f6kke")
+offset_left = 240.0
+offset_top = 61.0
+offset_right = 389.0
+offset_bottom = 436.0
+texture_normal = ExtResource("5_f6kke")
+stretch_mode = 0
 script = ExtResource("12_caf8r")
-metadata/_edit_lock_ = true
 
-[node name="GPU" type="TextureRect" parent="Panel/PC"]
+[node name="GPU" type="TextureButton" parent="Panel/PC"]
 clip_contents = true
 layout_mode = 0
-offset_top = 1.0
-offset_right = 600.0
-offset_bottom = 601.0
-texture = ExtResource("6_rwwnc")
-script = ExtResource("14_l473v")
-metadata/_edit_lock_ = true
-
-[node name="Button_container" type="Control" parent="Panel/PC"]
-anchors_preset = 0
-offset_right = 600.0
-offset_bottom = 600.0
-metadata/_edit_lock_ = true
-
-[node name="GPU_button" type="Button" parent="Panel/PC/Button_container"]
-layout_mode = 2
-offset_left = 44.0
+offset_left = 45.0
 offset_top = 485.0
-offset_right = 319.0
-offset_bottom = 565.0
-tooltip_text = "Placa de vídeo"
-mouse_default_cursor_shape = 2
-metadata/_edit_lock_ = true
-
-[node name="CPU_button" type="Button" parent="Panel/PC/Button_container"]
-layout_mode = 2
-offset_left = 77.0
-offset_top = 143.0
-offset_right = 235.0
-offset_bottom = 316.0
-tooltip_text = "Processador"
-mouse_default_cursor_shape = 2
-metadata/_edit_lock_ = true
-
-[node name="HD_button" type="Button" parent="Panel/PC/Button_container"]
-layout_mode = 2
-offset_left = 455.0
-offset_top = 24.0
-offset_right = 582.0
-offset_bottom = 296.0
-tooltip_text = "HD"
-mouse_default_cursor_shape = 2
-metadata/_edit_lock_ = true
-
-[node name="RAM_button" type="Button" parent="Panel/PC/Button_container"]
-layout_mode = 2
-offset_left = 315.0
-offset_top = 139.0
-offset_right = 389.0
-offset_bottom = 424.0
-tooltip_text = "Memória RAM"
-mouse_default_cursor_shape = 2
-metadata/_edit_lock_ = true
+offset_right = 306.0
+offset_bottom = 564.0
+texture_normal = ExtResource("6_rwwnc")
+stretch_mode = 0
+script = ExtResource("14_l473v")
 
 [node name="Tampa" type="TextureRect" parent="Panel/PC"]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.544
@@ -264,11 +226,8 @@ mouse_default_cursor_shape = 2
 flat = true
 metadata/_edit_lock_ = true
 
-[node name="DragDrop" parent="." instance=ExtResource("13_4b3sb")]
-layout_mode = 1
-
-[connection signal="pressed" from="Panel/PC/Button_container/GPU_button" to="." method="_on_gpu_button_pressed"]
-[connection signal="pressed" from="Panel/PC/Button_container/CPU_button" to="." method="_on_cpu_button_pressed"]
-[connection signal="pressed" from="Panel/PC/Button_container/HD_button" to="." method="_on_hd_button_pressed"]
-[connection signal="pressed" from="Panel/PC/Button_container/RAM_button" to="." method="_on_ram_button_pressed"]
+[connection signal="pressed" from="Panel/PC/CPU" to="." method="_on_cpu_button_pressed"]
+[connection signal="pressed" from="Panel/PC/HD" to="." method="_on_hd_button_pressed"]
+[connection signal="pressed" from="Panel/PC/RAM" to="." method="_on_ram_button_pressed"]
+[connection signal="pressed" from="Panel/PC/GPU" to="." method="_on_gpu_button_pressed"]
 [connection signal="pressed" from="Panel/PC/Tampa/Tampa_button" to="." method="_on_tampa_button_pressed"]
