@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dqlh68kvkhnhe"]
+[gd_scene load_steps=22 format=3 uid="uid://dqlh68kvkhnhe"]
 
 [ext_resource type="Script" path="res://scripts/PC/PC_Scene.gd" id="1_7ispj"]
 [ext_resource type="Texture2D" uid="uid://ca2cbleiskr7w" path="res://assets/PC/Mesa.png" id="1_fjdo7"]
@@ -19,6 +19,54 @@ font_size = 32
 [sub_resource type="LabelSettings" id="LabelSettings_e4cth"]
 font = ExtResource("5_r35ig")
 font_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q2q33"]
+bg_color = Color(0.392157, 0.392157, 0.392157, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wndes"]
+bg_color = Color(0.980392, 0.588235, 0.0784314, 0.196078)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.980392, 0.588235, 0.0784314, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ft4a"]
+bg_color = Color(0.392157, 0.392157, 0.392157, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7o1yn"]
+bg_color = Color(0.980392, 0.588235, 0.0784314, 0.196078)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.980392, 0.588235, 0.0784314, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tlmek"]
+bg_color = Color(0.392157, 0.392157, 0.392157, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nd6kk"]
+bg_color = Color(0.980392, 0.588235, 0.0784314, 0.196078)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.980392, 0.588235, 0.0784314, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ipnhn"]
+bg_color = Color(0.392157, 0.392157, 0.392157, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_olybo"]
+bg_color = Color(0.980392, 0.588235, 0.0784314, 0.196078)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.980392, 0.588235, 0.0784314, 1)
+border_blend = true
 
 [node name="PC" type="Control"]
 process_mode = 1
@@ -199,6 +247,8 @@ offset_right = 319.0
 offset_bottom = 565.0
 tooltip_text = "Placa de vídeo"
 mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_q2q33")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wndes")
 metadata/_edit_lock_ = true
 
 [node name="CPU_button" type="Button" parent="Panel/PC/Button_container"]
@@ -209,6 +259,8 @@ offset_right = 235.0
 offset_bottom = 316.0
 tooltip_text = "Processador"
 mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_1ft4a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7o1yn")
 metadata/_edit_lock_ = true
 
 [node name="HD_button" type="Button" parent="Panel/PC/Button_container"]
@@ -219,6 +271,8 @@ offset_right = 582.0
 offset_bottom = 296.0
 tooltip_text = "HD"
 mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_tlmek")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nd6kk")
 metadata/_edit_lock_ = true
 
 [node name="RAM_button" type="Button" parent="Panel/PC/Button_container"]
@@ -229,9 +283,12 @@ offset_right = 389.0
 offset_bottom = 424.0
 tooltip_text = "Memória RAM"
 mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ipnhn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_olybo")
 metadata/_edit_lock_ = true
 
 [node name="Tampa" type="TextureRect" parent="Panel/PC"]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.544
