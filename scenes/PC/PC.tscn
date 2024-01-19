@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dqlh68kvkhnhe"]
+[gd_scene load_steps=19 format=3 uid="uid://dqlh68kvkhnhe"]
 
 [ext_resource type="Script" path="res://scripts/PC/PC_Scene.gd" id="1_7ispj"]
 [ext_resource type="Texture2D" uid="uid://ca2cbleiskr7w" path="res://assets/PC/Mesa.png" id="1_fjdo7"]
@@ -11,6 +11,11 @@
 [ext_resource type="FontFile" uid="uid://vh5v3w00tnw3" path="res://assets/font/DePixel/depixelhalbfett.otf" id="5_r35ig"]
 [ext_resource type="Texture2D" uid="uid://d23p1thu5jsd" path="res://assets/PC/PC-tampa.png" id="6_1nsek"]
 [ext_resource type="Texture2D" uid="uid://bvwg0aj2f1a85" path="res://assets/PC/PC-placa-de-video.png" id="6_rwwnc"]
+[ext_resource type="Script" path="res://scripts/PC/DroppableCPU.gd" id="8_hvotm"]
+[ext_resource type="Script" path="res://scripts/PC/DroppableHD.gd" id="10_akio5"]
+[ext_resource type="Script" path="res://scripts/PC/DroppableRAM.gd" id="12_caf8r"]
+[ext_resource type="PackedScene" uid="uid://dgh6pux85c8q7" path="res://scenes/DragDrop/DragDrop.tscn" id="13_4b3sb"]
+[ext_resource type="Script" path="res://scripts/PC/DroppableGPU.gd" id="14_l473v"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_kx0gl"]
 font = ExtResource("3_i84rk")
@@ -157,16 +162,19 @@ texture = ExtResource("3_04ll1")
 
 [node name="CPU" type="TextureRect" parent="Panel/PC"]
 layout_mode = 0
-offset_right = 600.0
-offset_bottom = 600.0
+offset_left = 3.0
+offset_top = 12.0
+offset_right = 595.0
+offset_bottom = 578.0
 texture = ExtResource("4_mjng8")
-metadata/_edit_lock_ = true
+script = ExtResource("8_hvotm")
 
 [node name="HD" type="TextureRect" parent="Panel/PC"]
 layout_mode = 0
 offset_right = 600.0
 offset_bottom = 600.0
 texture = ExtResource("5_f4fxn")
+script = ExtResource("10_akio5")
 metadata/_edit_lock_ = true
 
 [node name="RAM" type="TextureRect" parent="Panel/PC"]
@@ -174,6 +182,7 @@ layout_mode = 0
 offset_right = 600.0
 offset_bottom = 600.0
 texture = ExtResource("5_f6kke")
+script = ExtResource("12_caf8r")
 metadata/_edit_lock_ = true
 
 [node name="GPU" type="TextureRect" parent="Panel/PC"]
@@ -183,6 +192,7 @@ offset_top = 1.0
 offset_right = 600.0
 offset_bottom = 601.0
 texture = ExtResource("6_rwwnc")
+script = ExtResource("14_l473v")
 metadata/_edit_lock_ = true
 
 [node name="Button_container" type="Control" parent="Panel/PC"]
@@ -253,6 +263,9 @@ tooltip_text = "Remover tampa"
 mouse_default_cursor_shape = 2
 flat = true
 metadata/_edit_lock_ = true
+
+[node name="DragDrop" parent="." instance=ExtResource("13_4b3sb")]
+layout_mode = 1
 
 [connection signal="pressed" from="Panel/PC/Button_container/GPU_button" to="." method="_on_gpu_button_pressed"]
 [connection signal="pressed" from="Panel/PC/Button_container/CPU_button" to="." method="_on_cpu_button_pressed"]
