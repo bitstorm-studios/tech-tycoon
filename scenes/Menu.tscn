@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://c7t0xwb6s0py7"]
+[gd_scene load_steps=7 format=3 uid="uid://c7t0xwb6s0py7"]
 
 [ext_resource type="Script" path="res://scripts/Menu.gd" id="1_ug6qg"]
 [ext_resource type="Texture2D" uid="uid://cv8yv5iiodmy0" path="res://assets/Menu/Menu.png" id="2_5yxi5"]
 [ext_resource type="Texture2D" uid="uid://dcwx0083msbnp" path="res://assets/Menu/Start_Hover.png" id="3_jlg0f"]
 [ext_resource type="Texture2D" uid="uid://sfyee3fgsetk" path="res://assets/Menu/Start.png" id="4_wgr1g"]
+[ext_resource type="Texture2D" uid="uid://chuq0dvdkl3l6" path="res://assets/Menu/Quit.png" id="5_mgxr5"]
+[ext_resource type="Texture2D" uid="uid://br58lhny8cbjp" path="res://assets/Menu/Quit_Hover.png" id="6_a2r4g"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -30,4 +32,16 @@ texture_normal = ExtResource("4_wgr1g")
 texture_hover = ExtResource("3_jlg0f")
 stretch_mode = 0
 
+[node name="TextureButton2" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 939.0
+offset_top = 537.0
+offset_right = 1112.0
+offset_bottom = 608.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("5_mgxr5")
+texture_hover = ExtResource("6_a2r4g")
+stretch_mode = 0
+
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="TextureButton2" to="." method="_on_texture_button_2_pressed"]

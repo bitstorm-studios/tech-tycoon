@@ -1,13 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://njokdodwft5r"]
+[gd_scene load_steps=7 format=3 uid="uid://njokdodwft5r"]
 
-[ext_resource type="FontFile" uid="uid://4miq0wwwk4mu" path="res://assets/font/kenney-blocks.ttf" id="1_q6giw"]
+[ext_resource type="FontFile" uid="uid://vh5v3w00tnw3" path="res://assets/font/DePixel/depixelhalbfett.otf" id="1_us0m6"]
 [ext_resource type="Script" path="res://scripts/HUD/Unpause.gd" id="2_qskja"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fnhc6"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_brsih"]
 keycode = 4194305
 
 [sub_resource type="Shortcut" id="Shortcut_njobj"]
 events = [SubResource("InputEventKey_brsih")]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3h8k1"]
 
 [node name="Pause" type="Control"]
 process_mode = 3
@@ -21,8 +25,8 @@ grow_vertical = 2
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
 offset_right = 1271.0
-offset_bottom = 724.0
-theme_override_fonts/font = ExtResource("1_q6giw")
+offset_bottom = 502.0
+theme_override_fonts/font = ExtResource("1_us0m6")
 theme_override_font_sizes/font_size = 90
 text = "JOGO PAUSADO"
 horizontal_alignment = 1
@@ -30,14 +34,28 @@ vertical_alignment = 1
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 377.0
-offset_top = 438.0
-offset_right = 873.0
-offset_bottom = 575.0
-theme_override_fonts/font = ExtResource("1_q6giw")
-theme_override_font_sizes/font_size = 50
+offset_left = 372.0
+offset_top = 363.0
+offset_right = 876.0
+offset_bottom = 459.0
+theme_override_fonts/font = ExtResource("1_us0m6")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fnhc6")
 shortcut = SubResource("Shortcut_njobj")
 text = "RETORNAR"
+flat = true
 script = ExtResource("2_qskja")
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 524.0
+offset_top = 481.0
+offset_right = 732.0
+offset_bottom = 584.0
+theme_override_fonts/font = ExtResource("1_us0m6")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3h8k1")
+text = "Sair"
+flat = true
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

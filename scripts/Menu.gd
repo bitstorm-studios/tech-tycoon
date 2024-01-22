@@ -6,3 +6,7 @@ func _on_texture_button_pressed():
 	var game_instance = game.instantiate()
 	get_tree().get_root().add_child(game_instance)
 	queue_free()
+
+
+func _on_texture_button_2_pressed():
+	get_tree().quit()

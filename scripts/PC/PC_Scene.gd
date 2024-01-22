@@ -45,21 +45,36 @@ func check_finish():
 
 func _on_cpu_button_pressed():
 	get_node("Panel/PC/CPU").texture_normal = null
+	get_node("Panel/PC/CPU").disabled = true
+	get_node("Panel/PC/CPU").set_default_cursor_shape(CURSOR_ARROW)
 	lauch_space_shooter()
 	get_node("Panel/Mesa/Tasks_panel/Tasks_container/Task_3_container/CheckBox3").texture = checkbox_complete
 	check_finish()
 
 func _on_hd_button_pressed():
 	get_node("Panel/PC/HD").texture_normal = null
+	get_node("Panel/PC/HD").disabled = true
+	get_node("Panel/PC/HD").set_default_cursor_shape(CURSOR_ARROW)
 	launch_catch_game()
 	get_node("Panel/Mesa/Tasks_panel/Tasks_container/Task_1_container/CheckBox1").texture = checkbox_complete
 	check_finish()
 
 func _on_ram_button_pressed():
 	get_node("Panel/PC/RAM").texture_normal = null
+	get_node("Panel/PC/RAM").disabled = true
+	get_node("Panel/PC/RAM").set_default_cursor_shape(CURSOR_ARROW)
 	get_node("Panel/Mesa/Tasks_panel/Tasks_container/Task_2_container/CheckBox2").texture = checkbox_complete
 	check_finish()
 
 func _on_gpu_button_pressed():
 	get_node("Panel/PC/GPU").texture_normal = null
+	get_node("Panel/PC/GPU").disabled = true
+	get_node("Panel/PC/GPU").set_default_cursor_shape(CURSOR_ARROW)
+	check_finish()
+
+
+func _on_fonte_pressed():
+	get_node("Panel/PC/Fonte").texture_normal = null
+	get_node("Panel/PC/Fonte").disabled = true
+	get_node("Panel/PC/Fonte").set_default_cursor_shape(CURSOR_ARROW)
 	check_finish()

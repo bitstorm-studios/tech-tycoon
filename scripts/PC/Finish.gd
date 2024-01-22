@@ -11,19 +11,7 @@ func _on_finish_pressed():
 	get_node("/root/Game/MainPC/PC").hide()
 	get_node("/root/Game/MainClient").show()
 	get_node("/root/Game/HUD/Will Hide").show()
-	get_node("/root/Game/MainClient/Path2D/PathFollow2D/Client/Sprite").texture = happy_larry
-	
-	if get_node("/root/Game/MainPC/PC").failed_tasks == 0:
-		get_node("/root/Game/HUD/Stats")._add_money(get_node("/root/Game/MainClient/Dialog/Text").money_payment)
-		get_node("/root/Game/HUD/Stats")._add_fame(get_node("/root/Game/MainClient/Dialog/Text").fame_payment)
-		
-	if get_node("/root/Game/MainPC/PC").failed_tasks == 1:
-		get_node("/root/Game/HUD/Stats")._add_money(get_node("/root/Game/MainClient/Dialog/Text").money_payment - (get_node("/root/Game/MainClient/Dialog/Text").money_payment * 0.2))
-		get_node("/root/Game/HUD/Stats")._add_fame(get_node("/root/Game/MainClient/Dialog/Text").fame_payment - 1)
-		
-	if get_node("/root/Game/MainPC/PC").failed_tasks == 2:
-		get_node("/root/Game/HUD/Stats")._add_money(get_node("/root/Game/MainClient/Dialog/Text").money_payment - (get_node("/root/Game/MainClient/Dialog/Text").money_payment * 0.4))
-		get_node("/root/Game/HUD/Stats")._add_fame(get_node("/root/Game/MainClient/Dialog/Text").fame_payment - 2)
+	get_node("/root/Game/MainClient/Path2D/PathFollow2D/Client/Sprite").texture = happy_larry	
 
 func _on_out_time_timeout():
 	get_node("/root/Game/MainPC/PC").queue_free()
