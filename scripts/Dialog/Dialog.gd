@@ -42,8 +42,8 @@ func _on_aceitar_pressed():
 	var PC_scene_instantiate = PC_scene.instantiate()
 	get_tree().get_root().get_node("/root/Game/MainPC").add_child(PC_scene_instantiate)
 	buttons.hide()
-	get_node("/root/Game/HUD/Stats")._add_money(money_payment)
-	get_node("/root/Game/HUD/Stats")._add_fame(fame_payment)
+	get_node("/root/Game/MainPC/PC/Panel/Mesa/Tasks_panel/Preview/MoneyPrev").text=str(money_payment)
+	get_node("/root/Game/MainPC/PC/Panel/Mesa/Tasks_panel/Preview/FamePrev").text=str(fame_payment)
 
 func _on_recusar_pressed():
 	get_node("/root/Game/MainClient/Path2D/PathFollow2D/Client/Sprite").texture = angry_larry	

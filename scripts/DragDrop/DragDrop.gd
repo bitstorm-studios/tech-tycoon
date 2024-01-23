@@ -14,6 +14,7 @@ func _get_drag_data(_at_position):
 	
 	var preview = Control.new()
 	preview.add_child(preview_texture)
+	preview.scale = Vector2(5 ,5)
 	
 	set_drag_preview(preview)
 	

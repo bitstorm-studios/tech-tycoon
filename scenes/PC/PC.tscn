@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dqlh68kvkhnhe"]
+[gd_scene load_steps=27 format=3 uid="uid://dqlh68kvkhnhe"]
 
 [ext_resource type="Script" path="res://scripts/PC/PC_Scene.gd" id="1_7ispj"]
 [ext_resource type="Texture2D" uid="uid://ca2cbleiskr7w" path="res://assets/PC/Mesa.png" id="1_fjdo7"]
@@ -7,8 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://cl6ck1ik5l0aj" path="res://assets/PC/PC-processador.png" id="4_mjng8"]
 [ext_resource type="Texture2D" uid="uid://c2pmgc2oe18c6" path="res://assets/PC/PC-hd.png" id="5_f4fxn"]
 [ext_resource type="Texture2D" uid="uid://dq8vlf7t5we6i" path="res://assets/PC/PC-ram.png" id="5_f6kke"]
+[ext_resource type="Texture2D" uid="uid://cosw4jf8dnclc" path="res://assets/HUD/moeda.png" id="5_lxyc8"]
 [ext_resource type="FontFile" uid="uid://vh5v3w00tnw3" path="res://assets/font/DePixel/depixelhalbfett.otf" id="5_r35ig"]
 [ext_resource type="Texture2D" uid="uid://d23p1thu5jsd" path="res://assets/PC/PC-tampa.png" id="6_1nsek"]
+[ext_resource type="Texture2D" uid="uid://oklgrypyhxs" path="res://assets/HUD/coroa.png" id="6_ah528"]
 [ext_resource type="Texture2D" uid="uid://bvwg0aj2f1a85" path="res://assets/PC/PC-placa-de-video.png" id="6_rwwnc"]
 [ext_resource type="Texture2D" uid="uid://jk0p6drn0eu" path="res://assets/PC/out-processador.png" id="7_4p8al"]
 [ext_resource type="Script" path="res://scripts/PC/DroppableCPU.gd" id="8_hvotm"]
@@ -65,12 +67,11 @@ texture = ExtResource("1_fjdo7")
 
 [node name="Tasks_panel" type="Panel" parent="Panel/Mesa"]
 layout_mode = 0
-offset_left = 945.0
+offset_left = 927.0
 offset_top = 98.0
 offset_right = 1245.0
 offset_bottom = 698.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ionr3")
-metadata/_edit_group_ = true
 
 [node name="Title" type="Label" parent="Panel/Mesa/Tasks_panel"]
 layout_mode = 1
@@ -153,6 +154,42 @@ justification_flags = 162
 [node name="Finish_container" type="HBoxContainer" parent="Panel/Mesa/Tasks_panel/Tasks_container"]
 layout_mode = 2
 alignment = 1
+
+[node name="Preview" type="HBoxContainer" parent="Panel/Mesa/Tasks_panel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 561.0
+offset_right = 318.0
+offset_bottom = 600.0
+
+[node name="Prev" type="Label" parent="Panel/Mesa/Tasks_panel/Preview"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_r35ig")
+text = "Pagamento:"
+
+[node name="Money" type="TextureRect" parent="Panel/Mesa/Tasks_panel/Preview"]
+layout_mode = 2
+texture = ExtResource("5_lxyc8")
+expand_mode = 2
+
+[node name="MoneyPrev" type="Label" parent="Panel/Mesa/Tasks_panel/Preview"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_r35ig")
+
+[node name="Fame" type="TextureRect" parent="Panel/Mesa/Tasks_panel/Preview"]
+layout_mode = 2
+texture = ExtResource("6_ah528")
+expand_mode = 2
+
+[node name="FamePrev" type="Label" parent="Panel/Mesa/Tasks_panel/Preview"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_r35ig")
+
+[node name="Money_Remove" type="Timer" parent="Panel/Mesa/Tasks_panel/Preview"]
+wait_time = 0.005
+
+[node name="Fame_Remove" type="Timer" parent="Panel/Mesa/Tasks_panel/Preview"]
+wait_time = 0.005
 
 [node name="PC" type="TextureRect" parent="Panel"]
 layout_mode = 1
@@ -246,6 +283,8 @@ texture_normal = ExtResource("6_1nsek")
 texture_hover = ExtResource("15_240s4")
 stretch_mode = 0
 
+[connection signal="timeout" from="Panel/Mesa/Tasks_panel/Preview/Money_Remove" to="." method="_on_money_remove_timeout"]
+[connection signal="timeout" from="Panel/Mesa/Tasks_panel/Preview/Fame_Remove" to="." method="_on_fame_remove_timeout"]
 [connection signal="pressed" from="Panel/PC/CPU" to="." method="_on_cpu_button_pressed"]
 [connection signal="pressed" from="Panel/PC/HD" to="." method="_on_hd_button_pressed"]
 [connection signal="pressed" from="Panel/PC/RAM" to="." method="_on_ram_button_pressed"]
