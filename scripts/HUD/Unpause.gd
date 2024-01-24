@@ -1,4 +1,4 @@
-extends Button
+extends Control
 
 func _on_pressed():
 	var pause_scene = get_node("/root/Game/Pause")

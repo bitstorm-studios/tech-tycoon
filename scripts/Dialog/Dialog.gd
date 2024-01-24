@@ -46,7 +46,7 @@ func _on_aceitar_pressed():
 	get_node("/root/Game/MainPC/PC/Panel/Mesa/Tasks_panel/Preview/FamePrev").text=str(fame_payment)
 
 func _on_recusar_pressed():
-	get_node("/root/Game/MainClient/Path2D/PathFollow2D/Client/Sprite").texture = angry_larry	
+	get_node("/root/Game/MainClient/Path2D/PathFollow2D/Client").change_sprite(1)
 	get_node("/root/Game/HUD/Stats")._remove_fame(-3)
 	get_node("/root/Game").is_walking = true
 	get_parent().queue_free()

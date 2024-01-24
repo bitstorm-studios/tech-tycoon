@@ -21,6 +21,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("2_qskja")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
@@ -38,13 +39,13 @@ offset_left = 372.0
 offset_top = 363.0
 offset_right = 876.0
 offset_bottom = 459.0
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("1_us0m6")
 theme_override_font_sizes/font_size = 70
 theme_override_styles/hover = SubResource("StyleBoxEmpty_fnhc6")
 shortcut = SubResource("Shortcut_njobj")
 text = "RETORNAR"
 flat = true
-script = ExtResource("2_qskja")
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 0
@@ -52,6 +53,7 @@ offset_left = 524.0
 offset_top = 481.0
 offset_right = 732.0
 offset_bottom = 584.0
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("1_us0m6")
 theme_override_font_sizes/font_size = 70
 theme_override_styles/hover = SubResource("StyleBoxEmpty_3h8k1")
@@ -59,3 +61,4 @@ text = "Sair"
 flat = true
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_texture_button_2_pressed"]
