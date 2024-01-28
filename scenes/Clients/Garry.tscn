@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ceh5gld6fyfjw"]
+
+[ext_resource type="Script" path="res://scripts/Clients/Garry.gd" id="1_alffb"]
+[ext_resource type="Texture2D" uid="uid://dkrtl8f2uku53" path="res://assets/Clients/Garry/Neutral.png" id="2_1cky3"]
+
+[node name="Client" type="Control"]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+script = ExtResource("1_alffb")
+
+[node name="Garry" type="Sprite2D" parent="."]
+position = Vector2(3.63798e-12, -149)
+scale = Vector2(5.6, 5.6)
+texture = ExtResource("2_1cky3")

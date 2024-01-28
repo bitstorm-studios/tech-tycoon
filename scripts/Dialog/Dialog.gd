@@ -9,7 +9,6 @@ extends TextureRect
 @export var no_btn = false
 @export var money_payment: int
 @export var fame_payment: int
-var angry_larry = load("res://assets/Clients/Larry_Bravo.png")
 
 func _input(event):
 	if event is InputEventMouseButton:

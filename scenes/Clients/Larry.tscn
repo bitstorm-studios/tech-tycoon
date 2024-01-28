@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://caxf4an2mcwld"]
 
 [ext_resource type="Script" path="res://scripts/Clients/Larry.gd" id="1_h0wdi"]
-[ext_resource type="Texture2D" uid="uid://bnw3e6ydjsltu" path="res://assets/Clients/Larry.png" id="2_76xyf"]
+[ext_resource type="Texture2D" uid="uid://j0id2atwa7l3" path="res://assets/Clients/Larry/Larry.png" id="2_8g1jj"]
 
 [node name="Client" type="Control"]
 layout_mode = 3
@@ -11,7 +11,7 @@ anchor_bottom = 1.0
 grow_vertical = 0
 script = ExtResource("1_h0wdi")
 
-[node name="Sprite" type="Sprite2D" parent="."]
+[node name="Larry" type="Sprite2D" parent="."]
 position = Vector2(3.63798e-12, -149)
 scale = Vector2(5.6, 5.6)
-texture = ExtResource("2_76xyf")
+texture = ExtResource("2_8g1jj")

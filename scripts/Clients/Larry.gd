@@ -5,9 +5,9 @@ extends Control
 @export var apareceu:bool
 
 func change_sprite(sprite):
-	var sprites = [load("res://assets/Clients/Happy_Larry.png"), load("res://assets/Clients/Larry_Bravo.png"),
-				   load("res://assets/Clients/Larry.png")]
-	$Sprite.texture = sprites[sprite]
+	var sprites = [load("res://assets/Clients/Larry/Happy_Larry.png"), load("res://assets/Clients/Larry/Larry_Bravo.png"),
+				   load("res://assets/Clients/Larry/Larry.png")]
+	$Larry.texture = sprites[sprite]
 
 func choose_message():
 	match accepted:
@@ -28,3 +28,7 @@ func reaction():
 			message = "Obrigado, logo mais eu voltarei"
 		2:
 			message = "Excelente, amanhã eu volto e te darei uma recompensa"
+			
+func _process(_delta):
+	if accepted == 2:
+		get_node("/root/Game").standar_array.erase(preload("res://scenes/Clients/Larry.tscn"))

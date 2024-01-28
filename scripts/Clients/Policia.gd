@@ -6,9 +6,9 @@ extends Control
 @export var saw_sus:bool
 
 func change_sprite(sprite):
-	var sprites = [load("res://assets/Clients/Happy_Larry.png"), load("res://assets/Clients/Larry_Bravo.png"),
-				   load("res://assets/Clients/Larry.png")]
-	$Sprite.texture = sprites[sprite]
+	var sprites = [load("res://assets/Clients/Policial/Happy.png"), load("res://assets/Clients/Policial/Angry.png"),
+				   load("res://assets/Clients/Policial/Neutral.png")]
+	$Policial.texture = sprites[sprite]
 
 func choose_message():
 	match accepted:
@@ -24,7 +24,15 @@ func reaction():
 		0:
 			message = "Muito obrigado"
 		1:
-			if saw_sus:
-				message = "Obrigado pela descrição"
-			else:
-				message = "Entendi, tenha um boa dia"
+			message = "Muito obrigado"
+			#if saw_sus:
+			#	message = "Obrigado pela descrição"
+			#else:
+			#	message = "Entendi, tenha um boa dia"
+		2:
+			message = "Muito obrigado"
+				
+func _process(_delta):
+	if accepted == 2:
+		get_node("/root/Game").standar_array.erase(preload("res://scenes/Clients/Policial.tscn"))
+		

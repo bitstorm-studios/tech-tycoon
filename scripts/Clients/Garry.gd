@@ -5,26 +5,28 @@ extends Control
 @export var apareceu:bool
 
 func change_sprite(sprite):
-	var sprites = [load("res://assets/Clients/Happy_Larry.png"), load("res://assets/Clients/Larry_Bravo.png"),
-				   load("res://assets/Clients/Larry.png")]
-	$Sprite.texture = sprites[sprite]
+	var sprites = [load("res://assets/Clients/Garry/Happy.png"), load("res://assets/Clients/Garry/Angry.png"),
+				   load("res://assets/Clients/Garry/Neutral.png")]
+	$Garry.texture = sprites[sprite]
 
 func choose_message():
 	match accepted:
 		0:
-			message = "Olá, me chamo Larry, trabalho na empresa X com banco de dados, gostaria que você trocasse o HD desde computador"
+			message = "Oi, eu sou o Harry, meu PC esta lento, de ua olhada por favor"
 		1:
-			message = "Preciso da sua ajuda ! Fiz besteira com os dados da empresa, posso deixar o mainframe aqui com você ?"
+			message = "Será que hoje poderia me ajudar com um app ?"
 		2:
-			message = "Pronto consegui arrumar o backup e ninguém me descobriu, agora posso devolver o mainframde. Poderia devolve-lo ?"
-		3:
-			message = "Aqui sua recompensa"
+			message = "As vendas do app foram incríveis, tome aqui a sua parte"
 			
 func reaction():
 	match accepted:
 		0:
-			message = "Muito obrigado"
+			message = "Você me ajudou muito, memoria RAM, quem diria."
 		1:
-			message = "Obrigado, logo mais eu voltarei"
+			message = "Muito obrigado, você é incrível"
 		2:
-			message = "Excelente, amanhã eu volto e te darei uma recompensa"
+			message = "Até mais"
+			
+func _process(_delta):
+	if accepted == 2:
+		get_node("/root/Game").standar_array.erase(preload("res://scenes/Clients/Garry.tscn"))
