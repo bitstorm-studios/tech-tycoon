@@ -25,4 +25,4 @@ func reaction():
 			
 func _process(_delta):
 	if accepted == 2:
-		get_node("/root/Game").standar_array.erase(preload("res://scenes/Clients/Harry.tscn"))
+		get_node("/root/Game").standard_array.erase(preload("res://scenes/Clients/Harry.tscn"))

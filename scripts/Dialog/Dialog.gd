@@ -23,7 +23,7 @@ func show_message(recived_message):
 func _on_timer_timeout():
 	if dialog.visible_characters == dialog.text.length():
 		money_payment = randi_range(70, 100)
-		fame_payment = randi_range(2, 5)
+		fame_payment = randi_range(50, 100)
 		money_label.text = str(money_payment)
 		fame_label.text = str(fame_payment)
 		buttons.show()

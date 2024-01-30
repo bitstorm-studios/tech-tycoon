@@ -11,7 +11,7 @@ var target_money: float
 var target_fame: float
 var current_money: float
 var current_fame: float
-@export var missing_parts = 0
+@export var missing_parts = 3
 @export var failed_tasks = 0
 
 func _on_tampa_button_pressed():

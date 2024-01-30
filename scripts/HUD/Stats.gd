@@ -1,9 +1,9 @@
 extends Control
 
-var target_money: float
-var target_fame: float
-var current_money: float
-var current_fame: float
+var target_money: int
+var target_fame: int
+var current_money: int
+var current_fame: int
 
 func _add_money(value):
 	target_money = get_node("/root/Game").money + value

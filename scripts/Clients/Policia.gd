@@ -24,15 +24,14 @@ func reaction():
 		0:
 			message = "Muito obrigado"
 		1:
-			message = "Muito obrigado"
-			#if saw_sus:
-			#	message = "Obrigado pela descrição"
-			#else:
-			#	message = "Entendi, tenha um boa dia"
+			if saw_sus:
+				message = "Obrigado pela descrição"
+			else:
+				message = "Entendi, tenha um boa dia"
 		2:
 			message = "Muito obrigado"
 				
 func _process(_delta):
 	if accepted == 2:
-		get_node("/root/Game").standar_array.erase(preload("res://scenes/Clients/Policial.tscn"))
+		get_node("/root/Game").standard_array.erase(preload("res://scenes/Clients/Policial.tscn"))
 		

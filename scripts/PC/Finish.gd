@@ -1,6 +1,5 @@
 extends Control
 
-var happy_larry = load("res://assets/Clients/Happy_Larry.png")
 @onready var outtime = get_node("OutTime")
 
 func _on_finish_pressed():
