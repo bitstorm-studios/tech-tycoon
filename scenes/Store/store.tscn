@@ -1,19 +1,12 @@
-[gd_scene load_steps=43 format=3 uid="uid://kvaeg7vr5u2e"]
+[gd_scene load_steps=15 format=3 uid="uid://kvaeg7vr5u2e"]
 
 [ext_resource type="Script" path="res://scripts/Store/Store.gd" id="1_ynrle"]
-[ext_resource type="Texture2D" uid="uid://cxu5u8nagn8y2" path="res://assets/Store/Loja.png" id="2_7ssd1"]
 [ext_resource type="Script" path="res://scripts/Store/StoreButtons.gd" id="3_4nbeu"]
-[ext_resource type="Texture2D" uid="uid://dejjyi8obidru" path="res://assets/Store/Biblia.png" id="3_ruu4q"]
-[ext_resource type="Texture2D" uid="uid://b2w56ldpqhd3w" path="res://assets/Store/Dinheiros.png" id="4_5ryfw"]
 [ext_resource type="ButtonGroup" uid="uid://c2823ge15880c" path="res://scripts/Store/Store_Buttons.tres" id="4_p5wl7"]
-[ext_resource type="Texture2D" uid="uid://dif3q4xwks1w2" path="res://assets/Store/Furadeira.png" id="5_6vyyh"]
+[ext_resource type="Texture2D" uid="uid://btcjs4fq6hv4w" path="res://assets/Store/uplojafinal-1.png" id="5_chtru"]
 [ext_resource type="Texture2D" uid="uid://62wevd6g7eub" path="res://assets/Store/LivroHover.png" id="5_ohqew"]
-[ext_resource type="Texture2D" uid="uid://bn52c64sopxrr" path="res://assets/Store/Monster.png" id="6_ief6k"]
-[ext_resource type="Texture2D" uid="uid://rtbwor7er5aq" path="res://assets/Store/Oculos.png" id="7_7rv1t"]
-[ext_resource type="Texture2D" uid="uid://dgd3a17yowe70" path="res://assets/Store/Livro.png" id="10_s0eoh"]
-[ext_resource type="Texture2D" uid="uid://qdedd5wvwnfn" path="res://assets/Store/PS5.png" id="11_t6gsd"]
-[ext_resource type="Texture2D" uid="uid://cikcrws0ue3cw" path="res://assets/Store/Cubo.png" id="12_ccko0"]
-[ext_resource type="FontFile" uid="uid://4miq0wwwk4mu" path="res://assets/font/kenney-blocks.ttf" id="13_owmpw"]
+[ext_resource type="Texture2D" uid="uid://xryhqbin6mrb" path="res://assets/Store/botaoXnormal-1.png.png" id="8_tym1m"]
+[ext_resource type="Texture2D" uid="uid://dy60nn18ge86x" path="res://assets/Store/botaoXvermelho-1.png.png" id="9_xyl4g"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yqg4b"]
 content_margin_left = 0.0
@@ -33,68 +26,6 @@ region_rect = Rect2(0, 0, 34, 40)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hi8p2"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pkkp6"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_opuxh"]
-content_margin_left = 0.0
-content_margin_top = 0.0
-content_margin_right = 0.0
-content_margin_bottom = 0.0
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_410gv"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g5no3"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o51jq"]
-content_margin_left = 0.0
-content_margin_top = 0.0
-content_margin_right = 0.0
-content_margin_bottom = 0.0
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jy2hg"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l61ey"]
-content_margin_left = 0.0
-content_margin_top = 0.0
-content_margin_right = 0.0
-content_margin_bottom = 0.0
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_33uyu"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_00y66"]
-content_margin_left = 0.0
-content_margin_top = 0.0
-content_margin_right = 0.0
-content_margin_bottom = 0.0
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hhb73"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d1bg5"]
-content_margin_left = 0.0
-content_margin_top = 0.0
-content_margin_right = 0.0
-content_margin_bottom = 0.0
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t0cey"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3fbum"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dhys8"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lhfwj"]
-content_margin_left = 0.0
-content_margin_top = 0.0
-content_margin_right = 0.0
-content_margin_bottom = 0.0
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g0q11"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e3gdl"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_alo8n"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0lh4m"]
-
 [sub_resource type="InputEventKey" id="InputEventKey_q3rxc"]
 keycode = 4194305
 
@@ -106,200 +37,256 @@ unicode = 80
 [sub_resource type="Shortcut" id="Shortcut_crl2v"]
 events = [SubResource("InputEventKey_q3rxc"), SubResource("InputEventKey_5s6jq")]
 
-[sub_resource type="Animation" id="Animation_civc6"]
-resource_name = "popup"
-length = 0.3
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(1, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_fs8s6"]
-_data = {
-"popup": SubResource("Animation_civc6")
-}
-
-[node name="Store" type="Node2D"]
+[node name="Store" type="Control"]
 process_mode = 3
-position = Vector2(-74, -53)
-script = ExtResource("1_ynrle")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(712.5, 415.5)
-scale = Vector2(4.97807, 4.75781)
-texture = ExtResource("2_7ssd1")
-
-[node name="Control" type="Control" parent="Sprite2D"]
 layout_mode = 3
 anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+script = ExtResource("1_ynrle")
+
+[node name="SpriteStore" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -285.0
+offset_right = 500.0
+offset_bottom = 315.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_chtru")
+metadata/_edit_lock_ = true
+
+[node name="PopupContainer" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 700.0
+offset_top = 448.0
+offset_right = 700.0
+offset_bottom = 448.0
+scale = Vector2(1e-05, 1e-05)
+
+[node name="ButtonGroup" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -498.0
+offset_top = -279.0
+offset_right = 502.0
+offset_bottom = 321.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("3_4nbeu")
 group = ExtResource("4_p5wl7")
+metadata/_edit_lock_ = true
 
-[node name="Bíblia" type="Button" parent="Sprite2D/Control"]
-layout_mode = 0
-offset_left = -75.029
-offset_top = -24.9064
-offset_right = -41.029
-offset_bottom = 15.0936
+[node name="Bíblia" type="Button" parent="ButtonGroup"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -331.0
+offset_top = -123.0
+offset_right = -181.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_yqg4b")
 theme_override_styles/hover = SubResource("StyleBoxTexture_hgc2j")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_v8mj6")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_hi8p2")
 toggle_mode = true
 button_group = ExtResource("4_p5wl7")
-icon = ExtResource("3_ruu4q")
 flat = true
 icon_alignment = 1
+expand_icon = true
 
-[node name="Dinheiros" type="Button" parent="Sprite2D/Control"]
-layout_mode = 0
-offset_left = -27.0
-offset_top = -25.0
-offset_right = 7.0
-offset_bottom = 15.0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_pkkp6")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_opuxh")
+[node name="Furadeira" type="Button" parent="ButtonGroup"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -121.0
+offset_top = -123.0
+offset_right = 29.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yqg4b")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hgc2j")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_v8mj6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hi8p2")
 toggle_mode = true
 button_group = ExtResource("4_p5wl7")
-icon = ExtResource("4_5ryfw")
+flat = true
 icon_alignment = 1
+expand_icon = true
 
-[node name="Furadeira" type="Button" parent="Sprite2D/Control"]
-layout_mode = 0
-offset_left = 21.0
-offset_top = -25.0
-offset_right = 55.0
-offset_bottom = 15.0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_410gv")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_g5no3")
+[node name="Monster" type="Button" parent="ButtonGroup"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 90.0
+offset_top = -123.0
+offset_right = 240.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yqg4b")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hgc2j")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_v8mj6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hi8p2")
 toggle_mode = true
 button_group = ExtResource("4_p5wl7")
-icon = ExtResource("5_6vyyh")
 flat = true
 icon_alignment = 1
+expand_icon = true
 
-[node name="Monster" type="Button" parent="Sprite2D/Control"]
-layout_mode = 0
-offset_left = 69.0
-offset_top = -25.0
-offset_right = 103.0
-offset_bottom = 15.0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_o51jq")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_jy2hg")
+[node name="Oculos" type="Button" parent="ButtonGroup"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 300.0
+offset_top = -123.0
+offset_right = 450.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yqg4b")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hgc2j")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_v8mj6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hi8p2")
 toggle_mode = true
 button_group = ExtResource("4_p5wl7")
-icon = ExtResource("6_ief6k")
 flat = true
 icon_alignment = 1
+expand_icon = true
 
-[node name="Oculos" type="Button" parent="Sprite2D/Control"]
-layout_mode = 0
-offset_left = -75.0
-offset_top = 16.0
-offset_right = -41.0
-offset_bottom = 56.0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_l61ey")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_33uyu")
+[node name="Dinheiros" type="Button" parent="ButtonGroup"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -331.0
+offset_top = 69.0
+offset_right = -181.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yqg4b")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hgc2j")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_v8mj6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hi8p2")
 toggle_mode = true
 button_group = ExtResource("4_p5wl7")
-icon = ExtResource("7_7rv1t")
 flat = true
 icon_alignment = 1
+expand_icon = true
 
-[node name="Livro" type="Button" parent="Sprite2D/Control"]
-layout_mode = 0
-offset_left = -27.0185
-offset_top = 16.0788
-offset_right = 6.98154
-offset_bottom = 56.0788
-theme_override_styles/normal = SubResource("StyleBoxEmpty_00y66")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_hhb73")
+[node name="BibliaDoDIABO" type="Button" parent="ButtonGroup"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -121.0
+offset_top = 69.0
+offset_right = 29.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yqg4b")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hgc2j")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_v8mj6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hi8p2")
 toggle_mode = true
 button_group = ExtResource("4_p5wl7")
-icon = ExtResource("10_s0eoh")
 flat = true
 icon_alignment = 1
+expand_icon = true
 
-[node name="PS5" type="Button" parent="Sprite2D/Control"]
-layout_mode = 0
-offset_left = 21.0
-offset_top = 16.0
-offset_right = 55.0
-offset_bottom = 56.0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_d1bg5")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_t0cey")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_3fbum")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_dhys8")
-icon = ExtResource("11_t6gsd")
+[node name="PS5" type="Button" parent="ButtonGroup"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 90.0
+offset_top = 69.0
+offset_right = 240.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yqg4b")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hgc2j")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_v8mj6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hi8p2")
+toggle_mode = true
+button_group = ExtResource("4_p5wl7")
 flat = true
+icon_alignment = 1
+expand_icon = true
 
-[node name="Cubo" type="Button" parent="Sprite2D/Control"]
-layout_mode = 0
-offset_left = 69.0
-offset_top = 16.0
-offset_right = 103.0
-offset_bottom = 56.0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_lhfwj")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_g0q11")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_e3gdl")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_alo8n")
-icon = ExtResource("12_ccko0")
+[node name="CUbo" type="Button" parent="ButtonGroup"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 300.0
+offset_top = 69.0
+offset_right = 450.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yqg4b")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hgc2j")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_v8mj6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hi8p2")
+toggle_mode = true
+button_group = ExtResource("4_p5wl7")
 flat = true
+icon_alignment = 1
+expand_icon = true
 
-[node name="Close" type="Button" parent="Sprite2D/Control"]
+[node name="Close" type="TextureButton" parent="ButtonGroup"]
 layout_mode = 0
-offset_left = 105.984
-offset_top = -64.0
-offset_right = 113.984
-offset_bottom = -56.0
-theme_override_styles/focus = SubResource("StyleBoxEmpty_0lh4m")
+offset_left = 963.0
+offset_top = -1.0
+offset_right = 994.0
+offset_bottom = 31.0
+mouse_default_cursor_shape = 2
 toggle_mode = true
 button_group = ExtResource("4_p5wl7")
 shortcut = SubResource("Shortcut_crl2v")
-flat = true
+texture_normal = ExtResource("8_tym1m")
+texture_hover = ExtResource("9_xyl4g")
+stretch_mode = 0
 
-[node name="Control" type="Panel" parent="Sprite2D/Control"]
-visible = false
-layout_mode = 0
-offset_left = -99.9383
-offset_top = -11.665
-offset_right = 98.0617
-offset_bottom = 9.33498
-metadata/_edit_group_ = true
-
-[node name="Label" type="Label" parent="Sprite2D/Control/Control"]
-layout_mode = 0
-offset_right = 198.0
-offset_bottom = 21.0
-theme_override_fonts/font = ExtResource("13_owmpw")
-theme_override_font_sizes/font_size = 12
-text = "Dinheiro insuficiente !"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D/Control/Control"]
-libraries = {
-"": SubResource("AnimationLibrary_fs8s6")
-}
-
-[node name="Timer" type="Timer" parent="Sprite2D/Control/Control"]
-one_shot = true
-
-[connection signal="pressed" from="Sprite2D/Control/Bíblia" to="Sprite2D/Control" method="_on_button_pressed"]
-[connection signal="pressed" from="Sprite2D/Control/Dinheiros" to="Sprite2D/Control" method="_on_button_pressed"]
-[connection signal="pressed" from="Sprite2D/Control/Furadeira" to="Sprite2D/Control" method="_on_button_pressed"]
-[connection signal="pressed" from="Sprite2D/Control/Monster" to="Sprite2D/Control" method="_on_button_pressed"]
-[connection signal="pressed" from="Sprite2D/Control/Oculos" to="Sprite2D/Control" method="_on_button_pressed"]
-[connection signal="pressed" from="Sprite2D/Control/Livro" to="Sprite2D/Control" method="_on_button_pressed"]
-[connection signal="pressed" from="Sprite2D/Control/PS5" to="Sprite2D/Control" method="_on_button_pressed"]
-[connection signal="pressed" from="Sprite2D/Control/Cubo" to="Sprite2D/Control" method="_on_button_pressed"]
-[connection signal="pressed" from="Sprite2D/Control/Close" to="." method="_on_close_pressed"]
-[connection signal="timeout" from="Sprite2D/Control/Control/Timer" to="Sprite2D/Control" method="_on_timer_timeout"]
+[connection signal="pressed" from="ButtonGroup/Bíblia" to="ButtonGroup" method="_on_bíblia_pressed"]
+[connection signal="pressed" from="ButtonGroup/Close" to="." method="_on_close_pressed"]

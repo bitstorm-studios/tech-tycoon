@@ -49,7 +49,6 @@ func _on_area_entered(_area):
 
 func _on_body_entered(body):
 	body.take_damage()
-	die()
 
 
 func _on_animated_sprite_2d_animation_finished():

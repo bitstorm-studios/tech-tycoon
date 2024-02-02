@@ -15,7 +15,7 @@ var pendent_tasks = 3
 func _on_tampa_button_pressed():
 	get_node("Panel/PC/Tampa").queue_free()
 	
-func lauch_space_shooter():
+func launch_space_shooter():
 	self.hide()
 	var space_shooter_instantiate
 	if get_node("/root/Game").first_time_shooter:
@@ -56,7 +56,7 @@ func check_finish():
 func _on_cpu_button_pressed():
 	get_node("Panel/PC/CPU").hide()
 	get_node("Panel/PC/Button_container/CPU_button").queue_free()
-	lauch_space_shooter()
+	launch_space_shooter()
 	if sucess:
 		get_node("Panel/Mesa/Tasks_panel/Tasks_container/Task_3_container/CheckBox3").texture = checkbox_complete
 	else:
