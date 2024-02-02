@@ -1,0 +1,118 @@
+[gd_scene load_steps=6 format=3 uid="uid://cg31xccxmv2rq"]
+
+[ext_resource type="Script" path="res://scripts/DayTransition.gd" id="1_5twog"]
+[ext_resource type="FontFile" uid="uid://vh5v3w00tnw3" path="res://assets/font/DePixel/depixelhalbfett.otf" id="2_h7wb7"]
+
+[sub_resource type="Animation" id="Animation_taglg"]
+resource_name = "DayAnimation"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/Label:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel/Label:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.28319]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_jm4be"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/Label:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel/Label:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [6.28319]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lspsx"]
+_data = {
+"DayAnimation": SubResource("Animation_taglg"),
+"RESET": SubResource("Animation_jm4be")
+}
+
+[node name="DayTransition" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5twog")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 2
+offset_left = 393.0
+offset_top = 265.0
+offset_right = 886.0
+offset_bottom = 454.0
+rotation = 6.28319
+pivot_offset = Vector2(246, 94)
+theme_override_fonts/font = ExtResource("2_h7wb7")
+theme_override_font_sizes/font_size = 150
+text = "Dia 1"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_lspsx")
+}
+autoplay = "DayAnimation"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

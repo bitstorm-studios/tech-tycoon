@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://tfsfovumtdm1"]
+
+[ext_resource type="Script" path="res://scripts/Clients/Harry.gd" id="1_ioncs"]
+[ext_resource type="Texture2D" uid="uid://ctxn7af64mahj" path="res://assets/Clients/Harry/Neutral.png" id="2_mxpcn"]
+
+[node name="Client" type="Control"]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+script = ExtResource("1_ioncs")
+
+[node name="Harry" type="Sprite2D" parent="."]
+position = Vector2(3.63798e-12, -149)
+scale = Vector2(5.6, 5.6)
+texture = ExtResource("2_mxpcn")

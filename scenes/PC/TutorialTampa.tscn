@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=3 uid="uid://ce3vf6m5flf8y"]
+
+[ext_resource type="Texture2D" uid="uid://3euao2asd1f3" path="res://assets/PC/Foco.png" id="2_jb0jp"]
+[ext_resource type="FontFile" uid="uid://vh5v3w00tnw3" path="res://assets/font/DePixel/depixelhalbfett.otf" id="3_bmnga"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cvjfy"]
+bg_color = Color(0.223529, 0.113725, 0.0509804, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u7sjc"]
+atlas = ExtResource("2_jb0jp")
+region = Rect2(0, 0, 800, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xgm50"]
+atlas = ExtResource("2_jb0jp")
+region = Rect2(0, 800, 800, 800)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_80n6x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u7sjc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xgm50")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="TutorialTampa" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 170.0
+offset_right = 268.0
+offset_bottom = 525.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cvjfy")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_right = 255.0
+offset_bottom = 353.0
+theme_override_fonts/font = ExtResource("3_bmnga")
+theme_override_font_sizes/font_size = 20
+text = "O primeiro passo é retirar a tampa do computador, faça isso clicando nela"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Panel"]
+position = Vector2(562, 226)
+scale = Vector2(0.7775, 0.78)
+sprite_frames = SubResource("SpriteFrames_80n6x")
+autoplay = "default"

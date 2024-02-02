@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=3 uid="uid://bilrfwf07o81i"]
+
+[ext_resource type="Texture2D" uid="uid://g2fus3shx7ia" path="res://assets/PC/Pecas.png" id="2_h87qv"]
+[ext_resource type="Texture2D" uid="uid://3euao2asd1f3" path="res://assets/PC/Foco.png" id="2_jxq4u"]
+[ext_resource type="FontFile" uid="uid://vh5v3w00tnw3" path="res://assets/font/DePixel/depixelhalbfett.otf" id="3_h4tn2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oytct"]
+atlas = ExtResource("2_h87qv")
+region = Rect2(0, 0, 97, 91)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bc5ch"]
+atlas = ExtResource("2_jxq4u")
+region = Rect2(0, 800, 800, 800)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qbvew"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oytct")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bc5ch")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q544f"]
+bg_color = Color(0.223529, 0.113725, 0.0509804, 1)
+
+[node name="TutorialPecas" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(590, 394)
+scale = Vector2(5.62887, 6.05701)
+sprite_frames = SubResource("SpriteFrames_qbvew")
+autoplay = "default"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 159.0
+offset_right = 268.0
+offset_bottom = 549.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_q544f")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_right = 255.0
+offset_bottom = 389.0
+theme_override_fonts/font = ExtResource("3_h4tn2")
+theme_override_font_sizes/font_size = 20
+text = "Depois basta clicar nas peças, toda peça interagível poderá ser identificada com o cursor, lembre-se que no lado direito estará indicando quais peças precisam ser consertadas."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

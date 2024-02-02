@@ -11,6 +11,12 @@ point_count = 3
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_jorwv")
+is_walking = null
+money = null
+fame = null
+lifes = null
+first_time_catch = null
+first_time_shooter = null
 
 [node name="MainPC" type="Node2D" parent="."]
 

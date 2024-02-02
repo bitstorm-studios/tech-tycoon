@@ -132,14 +132,21 @@ process_mode = 3
 position = Vector2(-74, -53)
 script = ExtResource("1_ynrle")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(712.5, 415.5)
+[node name="Sprite2D" type="TextureRect" parent="."]
+offset_left = 178.0
+offset_top = 102.0
+offset_right = 406.0
+offset_bottom = 230.0
 scale = Vector2(4.97807, 4.75781)
 texture = ExtResource("2_7ssd1")
 
 [node name="Control" type="Control" parent="Sprite2D"]
 layout_mode = 3
 anchors_preset = 0
+offset_left = 114.1
+offset_top = 65.156
+offset_right = 114.1
+offset_bottom = 65.156
 script = ExtResource("3_4nbeu")
 group = ExtResource("4_p5wl7")
 

@@ -1,20 +1,32 @@
-[gd_scene load_steps=14 format=3 uid="uid://dqlh68kvkhnhe"]
+[gd_scene load_steps=27 format=3 uid="uid://dqlh68kvkhnhe"]
 
 [ext_resource type="Script" path="res://scripts/PC/PC_Scene.gd" id="1_7ispj"]
 [ext_resource type="Texture2D" uid="uid://ca2cbleiskr7w" path="res://assets/PC/Mesa.png" id="1_fjdo7"]
 [ext_resource type="Texture2D" uid="uid://dm4quawx1qlrt" path="res://assets/PC/PC-sem-componentes.png" id="3_04ll1"]
-[ext_resource type="FontFile" uid="uid://4miq0wwwk4mu" path="res://assets/font/kenney-blocks.ttf" id="3_i84rk"]
 [ext_resource type="Texture2D" uid="uid://djldo7n46t65u" path="res://assets/PC/unfinished_task_box.png" id="4_i1giw"]
 [ext_resource type="Texture2D" uid="uid://cl6ck1ik5l0aj" path="res://assets/PC/PC-processador.png" id="4_mjng8"]
 [ext_resource type="Texture2D" uid="uid://c2pmgc2oe18c6" path="res://assets/PC/PC-hd.png" id="5_f4fxn"]
 [ext_resource type="Texture2D" uid="uid://dq8vlf7t5we6i" path="res://assets/PC/PC-ram.png" id="5_f6kke"]
+[ext_resource type="Texture2D" uid="uid://cosw4jf8dnclc" path="res://assets/HUD/moeda.png" id="5_lxyc8"]
 [ext_resource type="FontFile" uid="uid://vh5v3w00tnw3" path="res://assets/font/DePixel/depixelhalbfett.otf" id="5_r35ig"]
 [ext_resource type="Texture2D" uid="uid://d23p1thu5jsd" path="res://assets/PC/PC-tampa.png" id="6_1nsek"]
+[ext_resource type="Texture2D" uid="uid://oklgrypyhxs" path="res://assets/HUD/coroa.png" id="6_ah528"]
 [ext_resource type="Texture2D" uid="uid://bvwg0aj2f1a85" path="res://assets/PC/PC-placa-de-video.png" id="6_rwwnc"]
+[ext_resource type="Texture2D" uid="uid://jk0p6drn0eu" path="res://assets/PC/out-processador.png" id="7_4p8al"]
+[ext_resource type="Script" path="res://scripts/PC/DroppableCPU.gd" id="8_hvotm"]
+[ext_resource type="Texture2D" uid="uid://bftammcv6erpx" path="res://assets/PC/out-hd.png" id="10_6tiaf"]
+[ext_resource type="Script" path="res://scripts/PC/DroppableHD.gd" id="10_akio5"]
+[ext_resource type="Script" path="res://scripts/PC/DroppableRAM.gd" id="12_caf8r"]
+[ext_resource type="Texture2D" uid="uid://bvptej7cf46gi" path="res://assets/PC/out-ram.png" id="13_8ege8"]
+[ext_resource type="Script" path="res://scripts/PC/DroppableGPU.gd" id="14_l473v"]
+[ext_resource type="Texture2D" uid="uid://bck0cld51nwsp" path="res://assets/PC/Outline Tampa.png" id="15_240s4"]
+[ext_resource type="Texture2D" uid="uid://gkpukcb8n87i" path="res://assets/PC/out-placavideo.png" id="16_4g1ml"]
+[ext_resource type="Texture2D" uid="uid://vefvev16bsa0" path="res://assets/PC/PC-fonte.png" id="18_le4c3"]
+[ext_resource type="Texture2D" uid="uid://nb0jvbub741w" path="res://assets/PC/out-fonte.png" id="19_sim6c"]
+[ext_resource type="Script" path="res://scripts/PC/DroppableFonte.gd" id="20_p6w6a"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_kx0gl"]
-font = ExtResource("3_i84rk")
-font_size = 32
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ionr3"]
+bg_color = Color(0.745098, 0.403922, 0.0784314, 0.588235)
 
 [sub_resource type="LabelSettings" id="LabelSettings_e4cth"]
 font = ExtResource("5_r35ig")
@@ -55,11 +67,11 @@ texture = ExtResource("1_fjdo7")
 
 [node name="Tasks_panel" type="Panel" parent="Panel/Mesa"]
 layout_mode = 0
-offset_left = 945.0
+offset_left = 927.0
 offset_top = 98.0
 offset_right = 1245.0
 offset_bottom = 698.0
-metadata/_edit_group_ = true
+theme_override_styles/panel = SubResource("StyleBoxFlat_ionr3")
 
 [node name="Title" type="Label" parent="Panel/Mesa/Tasks_panel"]
 layout_mode = 1
@@ -71,8 +83,11 @@ offset_top = 30.0
 offset_right = 85.0
 offset_bottom = 80.0
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("5_r35ig")
+theme_override_font_sizes/font_size = 30
 text = "Vidas: 3"
-label_settings = SubResource("LabelSettings_kx0gl")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Tasks_container" type="VBoxContainer" parent="Panel/Mesa/Tasks_panel"]
 layout_mode = 1
@@ -140,6 +155,42 @@ justification_flags = 162
 layout_mode = 2
 alignment = 1
 
+[node name="Preview" type="HBoxContainer" parent="Panel/Mesa/Tasks_panel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 561.0
+offset_right = 318.0
+offset_bottom = 600.0
+
+[node name="Prev" type="Label" parent="Panel/Mesa/Tasks_panel/Preview"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_r35ig")
+text = "Pagamento:"
+
+[node name="Money" type="TextureRect" parent="Panel/Mesa/Tasks_panel/Preview"]
+layout_mode = 2
+texture = ExtResource("5_lxyc8")
+expand_mode = 2
+
+[node name="MoneyPrev" type="Label" parent="Panel/Mesa/Tasks_panel/Preview"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_r35ig")
+
+[node name="Fame" type="TextureRect" parent="Panel/Mesa/Tasks_panel/Preview"]
+layout_mode = 2
+texture = ExtResource("6_ah528")
+expand_mode = 2
+
+[node name="FamePrev" type="Label" parent="Panel/Mesa/Tasks_panel/Preview"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_r35ig")
+
+[node name="Money_Remove" type="Timer" parent="Panel/Mesa/Tasks_panel/Preview"]
+wait_time = 0.005
+
+[node name="Fame_Remove" type="Timer" parent="Panel/Mesa/Tasks_panel/Preview"]
+wait_time = 0.005
+
 [node name="PC" type="TextureRect" parent="Panel"]
 layout_mode = 1
 anchors_preset = 8
@@ -155,83 +206,68 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_04ll1")
 
-[node name="CPU" type="TextureRect" parent="Panel/PC"]
+[node name="CPU" type="TextureButton" parent="Panel/PC"]
 layout_mode = 0
-offset_right = 600.0
-offset_bottom = 600.0
-texture = ExtResource("4_mjng8")
-metadata/_edit_lock_ = true
-
-[node name="HD" type="TextureRect" parent="Panel/PC"]
-layout_mode = 0
-offset_right = 600.0
-offset_bottom = 600.0
-texture = ExtResource("5_f4fxn")
-metadata/_edit_lock_ = true
-
-[node name="RAM" type="TextureRect" parent="Panel/PC"]
-layout_mode = 0
-offset_right = 600.0
-offset_bottom = 600.0
-texture = ExtResource("5_f6kke")
-metadata/_edit_lock_ = true
-
-[node name="GPU" type="TextureRect" parent="Panel/PC"]
-clip_contents = true
-layout_mode = 0
-offset_top = 1.0
-offset_right = 600.0
-offset_bottom = 601.0
-texture = ExtResource("6_rwwnc")
-metadata/_edit_lock_ = true
-
-[node name="Button_container" type="Control" parent="Panel/PC"]
-anchors_preset = 0
-offset_right = 600.0
-offset_bottom = 600.0
-metadata/_edit_lock_ = true
-
-[node name="GPU_button" type="Button" parent="Panel/PC/Button_container"]
-layout_mode = 2
-offset_left = 44.0
-offset_top = 485.0
-offset_right = 319.0
-offset_bottom = 565.0
-tooltip_text = "Placa de vídeo"
+offset_left = 72.0
+offset_top = 146.0
+offset_right = 233.0
+offset_bottom = 321.0
 mouse_default_cursor_shape = 2
-metadata/_edit_lock_ = true
+texture_normal = ExtResource("4_mjng8")
+texture_hover = ExtResource("7_4p8al")
+stretch_mode = 0
+script = ExtResource("8_hvotm")
 
-[node name="CPU_button" type="Button" parent="Panel/PC/Button_container"]
-layout_mode = 2
-offset_left = 77.0
-offset_top = 143.0
-offset_right = 235.0
-offset_bottom = 316.0
-tooltip_text = "Processador"
-mouse_default_cursor_shape = 2
-metadata/_edit_lock_ = true
-
-[node name="HD_button" type="Button" parent="Panel/PC/Button_container"]
-layout_mode = 2
+[node name="HD" type="TextureButton" parent="Panel/PC"]
+layout_mode = 0
 offset_left = 455.0
 offset_top = 24.0
-offset_right = 582.0
-offset_bottom = 296.0
-tooltip_text = "HD"
+offset_right = 584.0
+offset_bottom = 297.0
 mouse_default_cursor_shape = 2
-metadata/_edit_lock_ = true
+texture_normal = ExtResource("5_f4fxn")
+texture_hover = ExtResource("10_6tiaf")
+stretch_mode = 0
+script = ExtResource("10_akio5")
 
-[node name="RAM_button" type="Button" parent="Panel/PC/Button_container"]
-layout_mode = 2
-offset_left = 315.0
-offset_top = 139.0
-offset_right = 389.0
-offset_bottom = 424.0
-tooltip_text = "Memória RAM"
+[node name="RAM" type="TextureButton" parent="Panel/PC"]
+layout_mode = 0
+offset_left = 311.0
+offset_top = 134.0
+offset_right = 394.0
+offset_bottom = 437.0
 mouse_default_cursor_shape = 2
-metadata/_edit_lock_ = true
+texture_normal = ExtResource("5_f6kke")
+texture_hover = ExtResource("13_8ege8")
+stretch_mode = 0
+script = ExtResource("12_caf8r")
 
-[node name="Tampa" type="TextureRect" parent="Panel/PC"]
+[node name="GPU" type="TextureButton" parent="Panel/PC"]
+clip_contents = true
+layout_mode = 0
+offset_left = 45.0
+offset_top = 485.0
+offset_right = 306.0
+offset_bottom = 564.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("6_rwwnc")
+texture_hover = ExtResource("16_4g1ml")
+stretch_mode = 0
+script = ExtResource("14_l473v")
+
+[node name="Fonte" type="TextureButton" parent="Panel/PC"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 24.0
+offset_right = 239.0
+offset_bottom = 109.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("18_le4c3")
+texture_hover = ExtResource("19_sim6c")
+stretch_mode = 0
+script = ExtResource("20_p6w6a")
+
+[node name="Tampa" type="TextureButton" parent="Panel/PC"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.544
@@ -242,20 +278,16 @@ offset_left = -326.4
 offset_top = -313.2
 offset_right = 273.6
 offset_bottom = 286.8
-texture = ExtResource("6_1nsek")
-metadata/_edit_lock_ = true
-
-[node name="Tampa_button" type="Button" parent="Panel/PC/Tampa"]
-layout_mode = 0
-offset_right = 600.0
-offset_bottom = 600.0
-tooltip_text = "Remover tampa"
 mouse_default_cursor_shape = 2
-flat = true
-metadata/_edit_lock_ = true
+texture_normal = ExtResource("6_1nsek")
+texture_hover = ExtResource("15_240s4")
+stretch_mode = 0
 
-[connection signal="pressed" from="Panel/PC/Button_container/GPU_button" to="." method="_on_gpu_button_pressed"]
-[connection signal="pressed" from="Panel/PC/Button_container/CPU_button" to="." method="_on_cpu_button_pressed"]
-[connection signal="pressed" from="Panel/PC/Button_container/HD_button" to="." method="_on_hd_button_pressed"]
-[connection signal="pressed" from="Panel/PC/Button_container/RAM_button" to="." method="_on_ram_button_pressed"]
-[connection signal="pressed" from="Panel/PC/Tampa/Tampa_button" to="." method="_on_tampa_button_pressed"]
+[connection signal="timeout" from="Panel/Mesa/Tasks_panel/Preview/Money_Remove" to="." method="_on_money_remove_timeout"]
+[connection signal="timeout" from="Panel/Mesa/Tasks_panel/Preview/Fame_Remove" to="." method="_on_fame_remove_timeout"]
+[connection signal="pressed" from="Panel/PC/CPU" to="." method="_on_cpu_button_pressed"]
+[connection signal="pressed" from="Panel/PC/HD" to="." method="_on_hd_button_pressed"]
+[connection signal="pressed" from="Panel/PC/RAM" to="." method="_on_ram_button_pressed"]
+[connection signal="pressed" from="Panel/PC/GPU" to="." method="_on_gpu_button_pressed"]
+[connection signal="pressed" from="Panel/PC/Fonte" to="." method="_on_fonte_pressed"]
+[connection signal="pressed" from="Panel/PC/Tampa" to="." method="_on_tampa_button_pressed"]
