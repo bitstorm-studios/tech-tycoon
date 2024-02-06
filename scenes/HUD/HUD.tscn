@@ -107,6 +107,7 @@ offset_left = 1005.0
 offset_top = 355.0
 offset_right = 1263.0
 offset_bottom = 512.0
+mouse_default_cursor_shape = 2
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_xa6d4")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_6rrkx")
 shortcut = SubResource("Shortcut_10set")

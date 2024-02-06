@@ -32,6 +32,54 @@ bg_color = Color(0.745098, 0.403922, 0.0784314, 0.588235)
 font = ExtResource("5_r35ig")
 font_size = 20
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q2q33"]
+bg_color = Color(0.392157, 0.392157, 0.392157, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wndes"]
+bg_color = Color(0.980392, 0.588235, 0.0784314, 0.196078)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.980392, 0.588235, 0.0784314, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ft4a"]
+bg_color = Color(0.392157, 0.392157, 0.392157, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7o1yn"]
+bg_color = Color(0.980392, 0.588235, 0.0784314, 0.196078)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.980392, 0.588235, 0.0784314, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tlmek"]
+bg_color = Color(0.392157, 0.392157, 0.392157, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nd6kk"]
+bg_color = Color(0.980392, 0.588235, 0.0784314, 0.196078)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.980392, 0.588235, 0.0784314, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ipnhn"]
+bg_color = Color(0.392157, 0.392157, 0.392157, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_olybo"]
+bg_color = Color(0.980392, 0.588235, 0.0784314, 0.196078)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.980392, 0.588235, 0.0784314, 1)
+border_blend = true
+
 [node name="PC" type="Control"]
 process_mode = 1
 layout_mode = 3

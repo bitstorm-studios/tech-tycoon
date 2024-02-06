@@ -13,11 +13,12 @@ var current_money: float
 var current_fame: float
 @export var missing_parts = 3
 @export var failed_tasks = 0
+@export var sucess: bool = true
 
 func _on_tampa_button_pressed():
 	get_node("Panel/PC/Tampa").queue_free()
 	
-func lauch_space_shooter():
+func launch_space_shooter():
 	self.hide()
 	var space_shooter_instantiate
 	if get_node("/root/Game").first_time_shooter:
@@ -40,6 +41,12 @@ func launch_catch_game():
 		
 	get_tree().get_root().get_node("/root/Game").add_child(catch_game_instantiate)
 	get_node("/root/Game/HUD").hide()
+	
+func show_all_parts():
+	get_node("Panel/PC/CPU").show()
+	get_node("Panel/PC/HD").show()
+	get_node("Panel/PC/RAM").show()
+	get_node("Panel/PC/GPU").show()
 
 func check_finish():
 	missing_parts += 1
@@ -60,7 +67,10 @@ func _on_hd_button_pressed():
 	get_node("Panel/PC/HD").disabled = true
 	get_node("Panel/PC/HD").set_default_cursor_shape(CURSOR_ARROW)
 	launch_catch_game()
-	get_node("Panel/Mesa/Tasks_panel/Tasks_container/Task_1_container/CheckBox1").texture = checkbox_complete
+	if sucess:
+		get_node("Panel/Mesa/Tasks_panel/Tasks_container/Task_1_container/CheckBox1").texture = checkbox_complete
+	else:
+		get_node("Panel/Mesa/Tasks_panel/Tasks_container/Task_1_container/CheckBox1").texture = checkbox_fail
 	check_finish()
 
 func _on_ram_button_pressed():
