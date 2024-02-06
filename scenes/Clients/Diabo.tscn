@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7pc3apod13ff"]
+
+[ext_resource type="Script" path="res://scripts/Clients/Diabo.gd" id="1_sbwfl"]
+[ext_resource type="Texture2D" uid="uid://frfv5xyeryh6" path="res://assets/Clients/Diabo/Neutral.png" id="2_n05i5"]
+
+[node name="Client" type="Control"]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+script = ExtResource("1_sbwfl")
+
+[node name="Diabo" type="Sprite2D" parent="."]
+position = Vector2(3.63798e-12, -149)
+scale = Vector2(5.6, 5.6)
+texture = ExtResource("2_n05i5")

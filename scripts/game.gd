@@ -16,19 +16,33 @@ var Jerry = preload("res://scenes/Clients/Jerry.tscn")
 var Garry = preload("res://scenes/Clients/Garry.tscn")
 var Bandido = preload("res://scenes/Clients/Bandido.tscn")
 var Policial = preload("res://scenes/Clients/Policial.tscn")
+
+var Padre = preload("res://scenes/Clients/Padre.tscn")
+
 var Larry_instance = Larry.instantiate()
 var Harry_instance = Harry.instantiate()
 var Jerry_instance = Jerry.instantiate()
 var Garry_instance = Garry.instantiate()
 var Bandido_instance = Bandido.instantiate()
 var Policial_instance = Policial.instantiate()
-var client_array = [Larry_instance, Harry_instance, Jerry_instance, Garry_instance, Bandido_instance, Policial_instance]
-var standard_array = [Larry_instance, Harry_instance, Jerry_instance, Garry_instance, Bandido_instance, Policial_instance]
+@export var client_array = [Larry_instance, Harry_instance, Jerry_instance, Garry_instance, Bandido_instance, Policial_instance]
+@export var standard_array = [Larry_instance, Harry_instance, Jerry_instance, Garry_instance, Bandido_instance, Policial_instance]
 var choosen_client
 var dialog_scene = preload("res://scenes/Dialog/Dialog.tscn")
 var day_scene = preload("res://scenes/DayTransition.tscn")
 var game_over = preload("res://scenes/GameOver.tscn")
 var has_stopped = false
+
+#Variaveis de itens comprados na loja que geram multiplicadores
+var item_biblia = false
+var item_neuralyzer = false
+var item_oculos = false
+var item_dinheiro = false
+
+func add_padre():
+	var Padre_instance = Padre.instantiate()
+	standard_array.append(Padre_instance)
+	print("Padre adicionado ao standard array")
 
 func _ready():
 	_create_client()

@@ -11,19 +11,24 @@
 [sub_resource type="LabelSettings" id="LabelSettings_v4atx"]
 font = ExtResource("5_01y8v")
 font_size = 19
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_bskyu"]
 font = ExtResource("5_01y8v")
 font_size = 14
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_7dsap"]
 font = ExtResource("5_01y8v")
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_srcss"]
 font = ExtResource("5_01y8v")
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_fc33g"]
 font = ExtResource("5_01y8v")
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iw0gh"]
 bg_color = Color(0, 1, 0, 1)
@@ -176,6 +181,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_iw0gh")
 text = "Comprar!"
 
 [node name="Cancelar" type="Button" parent="Popup"]
+layout_mode = 0
 offset_left = 38.0
 offset_top = 425.0
 offset_right = 190.0
@@ -186,4 +192,5 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_0jqdo")
 text = "Cancelar"
 
 [connection signal="pressed" from="Popup/Fechar" to="." method="_on_fechar_pressed"]
+[connection signal="pressed" from="Popup/Comprar" to="." method="_on_comprar_pressed"]
 [connection signal="pressed" from="Popup/Cancelar" to="." method="_on_cancelar_pressed"]

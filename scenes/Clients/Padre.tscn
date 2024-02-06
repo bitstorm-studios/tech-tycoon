@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0364lefgfdum"]
+
+[ext_resource type="Script" path="res://scripts/Clients/Padre.gd" id="1_fs3ta"]
+[ext_resource type="Texture2D" uid="uid://batprhr1wpoe8" path="res://assets/Clients/Padre/Neutral.png" id="2_vclmm"]
+
+[node name="Client" type="Control"]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+script = ExtResource("1_fs3ta")
+
+[node name="Padre" type="Sprite2D" parent="."]
+position = Vector2(3.63798e-12, -149)
+scale = Vector2(5.6, 5.6)
+texture = ExtResource("2_vclmm")

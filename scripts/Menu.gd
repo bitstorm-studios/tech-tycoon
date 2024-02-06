@@ -9,7 +9,7 @@ func _on_texture_button_pressed():
 	get_tree().get_root().add_child(game_instance)
 	get_tree().get_root().add_child(day_instance)
 	get_node("/root/DayTransition").change_day(1)
-	queue_free()
+	self.hide()
 
 
 func _on_texture_button_2_pressed():

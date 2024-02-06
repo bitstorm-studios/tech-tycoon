@@ -31,4 +31,5 @@ func reaction():
 			message = "Até mais"
 			
 func _process(_delta):
-	
+	if accepted == 2:
+		get_node("/root/Game").standard_array.erase(preload("res://scenes/Clients/Garry.tscn"))

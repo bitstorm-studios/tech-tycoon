@@ -51,18 +51,6 @@ var descricaoDinheiros = "Aumenta o ganho de ouro em 100%\nLibera um novo client
 var descricaoLivro = "Aumenta seu ouro atual em 50%\nLibera um novo cliente!"
 var descricaoPS5 = "Aumenta sua reputação atual em 20%\nLibera um novo cliente!"
 var descricaoArc = "Aumenta sua reputação atual em 10%\nLibera um novo cliente!"
-
-#func _on_button_pressed():
-#if get_node("/root/Game").money >= 500:
-#		get_node("/root/Game/HUD/Stats")._remove_money(500)
-#		group.get_pressed_button().disabled = true
-#		
-#	elif get_node("/root/Game").money < 500:
-#		$Control.show()
-#		$Control/AnimationPlayer.play("popup")
-#		$Control/Timer.start()
-#func _on_timer_timeout():
-#	$Control/AnimationPlayer.play_backwards("popup")
 	
 func instantiate_popup(scene, icon, nome, descricao, precoGold, precoRep):
 	var instance = scene.instantiate()
@@ -76,32 +64,56 @@ func instantiate_popup(scene, icon, nome, descricao, precoGold, precoRep):
 
 func _on_bíblia_pressed():
 	var popup_instance = instantiate_popup(popup_scene, bibliaPopup, nomeBiblia, descricaoBiblia, precoGoldBiblia, precoRepBiblia)
-	get_parent().add_child(popup_instance)
-
-func _on_necromicon_pressed():
-	var popup_instance = instantiate_popup(popup_scene, livroPopup, nomeLivro, descricaoLivro, precoGoldLivro, precoRepLivro)
+	popup_instance.item_comprado = 0
+	popup_instance.valor_gold = precoGoldBiblia
+	popup_instance.valor_rep = precoRepBiblia
 	get_parent().add_child(popup_instance)
 
 func _on_neuralyzer_pressed():
 	var popup_instance = instantiate_popup(popup_scene, neuralizerPopup, nomeNeuralizer, descricaoNeuralizer, precoGoldNeuralizer, precoRepNeuralizer)
+	popup_instance.item_comprado = 1
+	popup_instance.valor_gold = precoGoldNeuralizer
+	popup_instance.valor_rep = precoRepNeuralizer
 	get_parent().add_child(popup_instance)
 
 func _on_alien_egg_pressed():
 	var popup_instance = instantiate_popup(popup_scene, alienEggPopup, nomeAlienEgg, descricaoAlienEgg, precoGoldAlienEgg, precoRepAlienEgg)
+	popup_instance.item_comprado = 2
+	popup_instance.valor_gold = precoGoldAlienEgg
+	popup_instance.valor_rep = precoRepAlienEgg
 	get_parent().add_child(popup_instance)
 
 func _on_oculos_pressed():
 	var popup_instance = instantiate_popup(popup_scene, oculosPopup, nomeOculos, descricaoOculos, precoGoldOculos, precoRepOculos)
+	popup_instance.item_comprado = 3
+	popup_instance.valor_gold = precoGoldOculos
+	popup_instance.valor_rep = precoRepOculos
 	get_parent().add_child(popup_instance)
 
 func _on_dinheiro_pressed():
 	var popup_instance = instantiate_popup(popup_scene, dinheirosPopup, nomeDinheiros, descricaoDinheiros, precoGoldDinheiros, precoRepDinheiros)
+	popup_instance.item_comprado = 4
+	popup_instance.valor_gold = precoGoldDinheiros
+	popup_instance.valor_rep = precoRepDinheiros
+	get_parent().add_child(popup_instance)
+
+func _on_necromicon_pressed():
+	var popup_instance = instantiate_popup(popup_scene, livroPopup, nomeLivro, descricaoLivro, precoGoldLivro, precoRepLivro)
+	popup_instance.item_comprado = 5
+	popup_instance.valor_gold = precoGoldLivro
+	popup_instance.valor_rep = precoRepLivro
 	get_parent().add_child(popup_instance)
 
 func _on_ps_5_pressed():
 	var popup_instance = instantiate_popup(popup_scene, Ps5Popup, nomePs5, descricaoPS5, precoGoldPS5, precoRepPS5)
+	popup_instance.item_comprado = 6
+	popup_instance.valor_gold = precoGoldPS5
+	popup_instance.valor_rep = precoRepPS5
 	get_parent().add_child(popup_instance)
 
 func _on_arc_pressed():
 	var popup_instance = instantiate_popup(popup_scene, arcPopup, nomeArc, descricaoArc, precoGoldArc, precoRepArc)
+	popup_instance.item_comprado = 7
+	popup_instance.valor_gold = precoGoldArc
+	popup_instance.valor_rep = precoRepArc
 	get_parent().add_child(popup_instance)

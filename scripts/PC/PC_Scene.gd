@@ -58,7 +58,7 @@ func _on_cpu_button_pressed():
 	get_node("Panel/PC/CPU").texture_normal = null
 	get_node("Panel/PC/CPU").disabled = true
 	get_node("Panel/PC/CPU").set_default_cursor_shape(CURSOR_ARROW)
-	lauch_space_shooter()
+	launch_space_shooter()
 	get_node("Panel/Mesa/Tasks_panel/Tasks_container/Task_3_container/CheckBox3").texture = checkbox_complete
 	check_finish()
 
@@ -67,10 +67,7 @@ func _on_hd_button_pressed():
 	get_node("Panel/PC/HD").disabled = true
 	get_node("Panel/PC/HD").set_default_cursor_shape(CURSOR_ARROW)
 	launch_catch_game()
-	if sucess:
-		get_node("Panel/Mesa/Tasks_panel/Tasks_container/Task_1_container/CheckBox1").texture = checkbox_complete
-	else:
-		get_node("Panel/Mesa/Tasks_panel/Tasks_container/Task_1_container/CheckBox1").texture = checkbox_fail
+	get_node("Panel/Mesa/Tasks_panel/Tasks_container/Task_1_container/CheckBox1").texture = checkbox_complete
 	check_finish()
 
 func _on_ram_button_pressed():

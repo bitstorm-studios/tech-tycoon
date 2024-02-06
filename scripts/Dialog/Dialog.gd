@@ -13,6 +13,17 @@ extends TextureRect
 func _input(event):
 	if event is InputEventMouseButton:
 		dialog.visible_characters = dialog.text.length()
+
+func update_payment_upgrades():
+	if get_node("/root/Game").item_biblia:
+		money_payment *= 1.1
+	if get_node("/root/Game").item_neuralyzer:
+		money_payment *= 1.1
+		fame_payment *= 1.1
+	if get_node("/root/Game").item_oculos:
+		fame_payment *= 1.3
+	if get_node("/root/Game").item_dinheiro:
+		money_payment *= 2
 		
 func show_message(recived_message):
 	buttons.hide()
@@ -23,7 +34,8 @@ func show_message(recived_message):
 func _on_timer_timeout():
 	if dialog.visible_characters == dialog.text.length():
 		money_payment = randi_range(70, 100)
-		fame_payment = randi_range(50, 100)
+		fame_payment = randi_range(10, 25)
+		update_payment_upgrades()
 		money_label.text = str(money_payment)
 		fame_label.text = str(fame_payment)
 		buttons.show()
@@ -46,6 +58,6 @@ func _on_aceitar_pressed():
 
 func _on_recusar_pressed():
 	get_node("/root/Game/MainClient/Path2D/PathFollow2D/Client").change_sprite(1)
-	get_node("/root/Game/HUD/Stats")._remove_fame(-15)
+	get_node("/root/Game/HUD/Stats")._remove_fame(-3)
 	get_node("/root/Game").is_walking = true
 	get_parent().queue_free()

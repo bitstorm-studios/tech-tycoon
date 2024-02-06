@@ -1,10 +1,11 @@
-[gd_scene load_steps=25 format=3 uid="uid://kvaeg7vr5u2e"]
+[gd_scene load_steps=26 format=3 uid="uid://kvaeg7vr5u2e"]
 
 [ext_resource type="Script" path="res://scripts/Store/Store.gd" id="1_ynrle"]
 [ext_resource type="Texture2D" uid="uid://cvwq8vohsi6st" path="res://assets/Store/uplojafinal.png" id="2_103ci"]
 [ext_resource type="Script" path="res://scripts/Store/StoreButtons.gd" id="3_4nbeu"]
 [ext_resource type="Texture2D" uid="uid://62wevd6g7eub" path="res://assets/Store/LivroHover.png" id="5_ohqew"]
 [ext_resource type="Texture2D" uid="uid://dejjyi8obidru" path="res://assets/Store/Biblia.png" id="7_yulrc"]
+[ext_resource type="Texture2D" uid="uid://b3t5rlts2kguy" path="res://assets/Store/esgotado.png" id="8_3ydhn"]
 [ext_resource type="Texture2D" uid="uid://dgd3a17yowe70" path="res://assets/Store/Livro.png" id="8_4hr5v"]
 [ext_resource type="Texture2D" uid="uid://ck1rxttqdx6e5" path="res://assets/Store/BibliaHover.png" id="8_nnepp"]
 [ext_resource type="Texture2D" uid="uid://xryhqbin6mrb" path="res://assets/Store/botaoXnormal-1.png.png" id="8_tym1m"]
@@ -101,17 +102,7 @@ grow_vertical = 2
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("7_yulrc")
 texture_hover = ExtResource("8_nnepp")
-stretch_mode = 0
-
-[node name="Necromicon" type="TextureButton" parent="ButtonGroup"]
-layout_mode = 0
-offset_left = 380.0
-offset_top = 369.0
-offset_right = 529.0
-offset_bottom = 556.0
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("8_4hr5v")
-texture_hover = ExtResource("5_ohqew")
+texture_disabled = ExtResource("8_3ydhn")
 stretch_mode = 0
 
 [node name="Neuralyzer" type="TextureButton" parent="ButtonGroup"]
@@ -123,6 +114,7 @@ offset_bottom = 364.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("10_7thms")
 texture_hover = ExtResource("11_bmric")
+texture_disabled = ExtResource("8_3ydhn")
 stretch_mode = 0
 
 [node name="AlienEgg" type="TextureButton" parent="ButtonGroup"]
@@ -134,6 +126,7 @@ offset_bottom = 364.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("13_ip2vi")
 texture_hover = ExtResource("14_qbk0m")
+texture_disabled = ExtResource("8_3ydhn")
 stretch_mode = 0
 
 [node name="Oculos" type="TextureButton" parent="ButtonGroup"]
@@ -145,6 +138,7 @@ offset_bottom = 365.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("15_d25gf")
 texture_hover = ExtResource("16_8u8um")
+texture_disabled = ExtResource("8_3ydhn")
 stretch_mode = 0
 
 [node name="Dinheiro" type="TextureButton" parent="ButtonGroup"]
@@ -156,6 +150,19 @@ offset_bottom = 556.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("17_gaogs")
 texture_hover = ExtResource("18_qv67j")
+texture_disabled = ExtResource("8_3ydhn")
+stretch_mode = 0
+
+[node name="Necromicon" type="TextureButton" parent="ButtonGroup"]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 369.0
+offset_right = 529.0
+offset_bottom = 556.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("8_4hr5v")
+texture_hover = ExtResource("5_ohqew")
+texture_disabled = ExtResource("8_3ydhn")
 stretch_mode = 0
 
 [node name="PS5" type="TextureButton" parent="ButtonGroup"]
@@ -167,6 +174,7 @@ offset_bottom = 556.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("19_okdem")
 texture_hover = ExtResource("20_nr0jh")
+texture_disabled = ExtResource("8_3ydhn")
 stretch_mode = 0
 
 [node name="Arc" type="TextureButton" parent="ButtonGroup"]
@@ -178,14 +186,15 @@ offset_bottom = 556.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("21_skrpe")
 texture_hover = ExtResource("22_i2y6b")
+texture_disabled = ExtResource("8_3ydhn")
 stretch_mode = 0
 
 [connection signal="pressed" from="ButtonGroup/Close" to="." method="_on_close_pressed"]
 [connection signal="pressed" from="ButtonGroup/Bíblia" to="ButtonGroup" method="_on_bíblia_pressed"]
-[connection signal="pressed" from="ButtonGroup/Necromicon" to="ButtonGroup" method="_on_necromicon_pressed"]
 [connection signal="pressed" from="ButtonGroup/Neuralyzer" to="ButtonGroup" method="_on_neuralyzer_pressed"]
 [connection signal="pressed" from="ButtonGroup/AlienEgg" to="ButtonGroup" method="_on_alien_egg_pressed"]
 [connection signal="pressed" from="ButtonGroup/Oculos" to="ButtonGroup" method="_on_oculos_pressed"]
 [connection signal="pressed" from="ButtonGroup/Dinheiro" to="ButtonGroup" method="_on_dinheiro_pressed"]
+[connection signal="pressed" from="ButtonGroup/Necromicon" to="ButtonGroup" method="_on_necromicon_pressed"]
 [connection signal="pressed" from="ButtonGroup/PS5" to="ButtonGroup" method="_on_ps_5_pressed"]
 [connection signal="pressed" from="ButtonGroup/Arc" to="ButtonGroup" method="_on_arc_pressed"]

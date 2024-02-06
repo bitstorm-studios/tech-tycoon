@@ -9,15 +9,11 @@
 font = ExtResource("1_q6giw")
 font_size = 40
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fnhc6"]
-
 [sub_resource type="InputEventKey" id="InputEventKey_brsih"]
 keycode = 4194305
 
 [sub_resource type="Shortcut" id="Shortcut_njobj"]
 events = [SubResource("InputEventKey_brsih")]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3h8k1"]
 
 [node name="Pause" type="Control"]
 process_mode = 3
