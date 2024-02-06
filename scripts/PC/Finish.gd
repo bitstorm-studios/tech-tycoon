@@ -1,6 +1,11 @@
 extends Control
 
 @onready var outtime = get_node("OutTime")
+@export var HD = false
+@export var Fonte = false
+@export var Processador = false
+@export var Ram = false
+@export var Placa = false
 
 func _on_finish_pressed():
 	outtime.start()
@@ -15,7 +20,7 @@ func _on_finish_pressed():
 	get_node("/root/Game/HUD/Stats")._add_fame(get_node("/root/Game/MainClient/Dialog/Text").fame_payment)
 
 func _on_out_time_timeout():
-	get_node("/root/Game/MainClient/Path2D/PathFollow2D/Client").accepted += 1
+	get_node("/root/Game/MainClient/Path2D/PathFollow2D/Client").add_one()
 	get_node("/root/Game/MainPC/PC").queue_free()
 	get_node("/root/Game/MainClient/Dialog").queue_free()
 	get_node("/root/Game").is_walking = true

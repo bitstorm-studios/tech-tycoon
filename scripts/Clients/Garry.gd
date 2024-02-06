@@ -8,6 +8,9 @@ func change_sprite(sprite):
 	var sprites = [load("res://assets/Clients/Garry/Happy.png"), load("res://assets/Clients/Garry/Angry.png"),
 				   load("res://assets/Clients/Garry/Neutral.png")]
 	$Garry.texture = sprites[sprite]
+	
+func add_one():
+	accepted += 1
 
 func choose_message():
 	match accepted:
@@ -28,5 +31,4 @@ func reaction():
 			message = "Até mais"
 			
 func _process(_delta):
-	if accepted == 2:
-		get_node("/root/Game").standard_array.erase(preload("res://scenes/Clients/Garry.tscn"))
+	

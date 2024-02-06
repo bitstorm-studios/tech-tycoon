@@ -34,10 +34,6 @@ func _ready():
 	_create_client()
 	
 func _process(_delta):
-	if client == 5:
-		end_day()
-		client = 0
-	
 	if standard_array.is_empty():
 		var game_over_instance = game_over.instantiate()
 		get_node("/root").add_child(game_over_instance)
@@ -60,7 +56,6 @@ func _physics_process(delta: float):
 		_show_dialog()
 		
 	if path.progress_ratio == 1:
-		timer.start()
 		_new_client()
 
 func _show_dialog():
@@ -72,10 +67,15 @@ func _show_dialog():
 	dialog.show_message(get_node("/root/Game/MainClient/Path2D/PathFollow2D/Client").message)
 	
 func _new_client():
+	print(standard_array.size())
 	get_node("/root/Game/MainClient/Path2D/PathFollow2D").remove_child(choosen_client)
 	path.progress_ratio = 0
 	is_walking = false
 	client += 1
+	if client == 5:
+		end_day()
+		client = 0
+	timer.start()
 
 func _on_timer_timeout():
 	_create_client()
