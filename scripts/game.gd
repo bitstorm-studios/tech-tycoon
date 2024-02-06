@@ -16,8 +16,14 @@ var Jerry = preload("res://scenes/Clients/Jerry.tscn")
 var Garry = preload("res://scenes/Clients/Garry.tscn")
 var Bandido = preload("res://scenes/Clients/Bandido.tscn")
 var Policial = preload("res://scenes/Clients/Policial.tscn")
-var client_array = [Larry.instantiate(), Harry.instantiate(), Jerry.instantiate(), Garry.instantiate(), Bandido.instantiate(), Policial.instantiate()]
-var standard_array = [Larry.instantiate(), Harry.instantiate(), Jerry.instantiate(), Garry.instantiate(), Bandido.instantiate(), Policial.instantiate()]
+var Larry_instance = Larry.instantiate()
+var Harry_instance = Harry.instantiate()
+var Jerry_instance = Jerry.instantiate()
+var Garry_instance = Garry.instantiate()
+var Bandido_instance = Bandido.instantiate()
+var Policial_instance = Policial.instantiate()
+var client_array = [Larry_instance, Harry_instance, Jerry_instance, Garry_instance, Bandido_instance, Policial_instance]
+var standard_array = [Larry_instance, Harry_instance, Jerry_instance, Garry_instance, Bandido_instance, Policial_instance]
 var choosen_client
 var dialog_scene = preload("res://scenes/Dialog/Dialog.tscn")
 var day_scene = preload("res://scenes/DayTransition.tscn")
@@ -28,10 +34,6 @@ func _ready():
 	_create_client()
 	
 func _process(_delta):
-	if client == 5:
-		end_day()
-		client = 0
-	
 	if standard_array.is_empty():
 		var game_over_instance = game_over.instantiate()
 		get_node("/root").add_child(game_over_instance)
@@ -54,7 +56,6 @@ func _physics_process(delta: float):
 		_show_dialog()
 		
 	if path.progress_ratio == 1:
-		timer.start()
 		_new_client()
 
 func _show_dialog():
@@ -66,10 +67,15 @@ func _show_dialog():
 	dialog.show_message(get_node("/root/Game/MainClient/Path2D/PathFollow2D/Client").message)
 	
 func _new_client():
+	print(standard_array.size())
 	get_node("/root/Game/MainClient/Path2D/PathFollow2D").remove_child(choosen_client)
 	path.progress_ratio = 0
 	is_walking = false
 	client += 1
+	if client == 5:
+		end_day()
+		client = 0
+	timer.start()
 
 func _on_timer_timeout():
 	_create_client()

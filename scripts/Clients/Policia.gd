@@ -10,6 +10,9 @@ func change_sprite(sprite):
 				   load("res://assets/Clients/Policial/Neutral.png")]
 	$Policial.texture = sprites[sprite]
 
+func add_one():
+	accepted += 1
+
 func choose_message():
 	match accepted:
 		0:

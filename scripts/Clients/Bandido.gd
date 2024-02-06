@@ -9,6 +9,9 @@ func change_sprite(sprite):
 	var sprites = [load("res://assets/Clients/Bandido/Bandido.png"), load("res://assets/Clients/Bandido/Bandido.png"),
 				   load("res://assets/Clients/Bandido/Bandido.png")]
 	$Bandido.texture = sprites[sprite]
+	
+func add_one():
+	accepted += 1
 
 func choose_message():
 	match accepted:
