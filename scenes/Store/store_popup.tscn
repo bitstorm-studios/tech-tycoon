@@ -1,8 +1,35 @@
-[gd_scene load_steps=4 format=3 uid="uid://c5p0vk1bxluau"]
+[gd_scene load_steps=15 format=3 uid="uid://c5p0vk1bxluau"]
 
+[ext_resource type="Script" path="res://scripts/Store/store_popup.gd" id="1_q2yac"]
 [ext_resource type="Texture2D" uid="uid://b1v8bwulgdeyt" path="res://assets/Store/pop-up-pedido-1.png.png" id="1_w7xpb"]
 [ext_resource type="Texture2D" uid="uid://xryhqbin6mrb" path="res://assets/Store/botaoXnormal-1.png.png" id="2_26xjn"]
 [ext_resource type="Texture2D" uid="uid://dy60nn18ge86x" path="res://assets/Store/botaoXvermelho-1.png.png" id="3_j2ale"]
+[ext_resource type="FontFile" uid="uid://vh5v3w00tnw3" path="res://assets/font/DePixel/depixelhalbfett.otf" id="5_01y8v"]
+[ext_resource type="Texture2D" uid="uid://cosw4jf8dnclc" path="res://assets/HUD/moeda.png" id="6_sumaj"]
+[ext_resource type="Texture2D" uid="uid://oklgrypyhxs" path="res://assets/HUD/coroa.png" id="7_y8dah"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_v4atx"]
+font = ExtResource("5_01y8v")
+font_size = 19
+
+[sub_resource type="LabelSettings" id="LabelSettings_bskyu"]
+font = ExtResource("5_01y8v")
+font_size = 14
+
+[sub_resource type="LabelSettings" id="LabelSettings_7dsap"]
+font = ExtResource("5_01y8v")
+
+[sub_resource type="LabelSettings" id="LabelSettings_srcss"]
+font = ExtResource("5_01y8v")
+
+[sub_resource type="LabelSettings" id="LabelSettings_fc33g"]
+font = ExtResource("5_01y8v")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iw0gh"]
+bg_color = Color(0, 1, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0jqdo"]
+bg_color = Color(1, 0, 0, 1)
 
 [node name="StorePopup" type="Control"]
 top_level = true
@@ -20,6 +47,7 @@ offset_bottom = 240.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(410, 240)
+script = ExtResource("1_q2yac")
 
 [node name="Popup" type="TextureRect" parent="."]
 layout_mode = 1
@@ -57,3 +85,105 @@ mouse_default_cursor_shape = 2
 texture_normal = ExtResource("2_26xjn")
 texture_hover = ExtResource("3_j2ale")
 stretch_mode = 0
+
+[node name="Nome" type="Label" parent="Popup"]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 72.0
+offset_right = 461.0
+offset_bottom = 136.0
+text = "Teste"
+label_settings = SubResource("LabelSettings_v4atx")
+
+[node name="Descricao" type="Label" parent="Popup"]
+clip_contents = true
+layout_mode = 0
+offset_left = 37.0
+offset_top = 175.0
+offset_right = 441.0
+offset_bottom = 303.0
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id imperdiet nulla, eget dictum urna. Fusce tristique blandit vehicula."
+label_settings = SubResource("LabelSettings_bskyu")
+autowrap_mode = 2
+
+[node name="LabelPreco" type="Label" parent="Popup"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -36.5
+offset_top = 90.0
+offset_right = 36.5
+offset_bottom = 113.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Preço:"
+label_settings = SubResource("LabelSettings_7dsap")
+
+[node name="PrecoContainer" type="HBoxContainer" parent="Popup"]
+custom_minimum_size = Vector2(210, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -105.0
+offset_top = 120.0
+offset_right = 105.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="GoldContainer" type="HBoxContainer" parent="Popup/PrecoContainer"]
+layout_mode = 2
+
+[node name="GoldIcon" type="TextureRect" parent="Popup/PrecoContainer/GoldContainer"]
+layout_mode = 2
+texture = ExtResource("6_sumaj")
+stretch_mode = 3
+
+[node name="GoldPreco" type="Label" parent="Popup/PrecoContainer/GoldContainer"]
+layout_mode = 2
+text = "999"
+label_settings = SubResource("LabelSettings_srcss")
+
+[node name="RepContainer" type="HBoxContainer" parent="Popup/PrecoContainer"]
+layout_mode = 2
+
+[node name="RepIcon" type="TextureRect" parent="Popup/PrecoContainer/RepContainer"]
+layout_mode = 2
+texture = ExtResource("7_y8dah")
+stretch_mode = 3
+
+[node name="RepPreco" type="Label" parent="Popup/PrecoContainer/RepContainer"]
+layout_mode = 2
+text = "999"
+label_settings = SubResource("LabelSettings_fc33g")
+
+[node name="Comprar" type="Button" parent="Popup"]
+layout_mode = 0
+offset_left = 290.0
+offset_top = 425.0
+offset_right = 442.0
+offset_bottom = 468.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("5_01y8v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_iw0gh")
+text = "Comprar!"
+
+[node name="Cancelar" type="Button" parent="Popup"]
+offset_left = 38.0
+offset_top = 425.0
+offset_right = 190.0
+offset_bottom = 468.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("5_01y8v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0jqdo")
+text = "Cancelar"
+
+[connection signal="pressed" from="Popup/Fechar" to="." method="_on_fechar_pressed"]
+[connection signal="pressed" from="Popup/Cancelar" to="." method="_on_cancelar_pressed"]

@@ -1,30 +1,26 @@
-[gd_scene load_steps=15 format=3 uid="uid://kvaeg7vr5u2e"]
+[gd_scene load_steps=25 format=3 uid="uid://kvaeg7vr5u2e"]
 
 [ext_resource type="Script" path="res://scripts/Store/Store.gd" id="1_ynrle"]
+[ext_resource type="Texture2D" uid="uid://cvwq8vohsi6st" path="res://assets/Store/uplojafinal.png" id="2_103ci"]
 [ext_resource type="Script" path="res://scripts/Store/StoreButtons.gd" id="3_4nbeu"]
-[ext_resource type="ButtonGroup" uid="uid://c2823ge15880c" path="res://scripts/Store/Store_Buttons.tres" id="4_p5wl7"]
-[ext_resource type="Texture2D" uid="uid://btcjs4fq6hv4w" path="res://assets/Store/uplojafinal-1.png" id="5_chtru"]
 [ext_resource type="Texture2D" uid="uid://62wevd6g7eub" path="res://assets/Store/LivroHover.png" id="5_ohqew"]
+[ext_resource type="Texture2D" uid="uid://dejjyi8obidru" path="res://assets/Store/Biblia.png" id="7_yulrc"]
+[ext_resource type="Texture2D" uid="uid://dgd3a17yowe70" path="res://assets/Store/Livro.png" id="8_4hr5v"]
+[ext_resource type="Texture2D" uid="uid://ck1rxttqdx6e5" path="res://assets/Store/BibliaHover.png" id="8_nnepp"]
 [ext_resource type="Texture2D" uid="uid://xryhqbin6mrb" path="res://assets/Store/botaoXnormal-1.png.png" id="8_tym1m"]
 [ext_resource type="Texture2D" uid="uid://dy60nn18ge86x" path="res://assets/Store/botaoXvermelho-1.png.png" id="9_xyl4g"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yqg4b"]
-content_margin_left = 0.0
-content_margin_top = 0.0
-content_margin_right = 0.0
-content_margin_bottom = 0.0
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hgc2j"]
-content_margin_left = 0.0
-content_margin_top = 0.0
-content_margin_right = 0.0
-content_margin_bottom = 0.0
-texture = ExtResource("5_ohqew")
-region_rect = Rect2(0, 0, 34, 40)
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v8mj6"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hi8p2"]
+[ext_resource type="Texture2D" uid="uid://dokx7x5j5ufa5" path="res://assets/Store/neuralizer.png" id="10_7thms"]
+[ext_resource type="Texture2D" uid="uid://ceop0pgpfhxu8" path="res://assets/Store/neuralyzerHover.png" id="11_bmric"]
+[ext_resource type="Texture2D" uid="uid://duh4vag63185w" path="res://assets/Store/alieneggup.png" id="13_ip2vi"]
+[ext_resource type="Texture2D" uid="uid://dmsf3e3dg88g8" path="res://assets/Store/alieneggupHover.png" id="14_qbk0m"]
+[ext_resource type="Texture2D" uid="uid://rtbwor7er5aq" path="res://assets/Store/Oculos.png" id="15_d25gf"]
+[ext_resource type="Texture2D" uid="uid://clbg2qmaiiwna" path="res://assets/Store/OculosHover.png" id="16_8u8um"]
+[ext_resource type="Texture2D" uid="uid://b2w56ldpqhd3w" path="res://assets/Store/Dinheiros.png" id="17_gaogs"]
+[ext_resource type="Texture2D" uid="uid://bffyv587oidxd" path="res://assets/Store/DinheirosHover.png" id="18_qv67j"]
+[ext_resource type="Texture2D" uid="uid://qdedd5wvwnfn" path="res://assets/Store/PS5.png" id="19_okdem"]
+[ext_resource type="Texture2D" uid="uid://d0exsio4uacec" path="res://assets/Store/PS5Hover.png" id="20_nr0jh"]
+[ext_resource type="Texture2D" uid="uid://c4lw1vndmvpee" path="res://assets/Store/arcup.png" id="21_skrpe"]
+[ext_resource type="Texture2D" uid="uid://bflx07pg3c3wa" path="res://assets/Store/arcupHover.png" id="22_i2y6b"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_q3rxc"]
 keycode = 4194305
@@ -58,16 +54,8 @@ offset_right = 500.0
 offset_bottom = 315.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("5_chtru")
+texture = ExtResource("2_103ci")
 metadata/_edit_lock_ = true
-
-[node name="PopupContainer" type="Control" parent="."]
-anchors_preset = 0
-offset_left = 700.0
-offset_top = 448.0
-offset_right = 700.0
-offset_bottom = 448.0
-scale = Vector2(1e-05, 1e-05)
 
 [node name="ButtonGroup" type="Control" parent="."]
 layout_mode = 1
@@ -83,196 +71,7 @@ offset_bottom = 321.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("3_4nbeu")
-group = ExtResource("4_p5wl7")
 metadata/_edit_lock_ = true
-
-[node name="Bíblia" type="Button" parent="ButtonGroup"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -331.0
-offset_top = -123.0
-offset_right = -181.0
-offset_bottom = 64.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_default_cursor_shape = 2
-theme_override_styles/normal = SubResource("StyleBoxEmpty_yqg4b")
-theme_override_styles/hover = SubResource("StyleBoxTexture_hgc2j")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_v8mj6")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_hi8p2")
-toggle_mode = true
-button_group = ExtResource("4_p5wl7")
-flat = true
-icon_alignment = 1
-expand_icon = true
-
-[node name="Furadeira" type="Button" parent="ButtonGroup"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -121.0
-offset_top = -123.0
-offset_right = 29.0
-offset_bottom = 64.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_default_cursor_shape = 2
-theme_override_styles/normal = SubResource("StyleBoxEmpty_yqg4b")
-theme_override_styles/hover = SubResource("StyleBoxTexture_hgc2j")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_v8mj6")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_hi8p2")
-toggle_mode = true
-button_group = ExtResource("4_p5wl7")
-flat = true
-icon_alignment = 1
-expand_icon = true
-
-[node name="Monster" type="Button" parent="ButtonGroup"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 90.0
-offset_top = -123.0
-offset_right = 240.0
-offset_bottom = 64.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_default_cursor_shape = 2
-theme_override_styles/normal = SubResource("StyleBoxEmpty_yqg4b")
-theme_override_styles/hover = SubResource("StyleBoxTexture_hgc2j")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_v8mj6")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_hi8p2")
-toggle_mode = true
-button_group = ExtResource("4_p5wl7")
-flat = true
-icon_alignment = 1
-expand_icon = true
-
-[node name="Oculos" type="Button" parent="ButtonGroup"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 300.0
-offset_top = -123.0
-offset_right = 450.0
-offset_bottom = 64.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_default_cursor_shape = 2
-theme_override_styles/normal = SubResource("StyleBoxEmpty_yqg4b")
-theme_override_styles/hover = SubResource("StyleBoxTexture_hgc2j")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_v8mj6")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_hi8p2")
-toggle_mode = true
-button_group = ExtResource("4_p5wl7")
-flat = true
-icon_alignment = 1
-expand_icon = true
-
-[node name="Dinheiros" type="Button" parent="ButtonGroup"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -331.0
-offset_top = 69.0
-offset_right = -181.0
-offset_bottom = 256.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxEmpty_yqg4b")
-theme_override_styles/hover = SubResource("StyleBoxTexture_hgc2j")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_v8mj6")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_hi8p2")
-toggle_mode = true
-button_group = ExtResource("4_p5wl7")
-flat = true
-icon_alignment = 1
-expand_icon = true
-
-[node name="BibliaDoDIABO" type="Button" parent="ButtonGroup"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -121.0
-offset_top = 69.0
-offset_right = 29.0
-offset_bottom = 256.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxEmpty_yqg4b")
-theme_override_styles/hover = SubResource("StyleBoxTexture_hgc2j")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_v8mj6")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_hi8p2")
-toggle_mode = true
-button_group = ExtResource("4_p5wl7")
-flat = true
-icon_alignment = 1
-expand_icon = true
-
-[node name="PS5" type="Button" parent="ButtonGroup"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 90.0
-offset_top = 69.0
-offset_right = 240.0
-offset_bottom = 256.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxEmpty_yqg4b")
-theme_override_styles/hover = SubResource("StyleBoxTexture_hgc2j")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_v8mj6")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_hi8p2")
-toggle_mode = true
-button_group = ExtResource("4_p5wl7")
-flat = true
-icon_alignment = 1
-expand_icon = true
-
-[node name="CUbo" type="Button" parent="ButtonGroup"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 300.0
-offset_top = 69.0
-offset_right = 450.0
-offset_bottom = 256.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxEmpty_yqg4b")
-theme_override_styles/hover = SubResource("StyleBoxTexture_hgc2j")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_v8mj6")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_hi8p2")
-toggle_mode = true
-button_group = ExtResource("4_p5wl7")
-flat = true
-icon_alignment = 1
-expand_icon = true
 
 [node name="Close" type="TextureButton" parent="ButtonGroup"]
 layout_mode = 0
@@ -281,12 +80,112 @@ offset_top = -1.0
 offset_right = 994.0
 offset_bottom = 31.0
 mouse_default_cursor_shape = 2
-toggle_mode = true
-button_group = ExtResource("4_p5wl7")
 shortcut = SubResource("Shortcut_crl2v")
 texture_normal = ExtResource("8_tym1m")
 texture_hover = ExtResource("9_xyl4g")
 stretch_mode = 0
 
-[connection signal="pressed" from="ButtonGroup/Bíblia" to="ButtonGroup" method="_on_bíblia_pressed"]
+[node name="Bíblia" type="TextureButton" parent="ButtonGroup"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -331.0
+offset_top = -123.0
+offset_right = -181.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("7_yulrc")
+texture_hover = ExtResource("8_nnepp")
+stretch_mode = 0
+
+[node name="Necromicon" type="TextureButton" parent="ButtonGroup"]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 369.0
+offset_right = 529.0
+offset_bottom = 556.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("8_4hr5v")
+texture_hover = ExtResource("5_ohqew")
+stretch_mode = 0
+
+[node name="Neuralyzer" type="TextureButton" parent="ButtonGroup"]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 177.0
+offset_right = 529.0
+offset_bottom = 364.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("10_7thms")
+texture_hover = ExtResource("11_bmric")
+stretch_mode = 0
+
+[node name="AlienEgg" type="TextureButton" parent="ButtonGroup"]
+layout_mode = 0
+offset_left = 590.0
+offset_top = 177.0
+offset_right = 739.0
+offset_bottom = 364.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("13_ip2vi")
+texture_hover = ExtResource("14_qbk0m")
+stretch_mode = 0
+
+[node name="Oculos" type="TextureButton" parent="ButtonGroup"]
+layout_mode = 0
+offset_left = 801.0
+offset_top = 177.0
+offset_right = 949.0
+offset_bottom = 365.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("15_d25gf")
+texture_hover = ExtResource("16_8u8um")
+stretch_mode = 0
+
+[node name="Dinheiro" type="TextureButton" parent="ButtonGroup"]
+layout_mode = 0
+offset_left = 169.0
+offset_top = 369.0
+offset_right = 318.0
+offset_bottom = 556.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("17_gaogs")
+texture_hover = ExtResource("18_qv67j")
+stretch_mode = 0
+
+[node name="PS5" type="TextureButton" parent="ButtonGroup"]
+layout_mode = 0
+offset_left = 590.0
+offset_top = 369.0
+offset_right = 739.0
+offset_bottom = 556.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("19_okdem")
+texture_hover = ExtResource("20_nr0jh")
+stretch_mode = 0
+
+[node name="Arc" type="TextureButton" parent="ButtonGroup"]
+layout_mode = 0
+offset_left = 801.0
+offset_top = 369.0
+offset_right = 950.0
+offset_bottom = 556.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("21_skrpe")
+texture_hover = ExtResource("22_i2y6b")
+stretch_mode = 0
+
 [connection signal="pressed" from="ButtonGroup/Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="ButtonGroup/Bíblia" to="ButtonGroup" method="_on_bíblia_pressed"]
+[connection signal="pressed" from="ButtonGroup/Necromicon" to="ButtonGroup" method="_on_necromicon_pressed"]
+[connection signal="pressed" from="ButtonGroup/Neuralyzer" to="ButtonGroup" method="_on_neuralyzer_pressed"]
+[connection signal="pressed" from="ButtonGroup/AlienEgg" to="ButtonGroup" method="_on_alien_egg_pressed"]
+[connection signal="pressed" from="ButtonGroup/Oculos" to="ButtonGroup" method="_on_oculos_pressed"]
+[connection signal="pressed" from="ButtonGroup/Dinheiro" to="ButtonGroup" method="_on_dinheiro_pressed"]
+[connection signal="pressed" from="ButtonGroup/PS5" to="ButtonGroup" method="_on_ps_5_pressed"]
+[connection signal="pressed" from="ButtonGroup/Arc" to="ButtonGroup" method="_on_arc_pressed"]
