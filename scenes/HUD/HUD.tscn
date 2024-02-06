@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://byjgi1w5nus31"]
+[gd_scene load_steps=27 format=3 uid="uid://byjgi1w5nus31"]
 
 [ext_resource type="Texture2D" uid="uid://r5h6x53jj64i" path="res://assets/HUD/pause.png" id="1_igtv7"]
 [ext_resource type="Texture2D" uid="uid://bwlg1w0uvm73n" path="res://assets/HUD/Decoracao.png" id="2_1rhgb"]
@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://i234ff2cpj0i" path="res://assets/HUD/PC_Loja.png" id="5_dwo8b"]
 [ext_resource type="Script" path="res://scripts/HUD/Stats.gd" id="7_thvdp"]
 [ext_resource type="Texture2D" uid="uid://dv0w1ggvoe4d7" path="res://assets/HUD/Balcao.png" id="8_yve0k"]
+[ext_resource type="Script" path="res://scripts/HUD/PopUpPosition.gd" id="12_732kd"]
+[ext_resource type="PackedScene" uid="uid://bwporyytiqenf" path="res://scenes/HUD/PopUps.tscn" id="13_aoyxr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8qu8l"]
 atlas = ExtResource("8_yve0k")
@@ -182,6 +184,28 @@ text = "000"
 horizontal_alignment = 2
 vertical_alignment = 1
 
+[node name="Money_Add" type="Timer" parent="Stats"]
+wait_time = 0.005
+
+[node name="Money_Remove" type="Timer" parent="Stats"]
+wait_time = 0.005
+
+[node name="Fame_Add" type="Timer" parent="Stats"]
+wait_time = 0.005
+
+[node name="Fame_Remove" type="Timer" parent="Stats"]
+wait_time = 0.005
+
+[node name="PopUpPosition" type="Marker2D" parent="Stats"]
+top_level = true
+position = Vector2(171, 67)
+script = ExtResource("12_732kd")
+values_node = ExtResource("13_aoyxr")
+
 [connection signal="pressed" from="Will Hide/AnimatedSprite2D/Button" to="Will Hide/AnimatedSprite2D/Button" method="_on_pressed"]
 [connection signal="pressed" from="Will Hide/Store" to="Will Hide/Store" method="_on_pressed"]
 [connection signal="pressed" from="Pause" to="Pause" method="_on_pressed"]
+[connection signal="timeout" from="Stats/Money_Add" to="Stats" method="_on_money_add_timeout"]
+[connection signal="timeout" from="Stats/Money_Remove" to="Stats" method="_on_money_remove_timeout"]
+[connection signal="timeout" from="Stats/Fame_Add" to="Stats" method="_on_fame_add_timeout"]
+[connection signal="timeout" from="Stats/Fame_Remove" to="Stats" method="_on_fame_remove_timeout"]

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ceedx6ein35f8"]
+
+[ext_resource type="Script" path="res://scripts/Clients/Jerry.gd" id="1_yi0ew"]
+[ext_resource type="Texture2D" uid="uid://baeeewyml5js" path="res://assets/Clients/Jerry/Neutral.png" id="2_hy5dx"]
+
+[node name="Client" type="Control"]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+script = ExtResource("1_yi0ew")
+
+[node name="Jerry" type="Sprite2D" parent="."]
+position = Vector2(3.63798e-12, -149)
+scale = Vector2(5.6, 5.6)
+texture = ExtResource("2_hy5dx")

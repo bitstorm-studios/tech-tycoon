@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dej1mr3tedelr"]
+
+[ext_resource type="Script" path="res://scripts/Clients/Policia.gd" id="1_lvju2"]
+[ext_resource type="Texture2D" uid="uid://c5e0wb7nfpcca" path="res://assets/Clients/Policial/Neutral.png" id="2_njihp"]
+
+[node name="Client" type="Control"]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+script = ExtResource("1_lvju2")
+
+[node name="Policial" type="Sprite2D" parent="."]
+position = Vector2(3.63798e-12, -149)
+scale = Vector2(5.6, 5.6)
+texture = ExtResource("2_njihp")
